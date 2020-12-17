@@ -1,7 +1,8 @@
 site_name: 'Enterprise Knowledge Graphs'
 nav:
   - Home: index.md
-  
+  - Table of Contents: table-of-contents.md
+  - Glossary: glossary.md
   - Contact: contact.md
 
 site_description: 'Enterprise Knowledge Graphs'
