@@ -28,6 +28,10 @@ Raw low-level binary codes that contains information after analysis.
 #### Dashboard
 A set of views, usually presented on a single page, that display information as a set of key performance indicators and charts.  In general, dashboard views can be customized for a role or a specific user.
 
+## DB Engines
+A web site that harvests web documents that discuss databases and classifies the documents based on a taxonomy of database types.  The "Popularity changes per category report" is frequently cited in many graph presetations.
+[DB Engines](https://db-engines.com/en/ranking_categories)
+
 #### Embedding
 A data structure, usually a vector of decimal numbers, associated with an item in a graph, that helps users quickly find similar items.  Vertices, Edges, and Paths may all have embeddings.
 
@@ -36,9 +40,16 @@ A scalable graph database system used to store large-scale connected information
 
 By scalable we mean that it must be able to run on multiple servers as the graph expands.  Without scalability the graph might be considered a project or departmental graph.
 
+For many large organizations, enterprise knowledge graphs typically have hundreds of developers doing concurrent loading and query development and the models can be dynamic.  For example the Google Knowledge Graph team is thought to contain over 1,500 developers.
+
 #### Glossary
 A business vocabulary associated with a topic.  A glossary often has both general definitions of terms as well as contextual definitions for a specific domain or project.<br/>
 <br/>See also: [Business Vocabulary](#business-vocabulary)
+
+#### Graph Query Language
+A proposed standard graph query language being developed by the Working Group 3 (Database Languages) of ISO/IEC JTC 1's Subcommittee 32. 
+GQL is designed to work with [Labeled Property Graphs](#labeled-property-graph).
+<br/>[Wikipedia GQL Page](https://en.wikipedia.org/wiki/GQL_Graph_Query_Language)
 
 #### Graph Structured Query Language
 A distributed graph query language developed by TigerGraph.  GSQL was designed to be syntactically similar to the SQL language
@@ -119,7 +130,11 @@ the name of the world-wide-web standard for encoding these systems.  Serializati
 <br/>See Also: [W2C SKOS Referecnce](https://www.w3.org/2009/08/skos-reference/skos.html)
 
 #### Sustainability
-The ability for a team of developers to maintain the code that supports an enterprise knowledge graph in the face of changes to the data model.  The key measure is to avoide probems related to rewriting graph queries when small changes are made to the graph data model.
+The ability for a team of developers to maintain the code that supports an enterprise knowledge graph in the face of changes to the data model.  The key measure is to avoide problems related to rewriting graph queries when small changes are made to the graph data model.
+
+#### Triple Store
+A purpose-built database for the storage and retrieval of RDF triples through semantic queries.  Triple stores are not used in most enterprise graphs due to their lack of [sustanability](#sustanability) due to problems with [Reification](#Reification).
+https://en.wikipedia.org/wiki/Triplestore
 
 #### Web Ontology Language
 A Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things.
