@@ -1,0 +1,31 @@
+site_name: 'Enterprise Knowledge Graphs'
+nav:
+  - Home: index.md
+  
+  - Contact: contact.md
+
+site_description: 'Enterprise Knowledge Graphs'
+site_author: 'Dan McCreary'
+repo_name: 'ekg-book'
+repo_url: 'https://github.com/dmccreary/ekg-book'
+edit_uri: 'blob/master/docs'
+theme:
+  name: material
+  logo: img/knowledge-graph-logo.png
+  palette:
+    primary: 'orange'
+    accent: 'blue'
+  custom_dir: 'theme'
+  include_sidebar: true
+markdown_extensions:
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+  - codehilite:
+      linenums: true
+plugins:
+    - search
+markdown_extensions:
+  - codehilite:
+      linenums: true
