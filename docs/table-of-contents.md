@@ -8,8 +8,8 @@
 
 ### Part 2: Enterprise Knowledge Graphs Concepts
 
-#### Scale Out Graphs Databases
 #### The Knowledge Triangle
+#### Scale Out Graphs Databases
 #### Graph Machine Learning
 #### Calculating the Cost and Benefits of Enterprise Knowledge Graphs
 
@@ -22,4 +22,4 @@
 #### Strategy Analytics
 
 #### Glossary
-A listing of the concepts used in this book and their definitions. [Link](Glossary.md)
+A listing of the concepts used in this book and their definitions. [Link](glossary.md)

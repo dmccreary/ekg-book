@@ -1,15 +1,24 @@
 # Enterprise Knowledge Graph Glossary of Terms
 
+#### Accumulator
+A type of variable that tracks items as you traverse through a graph.  Accumulators can be global or be attached to a specific vertex.
+
+Accumulators allow MapReduce style queries where each server node in a cluster does work in its local data and returns consolidated results to the query node.  For example, in the query *"count all customers that have returned clothing items"*, each node would return only a single count to the query node.  This type of query reduces the amount of communication between nodes in the graph cluster.
+
+#### Bitermporal Modeling
+A specific case of [Temporal Modeling](#temporal-modeling) modeling designed to handle historical data along two different timelines.  One timeline is concerned with when an event occurred in the real world and the other timeline is concerned when the data was recorded or corrected in a computer system. This makes it possible to rewind the information to "as it actually was" in combination with "as it was recorded" at some point in time. In order to be able to do so, information cannot be discarded even if it is erroneous.
+[Wikipedia Bitemporal Modeling](https://en.wikipedia.org/wiki/Bitemporal_Modeling)
+
 #### Business Vocabulary
-A collection of terms and phrases that have meaning to a specific domain of work.  A business vocabulary
-typically starts out with a flat list of terms in a spreadsheet. The terms are listed with their abbreviations and definitions and how they are used within a specific project or department.
-As vocabularies grow and mature the individual terms might be grouped together.  These groupings become taxonomies and
-can then be used to automatcally classify documents with metadata tags of their preferred labels.  Classified documents
+A collection of terms and phrases that have meaning to a specific domain of work.  A business vocabulary typically starts out with a flat list of terms in a spreadsheet. The terms are listed with their abbreviations and definitions and how they are used within a specific project or department.
+
+As vocabularies grow and mature the individual terms might be grouped together.  These groupings become taxonomies and can then be used to automatically classify documents with metadata tags of their preferred labels.  Classified documents
 can have a dramatic increase on the search quality of a search engine.
 
 #### Concept
-An idea, a notion or a unit of thought.  Concept elements are the fundamental unit of work in semantics.  
-Each concept is usually associated with a preferred label in each language such as English, and it may have many alternate labels.
+An idea, notion or a unit of thought.  Concept elements are the fundamental unit of work in semantics and are in integral part of enterprise knowledge graphs. 
+
+In practice, each concept is usually associated with a vertex in a graph and has one preferred label in each language such as English.  Concepts may have many alternate labels.
 Concepts are grouped together in Schemas and may be part of one or more Collections.<br/>
 [Concept Reference on W3C SKOS Site](https://www.w3.org/TR/skos-reference/#concepts)
 
@@ -18,6 +27,11 @@ A graph that stores the core business concepts of a project, department or enter
 
 #### Data Ingestion
 A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including RDBMS, other types of databases, S3 buckets, CSVs, or from streams.
+
+#### Decision Tree
+A way of storing business rules in a graph.  A decision tree contains a series of branches, each branch containing a conditional expression.  If the conditional expression returns TRUE, then a true link is traversed.  If the conditional returns FALSE and false branch is traversed.
+
+Decision trees and the corrisponding rules that are represented as pointer hops in an enterprise knowledge graph have many integration and performance benefits.
 
 #### Departmental Graph
 A graph designed to store information from one or more departments of an enterprise.  Departmental graphs may be limited in that they can't be scaled up to hold enterprise data.
@@ -28,9 +42,9 @@ Raw low-level binary codes that contains information after analysis.
 #### Dashboard
 A set of views, usually presented on a single page, that display information as a set of key performance indicators and charts.  In general, dashboard views can be customized for a role or a specific user.
 
-## DB Engines
-A web site that harvests web documents that discuss databases and classifies the documents based on a taxonomy of database types.  The "Popularity changes per category report" is frequently cited in many graph presetations.
-[DB Engines](https://db-engines.com/en/ranking_categories)
+#### DB Engines
+A web site that harvests web documents that discuss databases and classifies the documents based on a taxonomy of database types.  The "Popularity changes per category report" is frequently cited in many graph presentations.
+<br/>[DB Engines](https://db-engines.com/en/ranking_categories)
 
 #### Embedding
 A data structure, usually a vector of decimal numbers, associated with an item in a graph, that helps users quickly find similar items.  Vertices, Edges, and Paths may all have embeddings.
@@ -40,11 +54,28 @@ A scalable graph database system used to store large-scale connected information
 
 By scalable we mean that it must be able to run on multiple servers as the graph expands.  Without scalability the graph might be considered a project or departmental graph.
 
-For many large organizations, enterprise knowledge graphs typically have hundreds of developers doing concurrent loading and query development and the models can be dynamic.  For example the Google Knowledge Graph team is thought to contain over 1,500 developers.
+For many large organizations, enterprise knowledge graphs typically have hundreds of developers doing concurrent loading and query development and the models can be dynamic. For example the Google Knowledge Graph team is thought to contain over 1,500 developers.
+
+#### Entity Resolution
+The process of finding records in a data set that refer to the same entity across different data sources.
+
+Entity Resolution is a core technique in converting Information layer data into a consistent knowledge graph.
+<br/>[Wikipeia Record Linkage](https://en.wikipedia.org/wiki/Record_linkage)
+
+#### Force Directed Graph
+A graph layout algorithm that simulates forces on springs that move items 
+[Wikipedia Force Directed Graph Drawing](https://en.wikipedia.org/wiki/Force-directed_graph_drawing)
 
 #### Glossary
 A business vocabulary associated with a topic.  A glossary often has both general definitions of terms as well as contextual definitions for a specific domain or project.<br/>
 <br/>See also: [Business Vocabulary](#business-vocabulary)
+
+#### GraphQL
+A query language for APIs and a runtime for fulfilling those queries with your existing data.
+
+Ironically, GraphGL has nothing to do with graph databases other than the fact that the queries often run much faster on graphs.  The name "graph" was used internally at FaceBook since they store their data in a graph structure.
+
+One concern about GraphQL at the enterprise-scale is that your graph database should be able to detect GraphQL queries that are using too many resources.  This means your enterprise graph databases must understand concepts of [resource quotas](#resource-quotas).
 
 #### Graph Query Language
 A proposed standard graph query language being developed by the Working Group 3 (Database Languages) of ISO/IEC JTC 1's Subcommittee 32. 
@@ -64,7 +95,6 @@ See also: [Index Free Adjacency](#index-free-adjacency)
 A graph can exist in different forms having the same number of vertices, edges, and also the same edge connectivity. Such graphs are called isomorphic graphs.
 
 #### Index Free Adjacency
-
 
 #### Information Layer
 Data about our key business entities.  This includes Things, like People, Places and Events.
@@ -91,7 +121,7 @@ to the challenges with Reification. Reification causes RDF SPARQL queries to be 
 <br/>See also: [RDF](#resource-description-framework)
 
 #### On-the-Wire vs. In-the-Can
-A way of looking at knowledge representation requirements in two domains.  On-The-Wire implies that a serialization of a dataset must retain connection information within itself and to other external systems.  In-The-Can implies that the representation is optimized for queryability and [sustainability](#sustainability).  RDF is optimized for On-The-Wire exchange of knowledge.  LPG is optimized for In-The-Can tasks such as queryability and  sustainability.
+A way of looking at knowledge representation requirements in two domains.  On-The-Wire implies that a serialization of a dataset must retain connection information within itself and to other external systems.  In-The-Can implies that the representation is optimized for ease of query and [sustainability](#sustainability).  RDF is optimized for On-The-Wire exchange of knowledge.  LPG is optimized for In-The-Can tasks such as ease of query and sustainability.
 
 #### Ontology
 A graph of [Concepts](#concept) within a specific domain.  Ontologies often begin as flat term lists, that become taxonomies that then have more complex relationships than simple broader and narrower concepts.  Ontologies
@@ -108,6 +138,11 @@ one and only one preferred label per language per concept.
 #### Project Graph
 A graph that supports a specific project.  Project graphs may contain knowledge that is not of interest to the rest of the enterprise.
 
+#### Reference Data
+Reference data is data used to classify or categorize other data.  They typically are stored as a set of valid codes for a specific data element.
+
+For example the list of [Country Codes](https://en.wikipedia.org/wiki/Country_code) is a type of reference data.  Referenece data is often stored as a short code and a definition of what that code represents.
+
 #### Reification
 Reification is the process by which an abstract idea about a computer program is turned into an explicit data model or other object created in a programming language.  Specifically, in the RDF modeling process it is the process of adding an abstract vertex to a graph when properties are needed in a relationship.  Reification causes queries that traverse that node to be rewritten.  This means that SPARQL queries are inherently much more difficult to maintain than LPG graph queries.
 
@@ -115,13 +150,31 @@ Reification is the process by which an abstract idea about a computer program is
 An early family of standards developed by the World Wide Web Consortium for exchanging graph data championed by the [Semantic Web](https://en.wikipedia.org/wiki/Semantic_Web) community starting in 1999.  RDF gained some traction around 2010 but failed to gain widespread adoption due to the complexity of the standards and the problems of [Reification](#reification).
 <br/>[Wikipedia](https://en.wikipedia.org/wiki/Resource_Description_Framework)
 
+#### Resource Quota
+The ability to limit the resources consumed by a query such as CPU time, or RAM for individuals or groups.
+
+Large enterprise-scale graph databases must carefully monitor and constrain queries that consume too many resources.  Many older technologies such as Apache Drill are difficult to implement without the ability to monitor and restrict resources.
+
 #### Role-based Access Control
 The ability to assign access to a resource to individuals that have a specific role.  For Enterprise Knowledge Graphs, there are both high-level subgraph rules and fine-grain rules such as vertex-related role-based access control.
+
+#### Rules Engine
+A software component that executes rules according to some algorithm.
+
+In the Enterprise Knowledge Graph space rules are frequently represented in [Decision Tree](#decison-tree) structures within the graph.
+<br/>[Rules for Knowledge Graph Rules])https://dmccreary.medium.com/rules-for-knowledge-graphs-rules-f22587307a8f
 
 #### Semantics
 The branch of computer science associated with meaning.  It can be best understood by understanding the semantic triangle.  The key point of the semantic triangle is that we cannot directly associate a label with a referent without traversing concepts. 
 
 ![Semantic Triangle](img/semantic-triangle.png)
+
+#### Shapes Constraint Language
+A W3C standard RDF vocabulary for validating RDF graphs against a set of conditions.
+
+Unlike document validation standards like XML Schema, SHACL assumes that data quality checks should be able to look for relationships in a graph as well as the local context of a document.  These conditions are provided as shapes and other constructs expressed in the form of an RDF graph.  LPG graphs do not yet have a version of SHACL.
+<br/>Also known as: SHACL
+<br/>[SHACL W3C](https://www.w3.org/TR/shacl/)
 
 #### Simple Knowledge Organizational System
 A model for expressing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, folksonomies, and other similar types of controlled vocabularies. SKOS is also
@@ -131,6 +184,9 @@ the name of the world-wide-web standard for encoding these systems.  Serializati
 
 #### Sustainability
 The ability for a team of developers to maintain the code that supports an enterprise knowledge graph in the face of changes to the data model.  The key measure is to avoide problems related to rewriting graph queries when small changes are made to the graph data model.
+
+#### Temporal Modeling
+The process of modeling time in a data model.  Modeling time can be complex when the requirements of a system require you to be able to recreate detailed reports as they were at a prior point in time.  Termporal modeling includes the concept of versioning and [bitemporal modeling](#bitermporal-modeling)
 
 #### Triple Store
 A purpose-built database for the storage and retrieval of RDF triples through semantic queries.  Triple stores are not used in most enterprise graphs due to their lack of [sustanability](#sustanability) due to problems with [Reification](#Reification).
