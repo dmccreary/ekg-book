@@ -2,24 +2,27 @@
 
 ## Part 1: Introduction
 
-### Preface
-### Acknowledgements
-### Chapter 1: Introduction to Enterprise Knowledge Graphs
+* [Preface](intro/preface.md)
+* [Acknowledgements](intro/acknowledgements.md)
+* Introduction to Enterprise Knowledge Graphs TBD
 
-### Part 2: Enterprise Knowledge Graphs Concepts
+## Part 2: Enterprise Knowledge Graphs Concepts
 
-#### The Knowledge Triangle
-#### Scale Out Graphs Databases
-#### Graph Machine Learning
-#### Calculating the Cost and Benefits of Enterprise Knowledge Graphs
+* The Knowledge Triangle TBD
+* Scale-Out Graph Databases - TBD
+* Graph Machine Learning - TBD
+* Calculating the Cost and Benefits of Enterprise Knowledge Graphs - TBD
 
-### Part 3: Enterprise Knowledge Graphs Case Studies
+## Part 3: Enterprise Knowledge Graphs Case Studies
 
-#### Customer 360
-#### Analytics Dashboard
-#### Product Recomendation
-#### Employee Career Paths
-#### Strategy Analytics
+* Customer 360
+* Analytics Dashboard
+* Semantic Search
+* Product Recommendation
+* Employee Career Paths
+Strategy Analytics
 
-#### Glossary
-A listing of the concepts used in this book and their definitions. [Link](glossary.md)
+## Part 4: Promoting Enterprise Knowledge Graphs
+* Storytelling
+
+[Glossary](glossary.md)

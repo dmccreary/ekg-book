@@ -5,9 +5,16 @@ A type of variable that tracks items as you traverse through a graph.  Accumulat
 
 Accumulators allow MapReduce style queries where each server node in a cluster does work in its local data and returns consolidated results to the query node.  For example, in the query *"count all customers that have returned clothing items"*, each node would return only a single count to the query node.  This type of query reduces the amount of communication between nodes in the graph cluster.
 
+#### Automaic Sharding
+The process of automatically migrating data from one server to another server in a distributed database.  Auto-sharding is frequently done as a database cluster grows or shrinks based on new data being added or removed from the cluster.
+
+Auto-sharding is one of the key features that differentiate scale-out enterprise-class databases from departmental solutions.  Testing sharding at scale under continuous load in the face of possible hardware failure is one of the key challenges facing enterprise data architects.
+
 #### Bitermporal Modeling
-A specific case of [Temporal Modeling](#temporal-modeling) modeling designed to handle historical data along two different timelines.  One timeline is concerned with when an event occurred in the real world and the other timeline is concerned when the data was recorded or corrected in a computer system. This makes it possible to rewind the information to "as it actually was" in combination with "as it was recorded" at some point in time. In order to be able to do so, information cannot be discarded even if it is erroneous.
-[Wikipedia Bitemporal Modeling](https://en.wikipedia.org/wiki/Bitemporal_Modeling)
+A specific case of [Temporal Modeling](#temporal-modeling) modeling designed to handle historical data in two different timelines.  One timeline is concerned with when an event occurred in the real world and the other timeline is concerned when the data was recorded or corrected in a computer system. This makes it possible to rewind the information to "as it actually was" in combination with "as it was recorded" at some point in time. 
+
+In order to implement this feature within an Enterprise Knowledge Graph, the data model must accomdate updates while preserving historical information. Information cannot be overwritten or discarded even if it is erroneous.  The consequence is more data must be retained even through only a small percentage of queries might require historical views of data.  Bitemporal models are more complex to query and require additonal RAM and disk storage.
+<br/>[Wikipedia Bitemporal Modeling](https://en.wikipedia.org/wiki/Bitemporal_Modeling)
 
 #### Business Vocabulary
 A collection of terms and phrases that have meaning to a specific domain of work.  A business vocabulary typically starts out with a flat list of terms in a spreadsheet. The terms are listed with their abbreviations and definitions and how they are used within a specific project or department.

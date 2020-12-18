@@ -12,7 +12,8 @@ repo_url: 'https://github.com/dmccreary/ekg-book'
 edit_uri: 'blob/master/docs'
 theme:
   name: material
-  logo: img/knowledge-graph-logo.png
+  logo: img/book-logo.png
+  favicon: img/favicon.png
   palette:
     primary: 'orange'
     accent: 'blue'
