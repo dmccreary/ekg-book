@@ -19,11 +19,22 @@ In order to implement this feature within an Enterprise Knowledge Graph, the dat
 #### Brain Anologies
 Explaining enterprise knowledge graphs in terms of the human brain.  Human brains have roughly 82 billion neurons and a degree of 10,000.  Many enterprise knowledge graphs for the largest companies exceed 80 billion vertices but have only a handful of connections between them [Degree](#degree).
 
+#### Business Event
+A change in the state of a business entity within an operational source system that may be published to a downstream consumer such as an enterprise knowledge graph.
+
+Business events are usually transmitted by [Change Data Capture](#change-data-capture) software and sent via document messages in formats such as JSON or XML.
+[Wikipedia](https://en.wikipedia.org/wiki/Event-driven_architecture)
+
 #### Business Vocabulary
 A collection of terms and phrases that have meaning to a specific domain of work.  A business vocabulary typically starts out with a flat list of terms in a spreadsheet. The terms are listed with their abbreviations and definitions and how they are used within a specific project or department.
 
 As vocabularies grow and mature the individual terms might be grouped together.  These groupings become taxonomies and can then be used to automatically classify documents with metadata tags of their preferred labels.  Classified documents
 can have a dramatic increase on the search quality of a search engine.
+
+#### Change Data Capture
+Software that detects changes in a database and transmits the change information via [business events](#business-event) to a remote system.  These events are often published on stream processing systems using the publish/subscribe integration pattern.
+<br/>Also known as: CDC
+[Wikipedia page on Change Data Capture](https://en.wikipedia.org/wiki/Change_data_capture)
 
 #### Concept
 An idea, notion or a unit of thought.  Concept elements are the fundamental unit of work in semantics and are in integral part of enterprise knowledge graphs. 
