@@ -13,8 +13,11 @@ Auto-sharding is one of the key features that differentiate scale-out enterprise
 #### Bitermporal Modeling
 A specific case of [Temporal Modeling](#temporal-modeling) modeling designed to handle historical data in two different timelines.  One timeline is concerned with when an event occurred in the real world and the other timeline is concerned when the data was recorded or corrected in a computer system. This makes it possible to rewind the information to "as it actually was" in combination with "as it was recorded" at some point in time. 
 
-In order to implement this feature within an Enterprise Knowledge Graph, the data model must accomdate updates while preserving historical information. Information cannot be overwritten or discarded even if it is erroneous.  The consequence is more data must be retained even through only a small percentage of queries might require historical views of data.  Bitemporal models are more complex to query and require additonal RAM and disk storage.
+In order to implement this feature within an Enterprise Knowledge Graph, the data model must accommodate updates while preserving historical information. Information cannot be overwritten or discarded even if it is erroneous.  The consequence is more data must be retained even through only a small percentage of queries might require historical views of data.  Bitemporal models are more complex to query and require additional RAM and disk storage.
 <br/>[Wikipedia Bitemporal Modeling](https://en.wikipedia.org/wiki/Bitemporal_Modeling)
+
+#### Brain Anologies
+Explaining enterprise knowledge graphs in terms of the human brain.  Human brains have roughly 82 billion neurons and a degree of 10,000.  Many enterprise knowledge graphs for the largest companies exceed 80 billion vertices but have only a handful of connections between them [Degree](#degree).
 
 #### Business Vocabulary
 A collection of terms and phrases that have meaning to a specific domain of work.  A business vocabulary typically starts out with a flat list of terms in a spreadsheet. The terms are listed with their abbreviations and definitions and how they are used within a specific project or department.
@@ -26,11 +29,15 @@ can have a dramatic increase on the search quality of a search engine.
 An idea, notion or a unit of thought.  Concept elements are the fundamental unit of work in semantics and are in integral part of enterprise knowledge graphs. 
 
 In practice, each concept is usually associated with a vertex in a graph and has one preferred label in each language such as English.  Concepts may have many alternate labels.
-Concepts are grouped together in Schemas and may be part of one or more Collections.<br/>
+Concepts are grouped in Schemas and may be part of one or more Collections.<br/>
 [Concept Reference on W3C SKOS Site](https://www.w3.org/TR/skos-reference/#concepts)
 
 #### Concept Graph
 A graph that stores the core business concepts of a project, department or enterprise.  In the ideal world, an enterprise graph will use a combination of machine learning to connect related concepts together.
+
+#### Cost Sharing
+The ability of a single graph data model to be shared by many business units and thus the costs can also be shared.  Lower charge backs make graph databases more cost-effective than other data models.
+<br/>See also: [No Complexity Penalty](#no-complexity-penalty)
 
 #### Data Ingestion
 A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including RDBMS, other types of databases, S3 buckets, CSVs, or from streams.
@@ -38,7 +45,12 @@ A process by which data is moved from one or more sources to a destination where
 #### Decision Tree
 A way of storing business rules in a graph.  A decision tree contains a series of branches, each branch containing a conditional expression.  If the conditional expression returns TRUE, then a true link is traversed.  If the conditional returns FALSE and false branch is traversed.
 
-Decision trees and the corrisponding rules that are represented as pointer hops in an enterprise knowledge graph have many integration and performance benefits.
+Decision trees and the corresponding rules that are represented as pointer hops in an enterprise knowledge graph have many integration and performance benefits.
+
+#### Degree
+The degree of a vertex is the count of the number of connections between the vertex and other vertices.  The average degree of a graph is the average number of connections for a vertex.
+
+For non-directional graphs, counting is one per edge.  For directional graphs that have reverse edges, each connection counts as two connections.  In a directional graph, each vertex has both an in-degree and out-degree.
 
 #### Departmental Graph
 A graph designed to store information from one or more departments of an enterprise.  Departmental graphs may be limited in that they can't be scaled up to hold enterprise data.
@@ -48,6 +60,11 @@ Raw low-level binary codes that contains information after analysis.
 
 #### Dashboard
 A set of views, usually presented on a single page, that display information as a set of key performance indicators and charts.  In general, dashboard views can be customized for a role or a specific user.
+
+#### Document Store
+A type of database that stores data as tree-structured data elements such as JSON or XML.  Document stores use path-like query languages such as X-PATH to traverse the tree structure.  Languages such as XQuery provide high-quality functional programming languages with strong type checking.
+
+X-PATH is a mature W3C standard for expressing path traversal using a rich array of standardized wildcard expressions.
 
 #### DB Engines
 A web site that harvests web documents that discuss databases and classifies the documents based on a taxonomy of database types.  The "Popularity changes per category report" is frequently cited in many graph presentations.
@@ -102,9 +119,16 @@ See also: [Index Free Adjacency](#index-free-adjacency)
 A graph can exist in different forms having the same number of vertices, edges, and also the same edge connectivity. Such graphs are called isomorphic graphs.
 
 #### Index Free Adjacency
+Accessing related entities in a system without having to consult a centralized index.  Using direct in-memory pointers to represent relationships is approximately three orders of magnitude faster than referencing a central index system.
+<br/>See also: The Neighborhood Walk Story
 
 #### Information Layer
 Data about our key business entities.  This includes Things, like People, Places and Events.
+
+#### Key-Value Store
+A type of database that stores items as pairs of keys and values.  The keys are strings and the values are binary blobs such as files or images.  A simple put/get/delete interface is used to manage the database.
+
+Key-value stores are excellent complements to graph databases since their simplicity allows for low-cost-per-byte storage. 
 
 #### Knowledge Layer
 A layer in the knowledge triangle that contains connected information.  The knowledge layer is often the top layer in our views.  There are some views that include a Wisdom layer on top of the knowledge layer.
@@ -127,8 +151,18 @@ to the challenges with Reification. Reification causes RDF SPARQL queries to be 
 <br/>[Load-as-is pattern](https://www.marklogic.com/blog/understanding-the-load-as-is-pattern/)
 <br/>See also: [RDF](#resource-description-framework)
 
+#### The Neighborhood Walk Story
+A story used to illustrate the difference between direct pointer hopping and using centralized indexes to traverse relationships.  The story uses a 30-second walk between two houses vs. an 8.2-hour walk to a central location and back.
+
+#### No Complexity Penalty
+Unlike relational databases, graph databases quickly traverse many complex relationships.  As a result, graph databases are better at modeling the real world - which is full of complexity.  We use the phrase "No Complexity Penalty" every time we are training people who have come from the relational world that worry that too many relationships will slow down their queries due to slow JOINs.
+<br/>See also: One version of the truth
+
+#### One Version of the Truth
+The real world has many complex relationships.  There are many ways to build simple models that take shortcuts to optimize queries by limiting relationships.  This is important in relational database modeling.  But the closer we get to modeling the real world, the closer to a single version of the truth we get.  Models that fairly represent the complexities of the real world can be reused among many business units and thus the costs of holding the information in memory can be shared.  This is why graph databases cost less then relational databases.
+
 #### On-the-Wire vs. In-the-Can
-A way of looking at knowledge representation requirements in two domains.  On-The-Wire implies that a serialization of a dataset must retain connection information within itself and to other external systems.  In-The-Can implies that the representation is optimized for ease of query and [sustainability](#sustainability).  RDF is optimized for On-The-Wire exchange of knowledge.  LPG is optimized for In-The-Can tasks such as ease of query and sustainability.
+A way of looking at knowledge representation requirements in two domains.  On-The-Wire implies that serialization of a dataset must retain connection information within itself and to other external systems.  In-The-Can knowledge representations are optimized for ease of query and [sustainability](#sustainability).  RDF is optimized for On-The-Wire exchange of knowledge.  LPG is optimized for In-The-Can tasks such as ease of query and sustainability.
 
 #### Ontology
 A graph of [Concepts](#concept) within a specific domain.  Ontologies often begin as flat term lists, that become taxonomies that then have more complex relationships than simple broader and narrower concepts.  Ontologies
@@ -137,6 +171,9 @@ are often stored in formats such as SKOS and OWL.
 #### Open vs Closed World
 https://en.wikipedia.org/wiki/Open-world_assumption
 https://en.wikipedia.org/wiki/Closed-world_assumption
+
+#### Operational Source System
+A transactional computer that is the source of a data stream.  Enterprise Graph Databases often use [Change Data Capture](#change-data-capture) software on these systems to create an event stream of change records that so they can be stored in a central enterprise knowledge graph.  Change records are new, updated, or deleted business entities.
 
 #### Preferred Label
 A preferred lexical label associated with a [Concept](#concept).  In the [SKOS](#skos) standard, there should be
@@ -148,7 +185,7 @@ A graph that supports a specific project.  Project graphs may contain knowledge 
 #### Reference Data
 Reference data is data used to classify or categorize other data.  They typically are stored as a set of valid codes for a specific data element.
 
-For example the list of [Country Codes](https://en.wikipedia.org/wiki/Country_code) is a type of reference data.  Referenece data is often stored as a short code and a definition of what that code represents.
+For example the list of [Country Codes](https://en.wikipedia.org/wiki/Country_code) is a type of reference data.  Reference data is often stored as a short code and a definition of what that code represents.
 
 #### Reification
 Reification is the process by which an abstract idea about a computer program is turned into an explicit data model or other object created in a programming language.  Specifically, in the RDF modeling process it is the process of adding an abstract vertex to a graph when properties are needed in a relationship.  Reification causes queries that traverse that node to be rewritten.  This means that SPARQL queries are inherently much more difficult to maintain than LPG graph queries.
@@ -190,10 +227,14 @@ the name of the world-wide-web standard for encoding these systems.  Serializati
 <br/>See Also: [W2C SKOS Referecnce](https://www.w3.org/2009/08/skos-reference/skos.html)
 
 #### Sustainability
-The ability for a team of developers to maintain the code that supports an enterprise knowledge graph in the face of changes to the data model.  The key measure is to avoide problems related to rewriting graph queries when small changes are made to the graph data model.
+The ability for a team of developers to maintain the code that supports an enterprise knowledge graph in the face of changes to the data model.  The key measure is to avoid problems related to rewriting graph queries when small changes are made to the graph data model.
+<br/>See also: The Jenga Tower Story
+
+#### Systems Thinking
+A way of looking at problems in terms of components that interact with each other over time using direct connections, indirection connections and both positive and negative feedback cycles.  Systems Thinking forces us to think broadly about how our enterprise knowledge graphs interact with external systems.  Systems thinking also helps us see the unintended consequences of our actions.
 
 #### Temporal Modeling
-The process of modeling time in a data model.  Modeling time can be complex when the requirements of a system require you to be able to recreate detailed reports as they were at a prior point in time.  Termporal modeling includes the concept of versioning and [bitemporal modeling](#bitermporal-modeling)
+The process of modeling time in a data model.  Modeling time can be complex when the requirements of a system require you to be able to recreate detailed reports as they were at a prior point in time. Temporal modeling includes the concept of versioning and [bitemporal modeling](#bitermporal-modeling)
 
 #### Triple Store
 A purpose-built database for the storage and retrieval of RDF triples through semantic queries.  Triple stores are not used in most enterprise graphs due to their lack of [sustanability](#sustanability) due to problems with [Reification](#Reification).
