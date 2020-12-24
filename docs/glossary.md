@@ -153,6 +153,11 @@ Entities can be any business objects, customers, products, parts, documents, or 
 A stack of three layers.  At the base is the [Data Layer](#data-layer), above that the [Information Layer](#information-layer) and at the top the [Knowledge Layer](#knowledge-layer).
 ![Knowledge Trainagle](img/knowledge-triangle.png)
 
+#### Label
+A string associated with one or more [Concepts](#concept).
+
+Labels have two main types: [Preferred Labels](#preferred-lable) and [Alternate Labels](#alternate-lable).  Most formal ontologies and taxonomies only permit a single preferred label for each Concept in a given Language.
+
 #### Labeled Property Graph
 A graph data model where each Vertex and Edge have a single type and goth Vertices and Edges have attributes.
 Both TigerGraph and Neo4j use the LPG data model.
@@ -228,6 +233,9 @@ In the Enterprise Knowledge Graph space rules are frequently represented in [Dec
 The branch of computer science associated with meaning.  It can be best understood by understanding the semantic triangle.  The key point of the semantic triangle is that we cannot directly associate a label with a referent without traversing concepts. 
 
 ![Semantic Triangle](img/semantic-triangle.png)
+
+#### Semantic Graph
+A graph where each vertex represents a [Concept](#concept) and the edges of the graph represent the relationships between the Concepts.  The primary data model for storing semantic graphs is the [SKOS](#simple-knowledge-organization-system) data model where Concepts and [Labels](#label) are distinct types.
 
 #### Shapes Constraint Language
 A W3C standard RDF vocabulary for validating RDF graphs against a set of conditions.
