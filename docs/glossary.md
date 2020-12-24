@@ -144,6 +144,11 @@ Key-value stores are excellent complements to graph databases since their simpli
 #### Knowledge Layer
 A layer in the knowledge triangle that contains connected information.  The knowledge layer is often the top layer in our views.  There are some views that include a Wisdom layer on top of the knowledge layer.
 
+#### Knowledge Graph
+A set of interconnected typed entities and their attributes.
+
+Entities can be any business objects, customers, products, parts, documents, or concepts.  Entities are usually implemented as vertices in a graph database and connected through edges.  In some types of graphs (LPGs), edges also have attributes.
+
 #### Knowledge Triangle
 A stack of three layers.  At the base is the [Data Layer](#data-layer), above that the [Information Layer](#information-layer) and at the top the [Knowledge Layer](#knowledge-layer).
 ![Knowledge Trainagle](img/knowledge-triangle.png)
