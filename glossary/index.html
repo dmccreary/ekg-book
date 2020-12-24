@@ -484,6 +484,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    Label
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#labeled-property-graph" class="md-nav__link">
     Labeled Property Graph
   </a>
@@ -605,6 +612,13 @@
         <li class="md-nav__item">
   <a href="#semantics" class="md-nav__link">
     Semantics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-graph" class="md-nav__link">
+    Semantic Graph
   </a>
   
 </li>
@@ -941,6 +955,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    Label
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#labeled-property-graph" class="md-nav__link">
     Labeled Property Graph
   </a>
@@ -1062,6 +1083,13 @@
         <li class="md-nav__item">
   <a href="#semantics" class="md-nav__link">
     Semantics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#semantic-graph" class="md-nav__link">
+    Semantic Graph
   </a>
   
 </li>
@@ -1239,6 +1267,9 @@ See also: <a href="#index-free-adjacency">Index Free Adjacency</a></p>
 <h4 id="knowledge-triangle">Knowledge Triangle</h4>
 <p>A stack of three layers.  At the base is the <a href="#data-layer">Data Layer</a>, above that the <a href="#information-layer">Information Layer</a> and at the top the <a href="#knowledge-layer">Knowledge Layer</a>.
 <img alt="Knowledge Trainagle" src="../img/knowledge-triangle.png" /></p>
+<h4 id="label">Label</h4>
+<p>A string associated with one or more <a href="#concept">Concepts</a>.</p>
+<p>Labels have two main types: <a href="#preferred-lable">Preferred Labels</a> and <a href="#alternate-lable">Alternate Labels</a>.  Most formal ontologies and taxonomies only permit a single preferred label for each Concept in a given Language.</p>
 <h4 id="labeled-property-graph">Labeled Property Graph</h4>
 <p>A graph data model where each Vertex and Edge have a single type and goth Vertices and Edges have attributes.
 Both TigerGraph and Neo4j use the LPG data model.
@@ -1293,6 +1324,8 @@ one and only one preferred label per language per concept.</p>
 <h4 id="semantics">Semantics</h4>
 <p>The branch of computer science associated with meaning.  It can be best understood by understanding the semantic triangle.  The key point of the semantic triangle is that we cannot directly associate a label with a referent without traversing concepts. </p>
 <p><img alt="Semantic Triangle" src="../img/semantic-triangle.png" /></p>
+<h4 id="semantic-graph">Semantic Graph</h4>
+<p>A graph where each vertex represents a <a href="#concept">Concept</a> and the edges of the graph represent the relationships between the Concepts.  The primary data model for storing semantic graphs is the <a href="#simple-knowledge-organization-system">SKOS</a> data model where Concepts and <a href="#label">Labels</a> are distinct types.</p>
 <h4 id="shapes-constraint-language">Shapes Constraint Language</h4>
 <p>A W3C standard RDF vocabulary for validating RDF graphs against a set of conditions.</p>
 <p>Unlike document validation standards like XML Schema, SHACL assumes that data quality checks should be able to look for relationships in a graph as well as the local context of a document.  These conditions are provided as shapes and other constructs expressed in the form of an RDF graph.  LPG graphs do not yet have a version of SHACL.
