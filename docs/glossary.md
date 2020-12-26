@@ -108,8 +108,18 @@ In contrast, [Exogenous Knowledge](#endongenic-knowledge) is the knowledge that 
 #### Emergence
 When an entity is observed to have properties its parts do not have on their own, properties or behaviors which emerge only when the parts interact in a wider whole.
 
-Emergence is a primary reason to build enterprise knowledge graphs.  Emergence allows us to find new insights in data that we could not find without connected data.  Unfortunately, there are few ways to predict the rate and value of insights that emerge when we connect new knowledge into a enterprise knowledge graph.  The value of emergence can be difficult to predict without a team that has experience with similar prior projects.
+Emergence is a primary reason to build enterprise knowledge graphs.  Emergence allows us to find new insights in data that we could not find without connected data.  Unfortunately, there are few ways to predict the rate and value of insights that emerge when we connect new knowledge into an enterprise knowledge graph.  The value of emergence can be difficult to predict without a team that has experience with similar prior projects.
 [Wikipedia Page on https://en.wikipedia.org/wiki/Emergence](https://en.wikipedia.org/wiki/Emergence)
+
+#### Employee Graph
+A graph representation of all your organization employees and their activities.  For each employee, the graph may contain items such as reporting structure, job titles, roles, work history, education, training, certifications, current skills, security access groups, goals, projects, tasks assigned, helpdesk tickets, bugs assigned, bugs fixed, inventions, desktop hardware, software being used, software licenses, emails, meetings, salary and performance reviews.
+
+A detailed employee graph can be used to match available staff with new projects and find similar employees for career mentoring.  Employee graphs can also be used to predict the impact of employees that leave an organization, what employees work as ambassadors between groups, and what teams will be the most productive.
+
+Due to confidentially reasons, sensitive employee data is often stored in a [subgraph](#subgraph) with specific [access controls].
+
+<br/>Also know as: Human Resources Graph
+<br/>Also know as: Human Capital Graph
 
 #### Enterprise Knowledge Graph
 A scalable graph database system used to store large-scale connected information for an entire enterprise.
@@ -166,6 +176,13 @@ See also: [Index Free Adjacency](#index-free-adjacency)
 #### Graph Isomorphism
 A graph can exist in different forms having the same number of vertices, edges, and also the same edge connectivity. Such graphs are called isomorphic graphs.
 
+#### Hedgehog vs Fox Modeling
+Focus on accurate modeling a single domain or [subgraph](#subgraph) of an enterprise knowledge graph (the Hedgehog) vs general modeling of a wide variety of subgraphs or domains.
+
+The term comes from [Archilochus](https://en.wikipedia.org/wiki/Archilochus) who stated "a fox knows many things, but a hedgehog knows one important thing".
+
+There are pros and cons for taking different approaches.  No single strategy will work for all enterprise knowledge graphs at all times.  The involvement of subject-matter experts (hedgehogs) at different times in the lifecycle of an enterprise knowledge graph will impact the evolution of enterprise knowledge graphs.
+
 #### Index Free Adjacency
 Accessing related entities in a system without having to consult a centralized index.  Using direct in-memory pointers to represent relationships is approximately three orders of magnitude faster than referencing a central index system.
 <br/>See also: The Neighborhood Walk Story
@@ -184,7 +201,9 @@ A layer in the knowledge triangle that contains connected information.  The know
 #### Knowledge Graph
 A set of interconnected typed entities and their attributes.
 
-Entities can be any business objects, customers, products, parts, documents, or concepts.  Entities are usually implemented as vertices in a graph database and connected through edges.  In some types of graphs (LPGs), edges also have attributes.
+Entities can be any business objects, customers, products, parts, documents, employees or concepts.  Entities are usually implemented as vertices in a graph database and connected through edges.  In some types of graphs, for example [LPGs](#labeled-property-graphs), edges also have attributes.
+
+Note that this definition has no dependence on semantics and inference.  Our definition is intentionally designed to include many types of interconnected datasets.  We think your organizational chart is a type of knowledge graph an may be a subgraph of your enterprise knowledge graph.
 
 #### Knowledge Triangle
 A stack of three layers.  At the base is the [Data Layer](#data-layer), above that the [Information Layer](#information-layer) and at the top the [Knowledge Layer](#knowledge-layer).
@@ -292,6 +311,15 @@ A model for expressing the basic structure and content of concept schemes such a
 the name of the world-wide-web standard for encoding these systems.  Serializations of SKOS are typically done in RDF format although other encodings such as XML and JSON are common.
 <br/>See Also: [W3C SKOS Primer](https://www.w3.org/TR/skos-primer/)
 <br/>See Also: [W2C SKOS Referecnce](https://www.w3.org/2009/08/skos-reference/skos.html)
+
+#### Strategy Graph
+A graph that is used to help determine what strategies might be optimal for an enterprise or a subgroup as well as how organizations are performing on a specific strategy.
+
+To be successful, enterprise and departmental strategies must be encoded in machine-readable forms such as [StratML](https://en.wikipedia.org/wiki/Strategy_Markup_Language) and loaded into an enterprise knowledge graph.
+
+Strategy graphs can also be used to determine the alignment of proposed projects for the future in an organization.
+
+StratML encoding is sometimes required of US federal organizations so that strategies can be analyzed by published public documents.
 
 #### Subgraph
 A subset of an enterprise knowledge graph that may store specific types of knowledge and may have specific access control rules based on the role of a user.
