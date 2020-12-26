@@ -12,6 +12,13 @@ A type of variable that tracks items as you traverse through a graph.  Accumulat
 
 Accumulators allow MapReduce style queries where each server node in a cluster does work in its local data and returns consolidated results to the query node.  For example, in the query *"count all customers that have returned clothing items"*, each node would return only a single count to the query node.  This type of query reduces the amount of communication between nodes in the graph cluster.
 
+#### Availability Heuristic
+The availability heuristic suggests that the likelihood of events is estimated based on how many examples of such events come to mind.
+
+For example, when a soltuion architect is presented with a business problem, their likelihood to recomend an enterprise knowledge graph solution is dependant on how many examples of successful enterprise knowledge graph project come to mind.  Surrounding solution architects with many successful stories or case studies of successful enterprise knowledge graph projects may positivly impact their probability of enterprise knowledge graph recomendations.
+<br/>See also: [Cognitive Bias](#cognitive-bias)
+<br/>[Wikipeida Case Study](https://en.wikipedia.org/wiki/Case_study#In_business)
+
 #### A Priori and A Posteriori
 A priori knowledge is that which is independent of experience. A posteriori knowledge is that which depends on empirical evidence.  The rules of mathematics, logic, and business rules are usually classified as a priori read-access is usually shared across all users of an enterprise knowledge graph.  Knowledge about a specific observable event, observation, customer transaction, etc. are considered A Posteriori and may not need to be universally accessed.
 
@@ -56,14 +63,18 @@ In this book we study why humans don't adopt enterprise knowledge graph technolg
 
 In this book we study several types of cognitive bias including:
 
-1. [Anchoring](#)
-2. [Availability bias](#)
-3. [Bandwagon effect](#)
-4. [Confirmation bias](#)
-5. [Filter bubble](#)
-6. [Framing effect](#)
-7. [Narrative bias](#)
-9. [Sunk cost](#)
+1. [Anchoring bias](#anchoring-bias)
+2. [Availability bias](#availability-bias) a.k.a. memory bias, familiarity heuristic
+3. [Bandwagon effect](#bandwagon-effect)
+4. [Confirmation bias](#confirmation-bias) a.k.a. Fiter bubble
+5. [Halo effect](#halo-effect)
+6. [Hindsight bias](#hindsight-bias)
+7. [Illusory superiority bias](#illusory-superiority-bias)
+8. [Framing effect](#framing-effect)
+9. [Narrative-bias](#narrative-bias)
+10. [Representativeness heuristic](#representativeness-heuristic)
+11. [Status_quo_bias](#status-quo-bias)
+12. [Sunk cost](#sunk-cost) a.k.a. Gamblers fallacy
 
 [Wikipedia on Congnitive Bias](https://en.wikipedia.org/wiki/Cognitive_bias)
 
