@@ -1,9 +1,22 @@
 # Enterprise Knowledge Graph Glossary of Terms
 
+#### ABox
+Types of assertions or statements in a knowledge graph that conform to specific terminologies (knows as [TBox](#tbox) statements).  The terms ABox and TBox are used to help determine if a statement is universal or related to a specific [Subgraph](#subgraph) of an [Enterpriese Knowledge Graph](#enterprise-knowledge-graph).
+
+Within our Enterprise Knowledge Graph architecture, ABox statements often contain knowledge about specific customers, parts, or concepts and may have specific [Access Control](#access-control) rules.  TBox statements don't usually have these same access rules.
+<br/>See also: TBox
+<br/>[Wikipedia page on ABox](https://en.wikipedia.org/wiki/Abox)
+
 #### Accumulator
 A type of variable that tracks items as you traverse through a graph.  Accumulators can be global or be attached to a specific vertex.
 
 Accumulators allow MapReduce style queries where each server node in a cluster does work in its local data and returns consolidated results to the query node.  For example, in the query *"count all customers that have returned clothing items"*, each node would return only a single count to the query node.  This type of query reduces the amount of communication between nodes in the graph cluster.
+
+#### A Priori and A Posteriori
+A priori knowledge is that which is independent of experience. A posteriori knowledge is that which depends on empirical evidence.  The rules of mathematics, logic, and business rules are usually classified as a priori read-access is usually shared across all users of an enterprise knowledge graph.  Knowledge about a specific observable event, observation, customer transaction, etc. are considered A Posteriori and may not need to be universally accessed.
+
+In an enterprise knowledge graph, a priori knowledge tends to be more universal such as TBox assertions that are universally accessible by all [subgraphs](#subgraph).
+https://en.wikipedia.org/wiki/A_priori_and_a_posteriori
 
 #### Automaic Sharding
 The process of automatically migrating data from one server to another server in a distributed database.  Auto-sharding is frequently done as a database cluster grows or shrinks based on new data being added or removed from the cluster.
@@ -84,6 +97,12 @@ A web site that harvests web documents that discuss databases and classifies the
 #### Embedding
 A data structure, usually a vector of decimal numbers, associated with an item in a graph, that helps users quickly find similar items.  Vertices, Edges, and Paths may all have embeddings.
 
+#### https://en.wikipedia.org/wiki/Emergence
+When an entity is observed to have properties its parts do not have on their own, properties or behaviors which emerge only when the parts interact in a wider whole.
+
+Emergence is a primary reason to build enterprise knowledge graphs.  Emergence allows us to find new insights in data that we could not find without connected data.  Unfortunately, there are few ways to predict the rate and value of insights that emerge when we connect new knowledge into a enterprise knoweledge graph.  The value of emergence can be difficult to predict without a team that has experience with similar prior projects.
+[Wikipedia Page on https://en.wikipedia.org/wiki/Emergence](https://en.wikipedia.org/wiki/Emergence)
+
 #### Enterprise Knowledge Graph
 A scalable graph database system used to store large-scale connected information for an entire enterprise.
 
@@ -96,6 +115,13 @@ The process of finding records in a data set that refer to the same entity acros
 
 Entity Resolution is a core technique in converting Information layer data into a consistent knowledge graph.
 <br/>[Wikipeia Record Linkage](https://en.wikipedia.org/wiki/Record_linkage)
+
+#### Exogenous Knowledge
+Knowledge “coming from outside” of your Enterprise Knowledge Graph.
+
+Finding out what exogenous knowledge you need to make accurate predictions is an emerging area of enterprise knowledge graphs.
+
+In economic modeling, exogenous events means an influence that arises from outside the scope of your model and that is, therefore, neither predicted nor explained by the model.
 
 #### Force Directed Graph
 A graph layout algorithm that simulates forces on springs that move items 
@@ -196,6 +222,12 @@ https://en.wikipedia.org/wiki/Closed-world_assumption
 #### Operational Source System
 A transactional computer that is the source of a data stream.  Enterprise Graph Databases often use [Change Data Capture](#change-data-capture) software on these systems to create an event stream of change records that so they can be stored in a central enterprise knowledge graph.  Change records are new, updated, or deleted business entities.
 
+#### PageRank
+A graph algorithm that is used to rank the most influential vertices in a directed graph.  For example web pages in a graph of linked web pages.
+
+PageRank was first used by Google Search to rank web pages in their search engine results.  The patent for PageRank (now expired) was purchased by Google from Standford University for Google shares.  Those shares sold for over $336 million USD when Google went public.
+<br/>[Wikipedia](https://en.wikipedia.org/wiki/PageRank)
+
 #### Preferred Label
 A preferred lexical label associated with a [Concept](#concept).  In the [SKOS](#skos) standard, there should be
 one and only one preferred label per language per concept.
@@ -250,6 +282,12 @@ the name of the world-wide-web standard for encoding these systems.  Serializati
 <br/>See Also: [W3C SKOS Primer](https://www.w3.org/TR/skos-primer/)
 <br/>See Also: [W2C SKOS Referecnce](https://www.w3.org/2009/08/skos-reference/skos.html)
 
+#### Subgraph
+A subset of an enterprise knowledge graph that may store specific types of knowledge and may have specific access control rules based on the role of a user.
+
+For example, a business glossary, taxonomy, ontology or business rules system that contains no customer-specific information may be in one subgraph and have universal read-access for all users.  Customer-specific data that is highly confidential may be stored in a different subgraph, with read access only granted on a need-to-know basis.
+<br/>See also:[Role Based Access Control](#role-based-access-control)
+
 #### Sustainability
 The ability for a team of developers to maintain the code that supports an enterprise knowledge graph in the face of changes to the data model.  The key measure is to avoid problems related to rewriting graph queries when small changes are made to the graph data model.
 <br/>See also: The Jenga Tower Story
@@ -257,12 +295,23 @@ The ability for a team of developers to maintain the code that supports an enter
 #### Systems Thinking
 A way of looking at problems in terms of components that interact with each other over time using direct connections, indirection connections and both positive and negative feedback cycles.  Systems Thinking forces us to think broadly about how our enterprise knowledge graphs interact with external systems.  Systems thinking also helps us see the unintended consequences of our actions.
 
+#### TBox
+A "terminological component" or terminology [Concept](#concept) associated with a set of facts assertions (ABox statements) of a knowledge graph.
+
+TBox statements tend to more rules or metarules (rules about rules) that individual fact about customers or other business entities.
+<br/>See also: [ABox](#abox)
+<br/>[Wikipedia Tbox page](https://en.wikipedia.org/wiki/Tbox)
+
 #### Temporal Modeling
 The process of modeling time in a data model.  Modeling time can be complex when the requirements of a system require you to be able to recreate detailed reports as they were at a prior point in time. Temporal modeling includes the concept of versioning and [bitemporal modeling](#bitermporal-modeling)
 
 #### Triple Store
 A purpose-built database for the storage and retrieval of RDF triples through semantic queries.  Triple stores are not used in most enterprise graphs due to their lack of [sustanability](#sustanability) due to problems with [Reification](#Reification).
 https://en.wikipedia.org/wiki/Triplestore
+
+#### Upper Ontology
+General high-level [Concepts](#concept) that are common across all domains in a knowledge graph.  Concepts such as Organization, Customer, Family Unit, Product, Part, Invoice, Document are often consider part of an upper ontology.  Enterprise graphs may contain multiple ontologies and the ease of linking ontologies in highly dependant on sharing upper ontologies.
+<br/>[Wikipedia Page on Upper Ontology](https://en.wikipedia.org/wiki/Upper_ontology)
 
 #### Web Ontology Language
 A Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things.
