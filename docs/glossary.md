@@ -49,6 +49,24 @@ Software that detects changes in a database and transmits the change information
 <br/>Also known as: CDC
 [Wikipedia page on Change Data Capture](https://en.wikipedia.org/wiki/Change_data_capture)
 
+#### Cognitive Bias
+A systematic pattern of deviation from norm or rationality in judgment.
+
+In this book we study why humans don't adopt enterprise knowledge graph technolgy and how we can use stories, demonstrations and economic reasoning to overcome these bias.
+
+In this book we study several types of cognitive bias including:
+
+1. [Anchoring](#)
+2. [Availability bias](#)
+3. [Bandwagon effect](#)
+4. [Confirmation bias](#)
+5. [Filter bubble](#)
+6. [Framing effect](#)
+7. [Narrative bias](#)
+9. [Sunk cost](#)
+
+[Wikipedia on Congnitive Bias](https://en.wikipedia.org/wiki/Cognitive_bias)
+
 #### Concept
 An idea, notion or a unit of thought.  Concept elements are the fundamental unit of work in semantics and are in integral part of enterprise knowledge graphs. 
 
@@ -183,6 +201,13 @@ The term comes from [Archilochus](https://en.wikipedia.org/wiki/Archilochus) who
 
 There are pros and cons for taking different approaches.  No single strategy will work for all enterprise knowledge graphs at all times.  The involvement of subject-matter experts (hedgehogs) at different times in the lifecycle of an enterprise knowledge graph will impact the evolution of enterprise knowledge graphs.
 
+#### Higher Order Knowledge
+A height-related metaphor that is used to describe more abstract knowledge that is more universal in an enterprise knowledge graph.  The concept of "height" is related to the layers of the [Knowledge Triange](#knowledge-triangle).
+
+For example, the idea behind "higher-order thinking" is that some types of learning requires more cognitive processing than others, but also have more generalized benefits.  Within knowledge graphs this may not translate into more CPU time for query traversal, but may depend on having more abstract vertices and edges in an upper or mid-range ontology.
+
+<br/>[Wikipedia page on Higher Order Thinking](https://en.wikipedia.org/wiki/Higher-order_thinking)
+
 #### Index Free Adjacency
 Accessing related entities in a system without having to consult a centralized index.  Using direct in-memory pointers to represent relationships is approximately three orders of magnitude faster than referencing a central index system.
 <br/>See also: The Neighborhood Walk Story
@@ -204,6 +229,17 @@ A set of interconnected typed entities and their attributes.
 Entities can be any business objects, customers, products, parts, documents, employees or concepts.  Entities are usually implemented as vertices in a graph database and connected through edges.  In some types of graphs, for example [LPGs](#labeled-property-graphs), edges also have attributes.
 
 Note that this definition has no dependence on semantics and inference.  Our definition is intentionally designed to include many types of interconnected datasets.  We think your organizational chart is a type of knowledge graph an may be a subgraph of your enterprise knowledge graph.
+
+#### Knowledge Represenation
+The process of representing information (individual facts) about the world in a form that a computer system can utilize to solve complex tasks.
+
+Within the context of the enterprise knowledge graph, we used graph databases as our primary way to store knowledge and we complement graph databases with search engines and key-value stores when they are more efficient.  There is no single knowledge reprenstation that is ideal for all problems.
+
+Graph database are the preferred way to store knowledge because efficient reasoning can be implemented as fast pointer-hopping operations that can be optimized by specialized hardware.
+
+Knowledge representation is often the most complex challenge in the field of Artificial Intelligence.
+
+<br/>[Wikipedia Page on Knowledge Represntaion](https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning)
 
 #### Knowledge Triangle
 A stack of three layers.  At the base is the [Data Layer](#data-layer), above that the [Information Layer](#information-layer) and at the top the [Knowledge Layer](#knowledge-layer).
