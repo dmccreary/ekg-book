@@ -309,6 +309,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cognitive-bias" class="md-nav__link">
+    Cognitive Bias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#concept" class="md-nav__link">
     Concept
   </a>
@@ -491,6 +498,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#higher-order-knowledge" class="md-nav__link">
+    Higher Order Knowledge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#index-free-adjacency" class="md-nav__link">
     Index Free Adjacency
   </a>
@@ -521,6 +535,13 @@
         <li class="md-nav__item">
   <a href="#knowledge-graph" class="md-nav__link">
     Knowledge Graph
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-represenation" class="md-nav__link">
+    Knowledge Represenation
   </a>
   
 </li>
@@ -864,6 +885,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cognitive-bias" class="md-nav__link">
+    Cognitive Bias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#concept" class="md-nav__link">
     Concept
   </a>
@@ -1046,6 +1074,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#higher-order-knowledge" class="md-nav__link">
+    Higher Order Knowledge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#index-free-adjacency" class="md-nav__link">
     Index Free Adjacency
   </a>
@@ -1076,6 +1111,13 @@
         <li class="md-nav__item">
   <a href="#knowledge-graph" class="md-nav__link">
     Knowledge Graph
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knowledge-represenation" class="md-nav__link">
+    Knowledge Represenation
   </a>
   
 </li>
@@ -1365,6 +1407,21 @@ can have a dramatic increase on the search quality of a search engine.</p>
 <p>Software that detects changes in a database and transmits the change information via <a href="#business-event">business events</a> to a remote system.  These events are often published on stream processing systems using the publish/subscribe integration pattern.
 <br/>Also known as: CDC
 <a href="https://en.wikipedia.org/wiki/Change_data_capture">Wikipedia page on Change Data Capture</a></p>
+<h4 id="cognitive-bias">Cognitive Bias</h4>
+<p>A systematic pattern of deviation from norm or rationality in judgment.</p>
+<p>In this book we study why humans don't adopt enterprise knowledge graph technolgy and how we can use stories, demonstrations and economic reasoning to overcome these bias.</p>
+<p>In this book we study several types of cognitive bias including:</p>
+<ol>
+<li><a href="#">Anchoring</a></li>
+<li><a href="#">Availability bias</a></li>
+<li><a href="#">Bandwagon effect</a></li>
+<li><a href="#">Confirmation bias</a></li>
+<li><a href="#">Filter bubble</a></li>
+<li><a href="#">Framing effect</a></li>
+<li><a href="#">Narrative bias</a></li>
+<li><a href="#">Sunk cost</a></li>
+</ol>
+<p><a href="https://en.wikipedia.org/wiki/Cognitive_bias">Wikipedia on Congnitive Bias</a></p>
 <h4 id="concept">Concept</h4>
 <p>An idea, notion or a unit of thought.  Concept elements are the fundamental unit of work in semantics and are in integral part of enterprise knowledge graphs. </p>
 <p>In practice, each concept is usually associated with a vertex in a graph and has one preferred label in each language such as English.  Concepts may have many alternate labels.
@@ -1453,6 +1510,10 @@ See also: <a href="#index-free-adjacency">Index Free Adjacency</a></p>
 <p>Focus on accurate modeling a single domain or <a href="#subgraph">subgraph</a> of an enterprise knowledge graph (the Hedgehog) vs general modeling of a wide variety of subgraphs or domains.</p>
 <p>The term comes from <a href="https://en.wikipedia.org/wiki/Archilochus">Archilochus</a> who stated "a fox knows many things, but a hedgehog knows one important thing".</p>
 <p>There are pros and cons for taking different approaches.  No single strategy will work for all enterprise knowledge graphs at all times.  The involvement of subject-matter experts (hedgehogs) at different times in the lifecycle of an enterprise knowledge graph will impact the evolution of enterprise knowledge graphs.</p>
+<h4 id="higher-order-knowledge">Higher Order Knowledge</h4>
+<p>A height-related metaphor that is used to describe more abstract knowledge that is more universal in an enterprise knowledge graph.  The concept of "height" is related to the layers of the <a href="#knowledge-triangle">Knowledge Triange</a>.</p>
+<p>For example, the idea behind "higher-order thinking" is that some types of learning requires more cognitive processing than others, but also have more generalized benefits.  Within knowledge graphs this may not translate into more CPU time for query traversal, but may depend on having more abstract vertices and edges in an upper or mid-range ontology.</p>
+<p><br/><a href="https://en.wikipedia.org/wiki/Higher-order_thinking">Wikipedia page on Higher Order Thinking</a></p>
 <h4 id="index-free-adjacency">Index Free Adjacency</h4>
 <p>Accessing related entities in a system without having to consult a centralized index.  Using direct in-memory pointers to represent relationships is approximately three orders of magnitude faster than referencing a central index system.
 <br/>See also: The Neighborhood Walk Story</p>
@@ -1467,6 +1528,12 @@ See also: <a href="#index-free-adjacency">Index Free Adjacency</a></p>
 <p>A set of interconnected typed entities and their attributes.</p>
 <p>Entities can be any business objects, customers, products, parts, documents, employees or concepts.  Entities are usually implemented as vertices in a graph database and connected through edges.  In some types of graphs, for example <a href="#labeled-property-graphs">LPGs</a>, edges also have attributes.</p>
 <p>Note that this definition has no dependence on semantics and inference.  Our definition is intentionally designed to include many types of interconnected datasets.  We think your organizational chart is a type of knowledge graph an may be a subgraph of your enterprise knowledge graph.</p>
+<h4 id="knowledge-represenation">Knowledge Represenation</h4>
+<p>The process of representing information (individual facts) about the world in a form that a computer system can utilize to solve complex tasks.</p>
+<p>Within the context of the enterprise knowledge graph, we used graph databases as our primary way to store knowledge and we complement graph databases with search engines and key-value stores when they are more efficient.  There is no single knowledge reprenstation that is ideal for all problems.</p>
+<p>Graph database are the preferred way to store knowledge because efficient reasoning can be implemented as fast pointer-hopping operations that can be optimized by specialized hardware.</p>
+<p>Knowledge representation is often the most complex challenge in the field of Artificial Intelligence.</p>
+<p><br/><a href="https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning">Wikipedia Page on Knowledge Represntaion</a></p>
 <h4 id="knowledge-triangle">Knowledge Triangle</h4>
 <p>A stack of three layers.  At the base is the <a href="#data-layer">Data Layer</a>, above that the <a href="#information-layer">Information Layer</a> and at the top the <a href="#knowledge-layer">Knowledge Layer</a>.
 <img alt="Knowledge Trainagle" src="../img/knowledge-triangle.png" /></p>
