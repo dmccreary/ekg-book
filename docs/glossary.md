@@ -97,10 +97,18 @@ A web site that harvests web documents that discuss databases and classifies the
 #### Embedding
 A data structure, usually a vector of decimal numbers, associated with an item in a graph, that helps users quickly find similar items.  Vertices, Edges, and Paths may all have embeddings.
 
-#### https://en.wikipedia.org/wiki/Emergence
+#### Endogenic Knowledge
+The knowledge that is modeled within your existing enterprise knowledge graph.
+
+Finding out if your current endogenic knowledge can promote adequate recommendations and predictions is a key strategy in enterprise graph evolution.
+
+In contrast, [Exogenous Knowledge](#endongenic-knowledge) is the knowledge that is not modeled inside your current knowledge graph.
+<br/>[Wikipedia page on Endogeneity](https://en.wikipedia.org/wiki/Endogeneity_(econometrics))
+
+#### Emergence
 When an entity is observed to have properties its parts do not have on their own, properties or behaviors which emerge only when the parts interact in a wider whole.
 
-Emergence is a primary reason to build enterprise knowledge graphs.  Emergence allows us to find new insights in data that we could not find without connected data.  Unfortunately, there are few ways to predict the rate and value of insights that emerge when we connect new knowledge into a enterprise knoweledge graph.  The value of emergence can be difficult to predict without a team that has experience with similar prior projects.
+Emergence is a primary reason to build enterprise knowledge graphs.  Emergence allows us to find new insights in data that we could not find without connected data.  Unfortunately, there are few ways to predict the rate and value of insights that emerge when we connect new knowledge into a enterprise knowledge graph.  The value of emergence can be difficult to predict without a team that has experience with similar prior projects.
 [Wikipedia Page on https://en.wikipedia.org/wiki/Emergence](https://en.wikipedia.org/wiki/Emergence)
 
 #### Enterprise Knowledge Graph
@@ -122,6 +130,9 @@ Knowledge “coming from outside” of your Enterprise Knowledge Graph.
 Finding out what exogenous knowledge you need to make accurate predictions is an emerging area of enterprise knowledge graphs.
 
 In economic modeling, exogenous events means an influence that arises from outside the scope of your model and that is, therefore, neither predicted nor explained by the model.
+
+In contrast, [Endogenic Knowledge](#endongenic-knowledge) is the knowledge that is modeled within your enterprise knowledge graph.
+<br/>[Wikipedia page on Exogeny](https://en.wikipedia.org/wiki/Exogeny)
 
 #### Force Directed Graph
 A graph layout algorithm that simulates forces on springs that move items 

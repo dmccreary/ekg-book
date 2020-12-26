@@ -9,6 +9,7 @@ site_description: 'Enterprise Knowledge Graphs'
 site_author: 'Dan McCreary'
 repo_name: 'ekg-book'
 repo_url: 'https://github.com/dmccreary/ekg-book'
+
 edit_uri: 'blob/master/docs'
 theme:
   name: material
