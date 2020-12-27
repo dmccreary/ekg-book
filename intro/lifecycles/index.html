@@ -19,7 +19,7 @@
     
     
       
-        <title>Chapter 1: What is an Enterprise Knowledge Graph - Enterprise Knowledge Graphs</title>
+        <title>Enterprise Knowledge Graph Life cycles - Enterprise Knowledge Graphs</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-1-what-is-an-enterprise-knowledge-graph" class="md-skip">
+        <a href="#enterprise-knowledge-graph-life-cycles" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Chapter 1: What is an Enterprise Knowledge Graph
+              Enterprise Knowledge Graph Life cycles
             
           </span>
         </div>
@@ -255,36 +255,51 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nosql-architectural-patterns" class="md-nav__link">
-    NoSQL Architectural Patterns
+  <a href="#the-first-customer" class="md-nav__link">
+    The First Customer
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#defining-enterprise-knowledge-graphs" class="md-nav__link">
-    Defining Enterprise Knowledge Graphs
+  <a href="#the-pilot" class="md-nav__link">
+    The Pilot
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scalable-knowledge-graphs" class="md-nav__link">
-    Scalable Knowledge Graphs
-  </a>
-  
-    <nav class="md-nav" aria-label="Scalable Knowledge Graphs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scalability-means-automatic-sharding" class="md-nav__link">
-    Scalability Means Automatic Sharding
+  <a href="#going-into-production" class="md-nav__link">
+    Going Into Production
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#the-second-customer" class="md-nav__link">
+    The Second Customer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finding-customers" class="md-nav__link">
+    Finding Customers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charge-backs" class="md-nav__link">
+    Charge Backs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-value-of-insight" class="md-nav__link">
+    The Value of Insight
+  </a>
   
 </li>
       
@@ -300,7 +315,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/dmccreary/ekg-book/blob/master/docs/intro/introduction.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/dmccreary/ekg-book/blob/master/docs/intro/lifecycles.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -308,46 +323,22 @@
                   
                 
                 
-                <h1 id="chapter-1-what-is-an-enterprise-knowledge-graph">Chapter 1: What is an Enterprise Knowledge Graph</h1>
-<ol>
-<li>NoSQL architectural patterns</li>
-<li>Defining enterprise knowledge graphs</li>
-<li>The Role of architectural scalability</li>
-<li>Growth Rates of graph databases technology</li>
-<li>Scale out graph database hardware</li>
-<li>Scale out graph query languages</li>
-</ol>
-<h2 id="nosql-architectural-patterns">NoSQL Architectural Patterns</h2>
-<p>Enterprise Knowledge Graphs (EKGs) are a type of <a href="glossary.md#graph-database">graph database</a> that are designed to scale to meet the demanding requirements of large organizations.  Graph databases are just one type of NoSQL database architectural patten that we use to solve business problems.  The six types of NoSQL database architectural patterns are described in Figure 1.1.</p>
-<p><img alt="NoSQL Architectural Patterns" src="../../img/nosql-architectural-patterns.png" /></p>
-<p>The six key architectures are:</p>
-<ol>
-<li><strong><a href="../../glossary/#relational-database">Relational</a></strong> - where data is stored in rows of tables and new data is added one row at a time.  Relationships between tables are calculated at query time using JOIN statements that require central indexes to be used to traverse the relationships.  Also known as row-stores.</li>
-<li><strong>[Analytical](../glossary.md#analytical-database</strong> - where data is stored in centralized fact tables with simple relationships to dimensional tables.  Dimensions each represent a way you classify the facts in the fact table.  Analytical databases severely restrict the number of JOIN operations to optimise performance but force everyone to agree on the dimensions used to classify data.  Analytical databases tend to be the most difficult to use between departments since the <a href="glossary.md#denomalization">denormalization</a> isprocess can be very specific to a single departments view of the enterprise.</li>
-<li>**<a href="../../glossary/#key-value-store">Key-value Store</a></li>
-<li>**<a href="../../glossary/#column-family-store">Column-family Store</a></li>
-<li>**<a href="../../glossary/#graph-database">Graph Database</a></li>
-<li>**<a href="../../glossary/#document-store">Document Store</a></li>
-</ol>
-<h2 id="defining-enterprise-knowledge-graphs">Defining Enterprise Knowledge Graphs</h2>
-<p>In this book, we define Enterprise Knowledge Graphs as the following:</p>
-<p><strong>An Enterprise Knowledge Graph ia a scalable graph database that stores information from two or more departments of an organization.</strong></p>
-<p>You will note that this definition is both somewhat general and very specific.  It is general because it includes many graph projects using a wide variety of technologies.  It is very specific in that it requires whatever graph database being used to have scalable technology under the hood.  Unfortunately, this eliminates most departmental graph projects in use today.</p>
-<p>Why do we define EKGs with scalability as a prerequisite?  Because to truly meet the future needs of a large enterprise we must build our graph on an infrastructure that will not fall over and die as it grows beyond the initial pilot phase.  I have seen many well intentioned software architects claim to be building enterprise scalable graph databases only to have the projects fail due to performance problems as they grow beyond their early stages.</p>
-<p>We also exclude knowledge graphs that are only attempting to solve problems for a specific department or specific business unit.  These can still be valuable projects for an enterprise since they can help individuals and departments learn the capabilities of graph databases.</p>
-<p>Now let's take a closer look at what we mean by scalable.</p>
-<h2 id="scalable-knowledge-graphs">Scalable Knowledge Graphs</h2>
-<p>Scalability is an inherent characteristic of any database architecture.  It implies that as the size an complexity of the databases grows, the architecture must accommodate this growth without rewriting the core applications.  Although unexpected performance problems with specific queries might occur as the size of your database grows, they should be fixable by doing simple query optimization.</p>
-<p>The key aspect of scalable graph databases is the ability to distribute a graph over a large number of independent but closely connected servers in a data center.  As demands grows, the number of servers in the cluster must easily scale without users or operations being impacted.</p>
-<h3 id="scalability-means-automatic-sharding">Scalability Means Automatic Sharding</h3>
-<p>The first criteria is that when the size of the enterprise graph grows to take on a new department or a new project, new hardware can be installed and the database is smart enough to use the new hardware without extensive pain and suffering by the database staff.  This is illustrated in Figure 1.2</p>
-<!--
-Non-published notes:
-
-Note this definition does not address the word "enterprise":
-
-https://help.poolparty.biz/pp/white-papers-release-notes/poolparty-technical-white-paper/an-enterprise-knowledge-graph-life-cycle-a-summary/the-enterprise-knowledge-graph-a-definition
-->
+                <h1 id="enterprise-knowledge-graph-life-cycles">Enterprise Knowledge Graph Life cycles</h1>
+<ul>
+<li>How EKGs work in practice</li>
+<li>Pilot projects</li>
+<li>Going into production</li>
+<li>Finding customers</li>
+<li>Charge backs</li>
+<li>The value of insight</li>
+</ul>
+<h2 id="the-first-customer">The First Customer</h2>
+<h2 id="the-pilot">The Pilot</h2>
+<h2 id="going-into-production">Going Into Production</h2>
+<h2 id="the-second-customer">The Second Customer</h2>
+<h2 id="finding-customers">Finding Customers</h2>
+<h2 id="charge-backs">Charge Backs</h2>
+<h2 id="the-value-of-insight">The Value of Insight</h2>
                 
               
               

@@ -19,7 +19,7 @@
     
     
       
-        <title>Chapter 1: What is an Enterprise Knowledge Graph - Enterprise Knowledge Graphs</title>
+        <title>Chapter 2: Why Build An Enterprise Knowledge Graph - Enterprise Knowledge Graphs</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-1-what-is-an-enterprise-knowledge-graph" class="md-skip">
+        <a href="#chapter-2-why-build-an-enterprise-knowledge-graph" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Chapter 1: What is an Enterprise Knowledge Graph
+              Chapter 2: Why Build An Enterprise Knowledge Graph
             
           </span>
         </div>
@@ -255,36 +255,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nosql-architectural-patterns" class="md-nav__link">
-    NoSQL Architectural Patterns
+  <a href="#cost-benefit-analysis" class="md-nav__link">
+    Cost-Benefit Analysis
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#defining-enterprise-knowledge-graphs" class="md-nav__link">
-    Defining Enterprise Knowledge Graphs
+  <a href="#measuring-costs" class="md-nav__link">
+    Measuring Costs
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#scalable-knowledge-graphs" class="md-nav__link">
-    Scalable Knowledge Graphs
-  </a>
-  
-    <nav class="md-nav" aria-label="Scalable Knowledge Graphs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#scalability-means-automatic-sharding" class="md-nav__link">
-    Scalability Means Automatic Sharding
+  <a href="#the-easy-to-measure-benefits" class="md-nav__link">
+    The Easy to Measure Benefits
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#difficult-to-measure-benefits" class="md-nav__link">
+    Difficult to Measure Benefits
+  </a>
   
 </li>
       
@@ -300,7 +294,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/dmccreary/ekg-book/blob/master/docs/intro/introduction.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/dmccreary/ekg-book/blob/master/docs/intro/ekg-cost-benefits.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -308,46 +302,42 @@
                   
                 
                 
-                <h1 id="chapter-1-what-is-an-enterprise-knowledge-graph">Chapter 1: What is an Enterprise Knowledge Graph</h1>
-<ol>
-<li>NoSQL architectural patterns</li>
-<li>Defining enterprise knowledge graphs</li>
-<li>The Role of architectural scalability</li>
-<li>Growth Rates of graph databases technology</li>
-<li>Scale out graph database hardware</li>
-<li>Scale out graph query languages</li>
-</ol>
-<h2 id="nosql-architectural-patterns">NoSQL Architectural Patterns</h2>
-<p>Enterprise Knowledge Graphs (EKGs) are a type of <a href="glossary.md#graph-database">graph database</a> that are designed to scale to meet the demanding requirements of large organizations.  Graph databases are just one type of NoSQL database architectural patten that we use to solve business problems.  The six types of NoSQL database architectural patterns are described in Figure 1.1.</p>
-<p><img alt="NoSQL Architectural Patterns" src="../../img/nosql-architectural-patterns.png" /></p>
-<p>The six key architectures are:</p>
-<ol>
-<li><strong><a href="../../glossary/#relational-database">Relational</a></strong> - where data is stored in rows of tables and new data is added one row at a time.  Relationships between tables are calculated at query time using JOIN statements that require central indexes to be used to traverse the relationships.  Also known as row-stores.</li>
-<li><strong>[Analytical](../glossary.md#analytical-database</strong> - where data is stored in centralized fact tables with simple relationships to dimensional tables.  Dimensions each represent a way you classify the facts in the fact table.  Analytical databases severely restrict the number of JOIN operations to optimise performance but force everyone to agree on the dimensions used to classify data.  Analytical databases tend to be the most difficult to use between departments since the <a href="glossary.md#denomalization">denormalization</a> isprocess can be very specific to a single departments view of the enterprise.</li>
-<li>**<a href="../../glossary/#key-value-store">Key-value Store</a></li>
-<li>**<a href="../../glossary/#column-family-store">Column-family Store</a></li>
-<li>**<a href="../../glossary/#graph-database">Graph Database</a></li>
-<li>**<a href="../../glossary/#document-store">Document Store</a></li>
-</ol>
-<h2 id="defining-enterprise-knowledge-graphs">Defining Enterprise Knowledge Graphs</h2>
-<p>In this book, we define Enterprise Knowledge Graphs as the following:</p>
-<p><strong>An Enterprise Knowledge Graph ia a scalable graph database that stores information from two or more departments of an organization.</strong></p>
-<p>You will note that this definition is both somewhat general and very specific.  It is general because it includes many graph projects using a wide variety of technologies.  It is very specific in that it requires whatever graph database being used to have scalable technology under the hood.  Unfortunately, this eliminates most departmental graph projects in use today.</p>
-<p>Why do we define EKGs with scalability as a prerequisite?  Because to truly meet the future needs of a large enterprise we must build our graph on an infrastructure that will not fall over and die as it grows beyond the initial pilot phase.  I have seen many well intentioned software architects claim to be building enterprise scalable graph databases only to have the projects fail due to performance problems as they grow beyond their early stages.</p>
-<p>We also exclude knowledge graphs that are only attempting to solve problems for a specific department or specific business unit.  These can still be valuable projects for an enterprise since they can help individuals and departments learn the capabilities of graph databases.</p>
-<p>Now let's take a closer look at what we mean by scalable.</p>
-<h2 id="scalable-knowledge-graphs">Scalable Knowledge Graphs</h2>
-<p>Scalability is an inherent characteristic of any database architecture.  It implies that as the size an complexity of the databases grows, the architecture must accommodate this growth without rewriting the core applications.  Although unexpected performance problems with specific queries might occur as the size of your database grows, they should be fixable by doing simple query optimization.</p>
-<p>The key aspect of scalable graph databases is the ability to distribute a graph over a large number of independent but closely connected servers in a data center.  As demands grows, the number of servers in the cluster must easily scale without users or operations being impacted.</p>
-<h3 id="scalability-means-automatic-sharding">Scalability Means Automatic Sharding</h3>
-<p>The first criteria is that when the size of the enterprise graph grows to take on a new department or a new project, new hardware can be installed and the database is smart enough to use the new hardware without extensive pain and suffering by the database staff.  This is illustrated in Figure 1.2</p>
-<!--
-Non-published notes:
-
-Note this definition does not address the word "enterprise":
-
-https://help.poolparty.biz/pp/white-papers-release-notes/poolparty-technical-white-paper/an-enterprise-knowledge-graph-life-cycle-a-summary/the-enterprise-knowledge-graph-a-definition
-->
+                <h1 id="chapter-2-why-build-an-enterprise-knowledge-graph">Chapter 2: Why Build An Enterprise Knowledge Graph</h1>
+<ul>
+<li>Cost-Benefit Analysis</li>
+<li>Business Value</li>
+<li>Measuring EKG costs</li>
+<li>Measuring EKG tangible benefits</li>
+<li>Measuring EKG intangible benefits</li>
+</ul>
+<p>When we build any large resource for an organization we are going to need to ask for money to build it.  If you work for a company like Apple and you are respected expert at building enterprise knowledge graphs, you many not need to go to a finance committee and justify your spending requests.  Apple hires world experts in specific fields and then trusts their judgement.  As long as you have a good track record they will keep giving you funding without asking a lot of questions.</p>
+<p>But most of us don't work at Apple and we are not world leaders with a long successful track record of building EKGs.  We will have to fight for every penny we spend on our EKG pilot projects until the ROI is so clear to everyone that the finance people are begging you to expand the scope of the EKG.</p>
+<p>Until that happens, we are going to need to learn to speak the language of finance to get our EKGs off the ground.</p>
+<h2 id="cost-benefit-analysis">Cost-Benefit Analysis</h2>
+<p>[The Business Value of Computers]
+<a href="https://en.wikipedia.org/wiki/Business_value">Wikipedia on Business Value</a>
+<a href="https://en.wikipedia.org/wiki/Peter_Drucker"></a>
+<a href="https://en.wikipedia.org/wiki/Michael_Porter"></a></p>
+<h2 id="measuring-costs">Measuring Costs</h2>
+<ul>
+<li>Cost of extracting knowledge from operational source systems</li>
+<li>Change data-capture (CDC)</li>
+<li>Publishing business events</li>
+</ul>
+<h2 id="the-easy-to-measure-benefits">The Easy to Measure Benefits</h2>
+<ul>
+<li>Integrated views of anything</li>
+<li>Integrated views of your customers</li>
+<li>Centralized business Rules</li>
+<li>Recommendation systems</li>
+</ul>
+<h2 id="difficult-to-measure-benefits">Difficult to Measure Benefits</h2>
+<ul>
+<li>The value of insights</li>
+<li>Tracking early insights</li>
+<li>Predicting future insights</li>
+<li>Focus on datasets that generate shared value</li>
+</ul>
                 
               
               
