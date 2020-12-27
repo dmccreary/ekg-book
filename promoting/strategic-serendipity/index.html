@@ -255,6 +255,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#discovery-and-the-ekg" class="md-nav__link">
+    Discovery and the EKG
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#a-story-of-connected-data-serendipity-and-fraud-detection" class="md-nav__link">
     A Story of Connected Data, Serendipity and Fraud Detection
   </a>
@@ -282,9 +289,14 @@
                 
                 
                 <h1 id="strategic-serendipity">Strategic Serendipity</h1>
-<p>When we thing of enterprise strategies, we often think of large groups of executives at off-site retreats spending days putting details into thoughtful planning for the next year and beyond.  There goal is to prioritize concrete tasks that can be acted upon, measured and deliver results that can be measured with <a href="../../glossary/#key-performance-indicators">key performance indicators</a>.  Their job is to remove uncertainty and randomness from their plan.</p>
-<p>But there is ample evidence that innovation and insight are not easy to predict.  Many stories about great discoveries such as the discovery of Penicillin amount to events that literally blew in through an open window.  Serendipity is the occurrence of random events that trigger positive outcomes.  Strategy and serendipity are oppositional thoughts.  Not everyone is good at holding oppositional ideas in their mind to come up with new innovations.</p>
-<p>We define <a href="../../glossary/#strategic-serendipity">Strategic Serendipity</a> as the process of thoughtfully creating an environment that promotes insights, serendipity and tangible savings.  This means creating an environment that encourages discovery.</p>
+<p><strong>Luck favors the prepared.  - Louis Pasteur</strong></p>
+<p>When we thing of enterprise strategies, we often think of large groups of executives at multi-day off-site retreats.  They will be brainstorming, classifying ideas, looking for synergies, prioritizing, and then putting details into what they hope will be thoughtful planning for the next year and beyond.</p>
+<p>Their goal is to prioritize concrete tasks that can be acted upon, assigned to teams, measured and then deliver results that can be measured with <a href="../../glossary/#key-performance-indicators">key performance indicators</a>.  Their job is to remove uncertainty and randomness from their plan.</p>
+<p>But there is ample evidence that innovation and insight are not easy to predict.  Many stories about great discoveries such as the discovery of Penicillin by Alexander Fleming amount to random events that literally blew in through an open window.  Serendipity is the occurrence of random events that trigger positive outcomes.  Strategy and serendipity are oppositional thoughts.  Not everyone is good at holding oppositional ideas in their mind to come up with new innovations.  It takes practice.</p>
+<p>We define <a href="../../glossary/#strategic-serendipity">Strategic Serendipity</a> as the process of thoughtfully creating an environment that promotes insights, serendipity and tangible savings from newly connected information.  This means creating an environment around your EKG that encourages discovery.</p>
+<h2 id="discovery-and-the-ekg">Discovery and the EKG</h2>
+<p>Discovery is different from creating regular <a href="../../glossary/#operational-reports">operational reports</a> on your EKG.  Operational reports show things like counts of vertices of various types with special conditions.  The key is operational report on an EKG are run regularly and consistently and often feed the monitoring dashboards that are customized for each user.  But other than an occasional new trend line, they don't play a role in the EKG Discovery process.</p>
+<p>In the context of the EKG, <a href="../../glossary/#data-discovery">data discovery</a> (also called data mining) is a process of discovering new patterns in large data sets using a combination of query tools, machine learning and often visualization.</p>
 <h2 id="a-story-of-connected-data-serendipity-and-fraud-detection">A Story of Connected Data, Serendipity and Fraud Detection</h2>
 <p>Let me start out with a true story about what I mean by this idea of strategic serendipity environment.  When we first building graph databases we started to connect new data sources that had not been connected before.  One of our bright young engineers started seeing an unusual pattern of very small healthcare claims in dataset.  Being naturally curious, the engineer started to "connect some dots".  Because the team had not just loaded the flat claims items but also loaded and linked the providers that submitted the claims, the engineer could write simple queries to see that many of the small claims came from just a few providers.  Although the individual claims were small, when taken in aggregate, they amounted to over $10M in claims.</p>
 <p>This pattern just did not make sense to the engineer.  So the engineer started to dig deeper.  The providers submitted these tiny claims were well outside the normal ranges of what other providers charged for similar procedures.  The engineer came up with charge distributions for other providers and then showed the average claims for "unusual" providers were much lower than normal.  Once they had the unusual providers identified they also saw that these claims were for procedures that their specialty codes didn't indicated they should be doing.</p>
