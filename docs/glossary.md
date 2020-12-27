@@ -1,7 +1,7 @@
 # Enterprise Knowledge Graph Glossary of Terms
 
 #### ABox
-Types of assertions or statements in a knowledge graph that conform to specific terminologies (knows as [TBox](#tbox) statements).  The terms ABox and TBox are used to help determine if a statement is universal or related to a specific [Subgraph](#subgraph) of an [Enterpriese Knowledge Graph](#enterprise-knowledge-graph).
+Types of assertions or statements in a knowledge graph that conform to specific terminologies (knows as [TBox](#tbox) statements).  The terms ABox and TBox are used to help determine if a statement is universal or related to a specific [Subgraph](#subgraph) of an [Enterprises Knowledge Graph](#enterprise-knowledge-graph).
 
 Within our Enterprise Knowledge Graph architecture, ABox statements often contain knowledge about specific customers, parts, or concepts and may have specific [Access Control](#access-control) rules.  TBox statements don't usually have these same access rules.
 <br/>See also: TBox
@@ -15,9 +15,9 @@ Accumulators allow MapReduce style queries where each server node in a cluster d
 #### Availability Heuristic
 The availability heuristic suggests that the likelihood of events is estimated based on how many examples of such events come to mind.
 
-For example, when a soltuion architect is presented with a business problem, their likelihood to recomend an enterprise knowledge graph solution is dependant on how many examples of successful enterprise knowledge graph project come to mind.  Surrounding solution architects with many successful stories or case studies of successful enterprise knowledge graph projects may positivly impact their probability of enterprise knowledge graph recomendations.
+For example, when a solution architect is presented with a business problem, their likelihood to recomend an enterprise knowledge graph solution is dependant on how many examples of successful enterprise knowledge graph project come to mind.  Surrounding solution architects with many successful stories or case studies of successful enterprise knowledge graph projects may positively impact their probability of enterprise knowledge graph recommendations.
 <br/>See also: [Cognitive Bias](#cognitive-bias)
-<br/>[Wikipeida Case Study](https://en.wikipedia.org/wiki/Case_study#In_business)
+<br/>[Wikipedia Case Study](https://en.wikipedia.org/wiki/Case_study#In_business)
 
 #### A Priori and A Posteriori
 A priori knowledge is that which is independent of experience. A posteriori knowledge is that which depends on empirical evidence.  The rules of mathematics, logic, and business rules are usually classified as a priori read-access is usually shared across all users of an enterprise knowledge graph.  Knowledge about a specific observable event, observation, customer transaction, etc. are considered A Posteriori and may not need to be universally accessed.
@@ -59,7 +59,7 @@ Software that detects changes in a database and transmits the change information
 #### Cognitive Bias
 A systematic pattern of deviation from norm or rationality in judgment.
 
-In this book we study why humans don't adopt enterprise knowledge graph technolgy and how we can use stories, demonstrations and economic reasoning to overcome these bias.
+In this book we study why humans don't adopt enterprise knowledge graph technology and how we can use stories, demonstrations and economic reasoning to overcome these bias.
 
 In this book we study several types of cognitive bias including:
 
@@ -76,7 +76,7 @@ In this book we study several types of cognitive bias including:
 11. [Status_quo_bias](#status-quo-bias)
 12. [Sunk cost](#sunk-cost) a.k.a. Gamblers fallacy
 
-[Wikipedia on Congnitive Bias](https://en.wikipedia.org/wiki/Cognitive_bias)
+[Wikipedia on Cognitive Bias](https://en.wikipedia.org/wiki/Cognitive_bias)
 
 #### Concept
 An idea, notion or a unit of thought.  Concept elements are the fundamental unit of work in semantics and are in integral part of enterprise knowledge graphs. 
@@ -95,10 +95,20 @@ The ability of a single graph data model to be shared by many business units and
 #### Data Ingestion
 A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including RDBMS, other types of databases, S3 buckets, CSVs, or from streams.
 
+# Datamart
+A data warehouse used by a project or a department.  Decomissioning datamarts is a key cost-driver to the adoption of enterprise knowledge graphs.
+
 #### Decision Tree
 A way of storing business rules in a graph.  A decision tree contains a series of branches, each branch containing a conditional expression.  If the conditional expression returns TRUE, then a true link is traversed.  If the conditional returns FALSE and false branch is traversed.
 
 Decision trees and the corresponding rules that are represented as pointer hops in an enterprise knowledge graph have many integration and performance benefits.
+
+#### Denormalization
+A strategy used in relational database design to increase performance for a large number of read-operations that access multiple tables using computationally expensive JOIN operations.  Denormalization is frequently used in [online analytical processing systems](#online-analytical-processing-system).
+
+Although denomalization does increase performance, it also imposes a single departments requirements to optimize the reports relevant to their viewpoints.  Denomalization destroys the shareability of data models and thus leads to duplication of information and the increase of enterprise costs.  Decommissioning departmental [datamarts](#datamart) is a common way to justify the costs of building enterprise knowledge graphs.
+
+<br/>[Wikipedia page on Denormalization](https://en.wikipedia.org/wiki/Denormalization)
 
 #### Degree
 The degree of a vertex is the count of the number of connections between the vertex and other vertices.  The average degree of a graph is the average number of connections for a vertex.
@@ -122,6 +132,9 @@ X-PATH is a mature W3C standard for expressing path traversal using a rich array
 #### DB Engines
 A web site that harvests web documents that discuss databases and classifies the documents based on a taxonomy of database types.  The "Popularity changes per category report" is frequently cited in many graph presentations.
 <br/>[DB Engines](https://db-engines.com/en/ranking_categories)
+
+#### Edge of Chaos
+The edge of chaos is narrow band between order and disorder in [complex systems] such as enterprise knowledge graphs.  In enterprise knowledge graphs we think of order as areas we have modeled and understand well.  We think of disorder as external areas that we have not yet modeled or we have determined that they are not worth the effort to model.  Enterprise knowledge graphs modeling teams are often working at the Edge of Choas.
 
 #### Embedding
 A data structure, usually a vector of decimal numbers, associated with an item in a graph, that helps users quickly find similar items.  Vertices, Edges, and Paths may all have embeddings.
@@ -388,6 +401,10 @@ TBox statements tend to more rules or metarules (rules about rules) that individ
 <br/>See also: [ABox](#abox)
 <br/>[Wikipedia Tbox page](https://en.wikipedia.org/wiki/Tbox)
 
+#### Technology Adoption Life Cycle
+A sociological model that describes the adoption or acceptance of a new product or innovation, according to the demographic and psychological characteristics of defined adopter groups.
+<br/>[Wikipedia](https://en.wikipedia.org/wiki/Technology_adoption_life_cycle)
+
 #### Temporal Modeling
 The process of modeling time in a data model.  Modeling time can be complex when the requirements of a system require you to be able to recreate detailed reports as they were at a prior point in time. Temporal modeling includes the concept of versioning and [bitemporal modeling](#bitermporal-modeling)
 
@@ -402,3 +419,15 @@ General high-level [Concepts](#concept) that are common across all domains in a 
 #### Web Ontology Language
 A Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things.
 <br/>[W3C OWL Web Site](https://www.w3.org/OWL/)
+
+#### Window of Opportunity
+A narrow band of time that an organization might be ready to adopt a new technology such as an enterprise knowledge graph.
+
+To arrive at the Window of Opportunity to adapt an enterprise knowledge graph an organization must meet a set of preconditions such as an internal chamption, a shared understanding of what enterprise knowledge graphs are capable of, and the ability to ingest enough information to achieve specific business objectives.  Enterprise knowledge graphs then have a limited time to create a pilot project before funding runs out, champions move on, or alternative technologies get mindshare.
+
+Very often a specific chrisis can trigger an unexpcted window of opportunity.
+
+Knowing how to recognize these windows and take advantage of them is a key skill we attempt to explore in this book.
+
+<br/>[Wikipedia article on Window of Opportunity](https://en.wikipedia.org/wiki/Window_of_opportunity)
+
