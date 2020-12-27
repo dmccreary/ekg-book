@@ -30,14 +30,19 @@ The process of automatically migrating data from one server to another server in
 
 Auto-sharding is one of the key features that differentiate scale-out enterprise-class databases from departmental solutions.  Testing sharding at scale under continuous load in the face of possible hardware failure is one of the key challenges facing enterprise data architects.
 
+#### Big Data
+An ambiguous term that many or may not refer to data sizes beyond the ability of commonly used tools to mange data.  If you used a spreadsheet, "Big Data" could be any data that does not fit into your spreadsheet.  If you use a Cray Supercomputer then your definition of Big Data could differ by ten orders of magnitude.  If we ever hear someone refer to "Big Data" we strongly suggest they use other terms that have more precise meaning.
+<br/>[Wikipedia Critique of Big Data](https://en.wikipedia.org/wiki/Big_data#Critique)
+
 #### Bitermporal Modeling
 A specific case of [Temporal Modeling](#temporal-modeling) modeling designed to handle historical data in two different timelines.  One timeline is concerned with when an event occurred in the real world and the other timeline is concerned when the data was recorded or corrected in a computer system. This makes it possible to rewind the information to "as it actually was" in combination with "as it was recorded" at some point in time. 
 
 In order to implement this feature within an Enterprise Knowledge Graph, the data model must accommodate updates while preserving historical information. Information cannot be overwritten or discarded even if it is erroneous.  The consequence is more data must be retained even through only a small percentage of queries might require historical views of data.  Bitemporal models are more complex to query and require additional RAM and disk storage.
 <br/>[Wikipedia Bitemporal Modeling](https://en.wikipedia.org/wiki/Bitemporal_Modeling)
 
-#### Brain Anologies
-Explaining enterprise knowledge graphs in terms of the human brain.  Human brains have roughly 82 billion neurons and a degree of 10,000.  Many enterprise knowledge graphs for the largest companies exceed 80 billion vertices but have only a handful of connections between them [Degree](#degree).
+#### Brain Analogies
+Explaining enterprise knowledge graphs in terms of the human brain.  Human brains have roughly 82 billion neurons and 10,000 connections for each neuron. This is known as a graph degree of 10,000.  Many enterprise knowledge graphs for the largest companies exceed 80 billion vertices but have only a handful of connections between them.
+<b/>See also: [Degree](#degree).
 
 #### Business Event
 A change in the state of a business entity within an operational source system that may be published to a downstream consumer such as an enterprise knowledge graph.
@@ -190,6 +195,9 @@ In contrast, [Endogenic Knowledge](#endongenic-knowledge) is the knowledge that 
 A graph layout algorithm that simulates forces on springs that move items 
 [Wikipedia Force Directed Graph Drawing](https://en.wikipedia.org/wiki/Force-directed_graph_drawing)
 
+#### Four Vs of Scalable Databases
+Volume, velocity, variability and veracity are considered the four Vs that define scalable systems.  Volume refers to the total amount of data in our knowledge graph.  Velocity means that new inserts, updates and deletes might be coming in fast via streaming events and these events must be ACID compliant and still never slow down read access times.  Service levels agreements (SLAs) must focus not on total average times, but the averages of the slowest 5% of the transactions.  Variability means that data is not uniform and can be easily stuffed into a single fact table of an [OLAP](#online-analytical-processing-system) cube.  Veracity means we need to be able to validate the quality of incoming data in real-time and quickly raise warning flags if corrupt data is being transmitted into the EKG.
+
 #### Glossary
 A business vocabulary associated with a topic.  A glossary often has both general definitions of terms as well as contextual definitions for a specific domain or project.<br/>
 <br/>See also: [Business Vocabulary](#business-vocabulary)
@@ -297,6 +305,11 @@ Unlike relational databases, graph databases quickly traverse many complex relat
 
 #### One Version of the Truth
 The real world has many complex relationships.  There are many ways to build simple models that take shortcuts to optimize queries by limiting relationships.  This is important in relational database modeling.  But the closer we get to modeling the real world, the closer to a single version of the truth we get.  Models that fairly represent the complexities of the real world can be reused among many business units and thus the costs of holding the information in memory can be shared.  This is why graph databases cost less then relational databases.
+
+#### Online Analytical Processing System
+An approach to answer multi-dimensional analytical queries quickly by minimizing JOIN operations in relational databases.  OLAP "cubes" often use a star schema with a central fact table and one JOIN operation per dimension of the cube.  The denomalization process used to create star schemas limits enterprise-sharing of these structures.
+<br/>[Wikipedia](https://en.wikipedia.org/wiki/Online_analytical_processing)
+
 
 #### On-the-Wire vs. In-the-Can
 A way of looking at knowledge representation requirements in two domains.  On-The-Wire implies that serialization of a dataset must retain connection information within itself and to other external systems.  In-The-Can knowledge representations are optimized for ease of query and [sustainability](#sustainability).  RDF is optimized for On-The-Wire exchange of knowledge.  LPG is optimized for In-The-Can tasks such as ease of query and sustainability.
