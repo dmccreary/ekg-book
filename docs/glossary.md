@@ -42,7 +42,7 @@ In order to implement this feature within an Enterprise Knowledge Graph, the dat
 
 #### Brain Analogies
 Explaining enterprise knowledge graphs in terms of the human brain.  Human brains have roughly 82 billion neurons and 10,000 connections for each neuron. This is known as a graph degree of 10,000.  Many enterprise knowledge graphs for the largest companies exceed 80 billion vertices but have only a handful of connections between them.
-<b/>See also: [Degree](#degree).
+<br/>See also: [Degree](#degree).
 
 #### Business Event
 A change in the state of a business entity within an operational source system that may be published to a downstream consumer such as an enterprise knowledge graph.
