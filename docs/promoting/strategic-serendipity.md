@@ -1,10 +1,19 @@
 # Strategic Serendipity
 
-When we thing of enterprise strategies, we often think of large groups of executives at off-site retreats spending days putting details into thoughtful planning for the next year and beyond.  There goal is to prioritize concrete tasks that can be acted upon, measured and deliver results that can be measured with [key performance indicators](../glossary.md#key-performance-indicators).  Their job is to remove uncertainty and randomness from their plan.
+**Luck favors the prepared.  - Louis Pasteur**
 
-But there is ample evidence that innovation and insight are not easy to predict.  Many stories about great discoveries such as the discovery of Penicillin amount to events that literally blew in through an open window.  Serendipity is the occurrence of random events that trigger positive outcomes.  Strategy and serendipity are oppositional thoughts.  Not everyone is good at holding oppositional ideas in their mind to come up with new innovations.
+When we thing of enterprise strategies, we often think of large groups of executives at multi-day off-site retreats.  They will be brainstorming, classifying ideas, looking for synergies, prioritizing, and then putting details into what they hope will be thoughtful planning for the next year and beyond.
 
-We define [Strategic Serendipity](../glossary.md#strategic-serendipity) as the process of thoughtfully creating an environment that promotes insights, serendipity and tangible savings.  This means creating an environment that encourages discovery.
+Their goal is to prioritize concrete tasks that can be acted upon, assigned to teams, measured and then deliver results that can be measured with [key performance indicators](../glossary.md#key-performance-indicators).  Their job is to remove uncertainty and randomness from their plan.
+
+But there is ample evidence that innovation and insight are not easy to predict.  Many stories about great discoveries such as the discovery of Penicillin by Alexander Fleming amount to random events that literally blew in through an open window.  Serendipity is the occurrence of random events that trigger positive outcomes.  Strategy and serendipity are oppositional thoughts.  Not everyone is good at holding oppositional ideas in their mind to come up with new innovations.  It takes practice.
+
+We define [Strategic Serendipity](../glossary.md#strategic-serendipity) as the process of thoughtfully creating an environment that promotes insights, serendipity and tangible savings from newly connected information.  This means creating an environment around your EKG that encourages discovery.
+
+## Discovery and the EKG
+Discovery is different from creating regular [operational reports](../glossary.md#operational-reports) on your EKG.  Operational reports show things like counts of vertices of various types with special conditions.  The key is operational report on an EKG are run regularly and consistently and often feed the monitoring dashboards that are customized for each user.  But other than an occasional new trend line, they don't play a role in the EKG Discovery process.
+
+In the context of the EKG, [data discovery](../glossary.md#data-discovery) (also called data mining) is a process of discovering new patterns in large data sets using a combination of query tools, machine learning and often visualization.
 
 ## A Story of Connected Data, Serendipity and Fraud Detection
 

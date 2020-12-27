@@ -103,6 +103,14 @@ A graph that stores the core business concepts of a project, department or enter
 The ability of a single graph data model to be shared by many business units and thus the costs can also be shared.  Lower charge backs make graph databases more cost-effective than other data models.
 <br/>See also: [No Complexity Penalty](#no-complexity-penalty)
 
+#### Data Discovery
+A process of discovering new patterns in large data sets using a combination of query tools, machine learning and often visualization.
+
+Data discovery is contrasted with operational reporting which are regular consistent reports that are well known to users and good for spotting trends in datasets.
+<br/>Also known as: Data Mining
+<br/>Also known as: Knowledge discovery
+<br/>[Wikipedia page on Data Mining](https://en.wikipedia.org/wiki/Data_mining)
+
 #### Data Ingestion
 A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including [RDBMS](../glossary.md#relational-database-management-system), other types of databases, S3 buckets, CSVs, or from streams.
 

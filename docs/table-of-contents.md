@@ -30,5 +30,8 @@
 * [Storytelling](promoting/storytelling.md) - using narrative bias to your advantage
 * [Technology Adoption](promoting/technology-adoption.md) - telling the right story to the right audi
 * [Windows of Opportunity](promoting/windows-of-opportunity.md) - the EKG pilot
+* [Strategic Serendipity](promoting/strategic-sendipity.md) - getting ready for discovery
+
+[Conclusion](promoting/conclusion.md)
 
 [Glossary](glossary.md)
