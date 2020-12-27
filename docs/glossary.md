@@ -12,10 +12,16 @@ A type of variable that tracks items as you traverse through a graph.  Accumulat
 
 Accumulators allow MapReduce style queries where each server node in a cluster does work in its local data and returns consolidated results to the query node.  For example, in the query *"count all customers that have returned clothing items"*, each node would return only a single count to the query node.  This type of query reduces the amount of communication between nodes in the graph cluster.
 
+#### Alternate Label
+In a [concept](#concept) [subgraph](#subgraph) of a EKG, every concept has a single preferred label (per language) and many alternate labels that can also be used to name a concept.  Alternate labels can be abbreviations, acronyms and synonyms of the concept.  In this glossary, alternate labels have a "Also known as" prefix.
+<br/>Also known as: atlLabel
+<br/>See also: [Preferred Label](#preferred-label)
+<br/>See also: [SKOS](#simple-knowledge-organizational-system)
+
 #### Availability Heuristic
 The availability heuristic suggests that the likelihood of events is estimated based on how many examples of such events come to mind.
 
-For example, when a solution architect is presented with a business problem, their likelihood to recomend an enterprise knowledge graph solution is dependant on how many examples of successful enterprise knowledge graph project come to mind.  Surrounding solution architects with many successful stories or case studies of successful enterprise knowledge graph projects may positively impact their probability of enterprise knowledge graph recommendations.
+For example, when a solution architect is presented with a business problem, their likelihood to recommend an enterprise knowledge graph solution is dependant on how many examples of successful enterprise knowledge graph project come to mind.  Surrounding solution architects with many successful stories or case studies of successful enterprise knowledge graph projects may positively impact their probability of recomending an enterprise knowledge graph as an option.
 <br/>See also: [Cognitive Bias](#cognitive-bias)
 <br/>[Wikipedia Case Study](https://en.wikipedia.org/wiki/Case_study#In_business)
 
@@ -48,7 +54,7 @@ Explaining enterprise knowledge graphs in terms of the human brain.  Human brain
 A change in the state of a business entity within an operational source system that may be published to a downstream consumer such as an enterprise knowledge graph.
 
 Business events are usually transmitted by [Change Data Capture](#change-data-capture) software and sent via document messages in formats such as JSON or XML.
-[Wikipedia](https://en.wikipedia.org/wiki/Event-driven_architecture)
+<br/>[Wikipedia](https://en.wikipedia.org/wiki/Event-driven_architecture)
 
 #### Business Vocabulary
 A collection of terms and phrases that have meaning to a specific domain of work.  A business vocabulary typically starts out with a flat list of terms in a spreadsheet. The terms are listed with their abbreviations and definitions and how they are used within a specific project or department.
@@ -59,7 +65,7 @@ can have a dramatic increase on the search quality of a search engine.
 #### Change Data Capture
 Software that detects changes in a database and transmits the change information via [business events](#business-event) to a remote system.  These events are often published on stream processing systems using the publish/subscribe integration pattern.
 <br/>Also known as: CDC
-[Wikipedia page on Change Data Capture](https://en.wikipedia.org/wiki/Change_data_capture)
+<br/>[Wikipedia page on Change Data Capture](https://en.wikipedia.org/wiki/Change_data_capture)
 
 #### Cognitive Bias
 A systematic pattern of deviation from norm or rationality in judgment.
@@ -98,7 +104,7 @@ The ability of a single graph data model to be shared by many business units and
 <br/>See also: [No Complexity Penalty](#no-complexity-penalty)
 
 #### Data Ingestion
-A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including RDBMS, other types of databases, S3 buckets, CSVs, or from streams.
+A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including [RDBMS](../glossary.md#relational-database-management-system), other types of databases, S3 buckets, CSVs, or from streams.
 
 #### Datamart
 A data warehouse used by a project or a department.  Decomissioning datamarts is a key cost-driver to the adoption of enterprise knowledge graphs.
@@ -262,7 +268,7 @@ Entities can be any business objects, customers, products, parts, documents, emp
 
 Note that this definition has no dependence on semantics and inference.  Our definition is intentionally designed to include many types of interconnected datasets.  We think your organizational chart is a type of knowledge graph an may be a subgraph of your enterprise knowledge graph.
 
-#### Knowledge Represenation
+#### Knowledge Representation
 The process of representing information (individual facts) about the world in a form that a computer system can utilize to solve complex tasks.
 
 Within the context of the enterprise knowledge graph, we used graph databases as our primary way to store knowledge and we complement graph databases with search engines and key-value stores when they are more efficient.  There is no single knowledge reprenstation that is ideal for all problems.
@@ -271,7 +277,7 @@ Graph database are the preferred way to store knowledge because efficient reason
 
 Knowledge representation is often the most complex challenge in the field of Artificial Intelligence.
 
-<br/>[Wikipedia Page on Knowledge Represntaion](https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning)
+<br/>[Wikipedia Page on Knowledge Representation](https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning)
 
 #### Knowledge Triangle
 A stack of three layers.  At the base is the [Data Layer](#data-layer), above that the [Information Layer](#information-layer) and at the top the [Knowledge Layer](#knowledge-layer).
