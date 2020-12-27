@@ -400,6 +400,9 @@ Strategy graphs can also be used to determine the alignment of proposed projects
 
 StratML encoding is sometimes required of US federal organizations so that strategies can be analyzed by published public documents.
 
+#### Strategic Serendipity
+Building a enterprise strategy around the creation of an environment where it is easier to make unexpected connections between items.  Strategic serendipity involves getting a large number of people ready to discover new things in an enterprise knowledge graph.
+
 #### Subgraph
 A subset of an enterprise knowledge graph that may store specific types of knowledge and may have specific access control rules based on the role of a user.
 
