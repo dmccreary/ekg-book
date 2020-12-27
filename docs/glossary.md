@@ -25,7 +25,7 @@ A priori knowledge is that which is independent of experience. A posteriori know
 In an enterprise knowledge graph, a priori knowledge tends to be more universal such as TBox assertions that are universally accessible by all [subgraphs](#subgraph).
 https://en.wikipedia.org/wiki/A_priori_and_a_posteriori
 
-#### Automaic Sharding
+#### Automatic Sharding
 The process of automatically migrating data from one server to another server in a distributed database.  Auto-sharding is frequently done as a database cluster grows or shrinks based on new data being added or removed from the cluster.
 
 Auto-sharding is one of the key features that differentiate scale-out enterprise-class databases from departmental solutions.  Testing sharding at scale under continuous load in the face of possible hardware failure is one of the key challenges facing enterprise data architects.
@@ -100,7 +100,7 @@ The ability of a single graph data model to be shared by many business units and
 #### Data Ingestion
 A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including RDBMS, other types of databases, S3 buckets, CSVs, or from streams.
 
-# Datamart
+#### Datamart
 A data warehouse used by a project or a department.  Decomissioning datamarts is a key cost-driver to the adoption of enterprise knowledge graphs.
 
 #### Decision Tree
