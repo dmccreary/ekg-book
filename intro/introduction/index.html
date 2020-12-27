@@ -277,8 +277,50 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#scalability-means-the-four-vs" class="md-nav__link">
+    Scalability Means the Four Vs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#scalability-means-automatic-sharding" class="md-nav__link">
     Scalability Means Automatic Sharding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalability-means-scalable-access-control" class="md-nav__link">
+    Scalability Means Scalable Access Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalability-means-high-availability" class="md-nav__link">
+    Scalability Means High Availability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalability-means-ease-of-creating-distributed-queries" class="md-nav__link">
+    Scalability Means Ease of Creating Distributed Queries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalability-means-resource-quotas" class="md-nav__link">
+    Scalability Means Resource Quotas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scalability-means-scalable-metadata-management" class="md-nav__link">
+    Scalability Means Scalable Metadata Management
   </a>
   
 </li>
@@ -310,7 +352,7 @@
                 
                 <h1 id="chapter-1-what-is-an-enterprise-knowledge-graph">Chapter 1: What is an Enterprise Knowledge Graph</h1>
 <ol>
-<li>NoSQL architectural patterns</li>
+<li>EKG are one type of NoSQL architectural patterns</li>
 <li>Defining enterprise knowledge graphs</li>
 <li>The Role of architectural scalability</li>
 <li>Growth Rates of graph databases technology</li>
@@ -339,8 +381,26 @@
 <h2 id="scalable-knowledge-graphs">Scalable Knowledge Graphs</h2>
 <p>Scalability is an inherent characteristic of any database architecture.  It implies that as the size an complexity of the databases grows, the architecture must accommodate this growth without rewriting the core applications.  Although unexpected performance problems with specific queries might occur as the size of your database grows, they should be fixable by doing simple query optimization.</p>
 <p>The key aspect of scalable graph databases is the ability to distribute a graph over a large number of independent but closely connected servers in a data center.  As demands grows, the number of servers in the cluster must easily scale without users or operations being impacted.</p>
+<h3 id="scalability-means-the-four-vs">Scalability Means the Four Vs</h3>
+<p>Volume, velocity, variability and veracity are considered the four Vs that define scalable systems.</p>
+<p><strong>Volume</strong> refers to the total amount of data in our knowledge graph.  For example enterprise-scale graphs may easily contain over 10 billion vertices and 50 billion edges. </p>
+<p><strong>Velocity</strong> means that new inserts, updates and deletes might be coming in fast via streaming events and these events must be ACID compliant and still never slow down read access times.  Service levels agreements (SLAs) must focus not on total average times, but the averages of the slowest 5% of the transactions.</p>
+<p><strong>Variability</strong> means that data is not uniform and can be easily stuffed into a single fact table of an <a href="#online-analytical-processing-system">OLAP</a> cube.</p>
+<p><strong>Veracity</strong> means we need to be able to validate the quality of incoming data in real-time and quickly raise warning flags if corrupt data is being transmitted into our EKG.</p>
+<p>Note: We avoid using the term "[Big Data](../glossary.md#big-data" in this book.  It is an ambiguous statement of a problem and adds no insight into a solution.</p>
 <h3 id="scalability-means-automatic-sharding">Scalability Means Automatic Sharding</h3>
-<p>The first criteria is that when the size of the enterprise graph grows to take on a new department or a new project, new hardware can be installed and the database is smart enough to use the new hardware without extensive pain and suffering by the database staff.  This is illustrated in Figure 1.2</p>
+<p>The first criteria is that when the size of the enterprise graph grows to take on a new department or a new project, new hardware can be installed and the database is smart enough to use the new hardware without extensive pain and suffering by the database staff.  This is illustrated in Figure 1.2.</p>
+<p><img alt="Automatic Sharding" src="../img/autosharding.png" /></p>
+<h3 id="scalability-means-scalable-access-control">Scalability Means Scalable Access Control</h3>
+<p>Many graph products claim to have performance scale out capabilities, but their software falls down when we give them a a detailed list of what roles can access what data.  This means they might be able to scale their data to 100 nodes, but only a single role of "admin" can be defined for the graph.  They provide an all-or nothing approach to security.  This model works in small applications where access to the application is controlled by security access rules.  However it breaks down when I want 100 teams to only be able to run queries on their own team's data.  We will provide more examples of vertex-level role-based access control in <a href="#lifecycles.md">Chapter 3</a></p>
+<h3 id="scalability-means-high-availability">Scalability Means High Availability</h3>
+<p>Many graph products are perfect for a small team in a single city that work 9am to 5pm.  Upgrades can be done at night and on weekends.  But Enterprise class systems don't have users in a single city.  Employees and customers are all over the world.  That means when we upgrade our database with a new version of software we can't shut it down.  We need distributed servers that can take a single node down, upgrade the software and get it back into the cluster without ever dropping a single transaction.</p>
+<h3 id="scalability-means-ease-of-creating-distributed-queries">Scalability Means Ease of Creating Distributed Queries</h3>
+<p>If you are building enterprise-class knowledge graphs you may need to support 100+ concurrent developer all writing queries on a graph distributed over 100+ nodes in a cluster.  These queries need to efficiently distribute their work over each node and bring back just the data that is relevant to the results.  For example if you run a count of customers that have purchased a specific product, that query needs to distribute the query to each node and have each node return a simple count to the server where the query originated.  Those counts are summed together and returned to the user.  This type of query is sometimes called a map-reduce query since only the <em>counts</em> (reduced data) are returned to the origin server.  The actual customer data never never needs to move around.</p>
+<h3 id="scalability-means-resource-quotas">Scalability Means Resource Quotas</h3>
+<p>In a small project graph, you often have control and review processes of the code that each developer is working on.  In an enterprise setting you can't control everyone's code.  You need to assume that user will write run-away queries or just run queries that are not optimized for performance during the development and testing phases of query development.  You enterprise graph needs to be able to monitor rouge queries and shut them down when vertex counts, edges counts, CPU counts or memory resources reach reasonable limits.  Without these resource quotas a single query can take down an entire enterprise graph database.  So we need fine-grain controls in query resources, even when the queries may be running on 100 different nodes in a cluster.</p>
+<h3 id="scalability-means-scalable-metadata-management">Scalability Means Scalable Metadata Management</h3>
+<p>For small project graphs, you many only have a few hundred vertices, edges and attributes.  For enterprise-scale graphs you may have thousands of these items and staff that are new to the enterprise knowledge graph need to be able to quickly search for the structures they are interested in.  Once they find the items of interest they need to understand their meaning and what the various code within value sets mean (reference data).  New users also many need to ask the data steward for each attribute questions such as where did the data come from, what assumptions were made about the data if if the dataset contains any sensitive information that might restrict who can view the data.</p>
 <!--
 Non-published notes:
 

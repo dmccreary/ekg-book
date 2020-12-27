@@ -260,6 +260,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#alternate-label" class="md-nav__link">
+    Alternate Label
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#availability-heuristic" class="md-nav__link">
     Availability Heuristic
   </a>
@@ -582,8 +589,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#knowledge-represenation" class="md-nav__link">
-    Knowledge Represenation
+  <a href="#knowledge-representation" class="md-nav__link">
+    Knowledge Representation
   </a>
   
 </li>
@@ -899,6 +906,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#alternate-label" class="md-nav__link">
+    Alternate Label
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#availability-heuristic" class="md-nav__link">
     Availability Heuristic
   </a>
@@ -1221,8 +1235,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#knowledge-represenation" class="md-nav__link">
-    Knowledge Represenation
+  <a href="#knowledge-representation" class="md-nav__link">
+    Knowledge Representation
   </a>
   
 </li>
@@ -1508,9 +1522,14 @@
 <h4 id="accumulator">Accumulator</h4>
 <p>A type of variable that tracks items as you traverse through a graph.  Accumulators can be global or be attached to a specific vertex.</p>
 <p>Accumulators allow MapReduce style queries where each server node in a cluster does work in its local data and returns consolidated results to the query node.  For example, in the query <em>"count all customers that have returned clothing items"</em>, each node would return only a single count to the query node.  This type of query reduces the amount of communication between nodes in the graph cluster.</p>
+<h4 id="alternate-label">Alternate Label</h4>
+<p>In a <a href="#concept">concept</a> <a href="#subgraph">subgraph</a> of a EKG, every concept has a single preferred label (per language) and many alternate labels that can also be used to name a concept.  Alternate labels can be abbreviations, acronyms and synonyms of the concept.  In this glossary, alternate labels have a "Also known as" prefix.
+<br/>Also known as: atlLabel
+<br/>See also: <a href="#preferred-label">Preferred Label</a>
+<br/>See also: <a href="#simple-knowledge-organizational-system">SKOS</a></p>
 <h4 id="availability-heuristic">Availability Heuristic</h4>
 <p>The availability heuristic suggests that the likelihood of events is estimated based on how many examples of such events come to mind.</p>
-<p>For example, when a solution architect is presented with a business problem, their likelihood to recomend an enterprise knowledge graph solution is dependant on how many examples of successful enterprise knowledge graph project come to mind.  Surrounding solution architects with many successful stories or case studies of successful enterprise knowledge graph projects may positively impact their probability of enterprise knowledge graph recommendations.
+<p>For example, when a solution architect is presented with a business problem, their likelihood to recommend an enterprise knowledge graph solution is dependant on how many examples of successful enterprise knowledge graph project come to mind.  Surrounding solution architects with many successful stories or case studies of successful enterprise knowledge graph projects may positively impact their probability of recomending an enterprise knowledge graph as an option.
 <br/>See also: <a href="#cognitive-bias">Cognitive Bias</a>
 <br/><a href="https://en.wikipedia.org/wiki/Case_study#In_business">Wikipedia Case Study</a></p>
 <h4 id="a-priori-and-a-posteriori">A Priori and A Posteriori</h4>
@@ -1533,7 +1552,7 @@ https://en.wikipedia.org/wiki/A_priori_and_a_posteriori</p>
 <h4 id="business-event">Business Event</h4>
 <p>A change in the state of a business entity within an operational source system that may be published to a downstream consumer such as an enterprise knowledge graph.</p>
 <p>Business events are usually transmitted by <a href="#change-data-capture">Change Data Capture</a> software and sent via document messages in formats such as JSON or XML.
-<a href="https://en.wikipedia.org/wiki/Event-driven_architecture">Wikipedia</a></p>
+<br/><a href="https://en.wikipedia.org/wiki/Event-driven_architecture">Wikipedia</a></p>
 <h4 id="business-vocabulary">Business Vocabulary</h4>
 <p>A collection of terms and phrases that have meaning to a specific domain of work.  A business vocabulary typically starts out with a flat list of terms in a spreadsheet. The terms are listed with their abbreviations and definitions and how they are used within a specific project or department.</p>
 <p>As vocabularies grow and mature the individual terms might be grouped together.  These groupings become taxonomies and can then be used to automatically classify documents with metadata tags of their preferred labels.  Classified documents
@@ -1541,7 +1560,7 @@ can have a dramatic increase on the search quality of a search engine.</p>
 <h4 id="change-data-capture">Change Data Capture</h4>
 <p>Software that detects changes in a database and transmits the change information via <a href="#business-event">business events</a> to a remote system.  These events are often published on stream processing systems using the publish/subscribe integration pattern.
 <br/>Also known as: CDC
-<a href="https://en.wikipedia.org/wiki/Change_data_capture">Wikipedia page on Change Data Capture</a></p>
+<br/><a href="https://en.wikipedia.org/wiki/Change_data_capture">Wikipedia page on Change Data Capture</a></p>
 <h4 id="cognitive-bias">Cognitive Bias</h4>
 <p>A systematic pattern of deviation from norm or rationality in judgment.</p>
 <p>In this book we study why humans don't adopt enterprise knowledge graph technology and how we can use stories, demonstrations and economic reasoning to overcome these bias.</p>
@@ -1572,7 +1591,7 @@ Concepts are grouped in Schemas and may be part of one or more Collections.<br/>
 <p>The ability of a single graph data model to be shared by many business units and thus the costs can also be shared.  Lower charge backs make graph databases more cost-effective than other data models.
 <br/>See also: <a href="#no-complexity-penalty">No Complexity Penalty</a></p>
 <h4 id="data-ingestion">Data Ingestion</h4>
-<p>A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including RDBMS, other types of databases, S3 buckets, CSVs, or from streams.</p>
+<p>A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including <a href="../glossary.md#relational-database-management-system">RDBMS</a>, other types of databases, S3 buckets, CSVs, or from streams.</p>
 <h4 id="datamart">Datamart</h4>
 <p>A data warehouse used by a project or a department.  Decomissioning datamarts is a key cost-driver to the adoption of enterprise knowledge graphs.</p>
 <h4 id="decision-tree">Decision Tree</h4>
@@ -1677,12 +1696,12 @@ See also: <a href="#index-free-adjacency">Index Free Adjacency</a></p>
 <p>A set of interconnected typed entities and their attributes.</p>
 <p>Entities can be any business objects, customers, products, parts, documents, employees or concepts.  Entities are usually implemented as vertices in a graph database and connected through edges.  In some types of graphs, for example <a href="#labeled-property-graphs">LPGs</a>, edges also have attributes.</p>
 <p>Note that this definition has no dependence on semantics and inference.  Our definition is intentionally designed to include many types of interconnected datasets.  We think your organizational chart is a type of knowledge graph an may be a subgraph of your enterprise knowledge graph.</p>
-<h4 id="knowledge-represenation">Knowledge Represenation</h4>
+<h4 id="knowledge-representation">Knowledge Representation</h4>
 <p>The process of representing information (individual facts) about the world in a form that a computer system can utilize to solve complex tasks.</p>
 <p>Within the context of the enterprise knowledge graph, we used graph databases as our primary way to store knowledge and we complement graph databases with search engines and key-value stores when they are more efficient.  There is no single knowledge reprenstation that is ideal for all problems.</p>
 <p>Graph database are the preferred way to store knowledge because efficient reasoning can be implemented as fast pointer-hopping operations that can be optimized by specialized hardware.</p>
 <p>Knowledge representation is often the most complex challenge in the field of Artificial Intelligence.</p>
-<p><br/><a href="https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning">Wikipedia Page on Knowledge Represntaion</a></p>
+<p><br/><a href="https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning">Wikipedia Page on Knowledge Representation</a></p>
 <h4 id="knowledge-triangle">Knowledge Triangle</h4>
 <p>A stack of three layers.  At the base is the <a href="#data-layer">Data Layer</a>, above that the <a href="#information-layer">Information Layer</a> and at the top the <a href="#knowledge-layer">Knowledge Layer</a>.
 <img alt="Knowledge Trainagle" src="../img/knowledge-triangle.png" /></p>
