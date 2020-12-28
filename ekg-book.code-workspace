@@ -7,15 +7,21 @@
 	"settings": {
 		"cSpell.words": [
 			"Bitermporal",
+			"DIKW",
 			"Datamart",
 			"Dataversity",
 			"Denomalization",
 			"Denormalization",
 			"EKGs",
+			"Inmon",
+			"Inomn",
+			"Kimball",
+			"Rebalancing",
 			"SLAs",
 			"Saffo",
 			"posteriori",
-			"queryable"
+			"queryable",
+			"rebalance"
 		]
 	}
 }

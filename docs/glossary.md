@@ -67,6 +67,10 @@ Software that detects changes in a database and transmits the change information
 <br/>Also known as: CDC
 <br/>[Wikipedia page on Change Data Capture](https://en.wikipedia.org/wiki/Change_data_capture)
 
+#### Classification and Connection
+Within the [data enrichment](#enrichment) pattern there are two distinct phases.  The first step is to take raw binary and numeric data streams and classify it according to the concept types in our knowledge graph.  Once we have business entities identified we next need to connect our business entities together using the context around them in the data.  These steps are called classification and connection.
+<br/>See also: [Knowledge Triangle](#knowledge-triangle)
+
 #### Cognitive Bias
 A systematic pattern of deviation from norm or rationality in judgment.
 
@@ -114,6 +118,12 @@ Data discovery is contrasted with operational reporting which are regular consis
 #### Data Ingestion
 A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including [RDBMS](../glossary.md#relational-database-management-system), other types of databases, S3 buckets, CSVs, or from streams.
 
+#### Data Layer
+Raw low-level binary codes that contains information after analysis.
+
+#### Dashboard
+A set of views, usually presented on a single page, that display information as a set of key performance indicators and charts.  In general, dashboard views can be customized for a role or a specific user.
+
 #### Datamart
 A data warehouse used by a project or a department.  Decomissioning datamarts is a key cost-driver to the adoption of enterprise knowledge graphs.
 
@@ -137,11 +147,11 @@ For non-directional graphs, counting is one per edge.  For directional graphs th
 #### Departmental Graph
 A graph designed to store information from one or more departments of an enterprise.  Departmental graphs may be limited in that they can't be scaled up to hold enterprise data.
 
-#### Data Layer
-Raw low-level binary codes that contains information after analysis.
+#### DIKW Pyramid
+A visualization of the relationships between data, information, knowledge, and wisdom with data at the base followed by information, knowledge and finally wisdom at the top.
 
-#### Dashboard
-A set of views, usually presented on a single page, that display information as a set of key performance indicators and charts.  In general, dashboard views can be customized for a role or a specific user.
+Although commonly used in the field of we don't use the DIKW pyramid visualization in this book because the top wisdom layer is confusing in the context of an enterprise knowledge graph.  We used the simpler three layer [Knowledge Triangle](#knowledge-triangle).
+<br/>[Wikipedia page on DIKW Pyramid](https://en.wikipedia.org/wiki/DIKW_pyramid)
 
 #### Document Store
 A type of database that stores data as tree-structured data elements such as JSON or XML.  Document stores use path-like query languages such as X-PATH to traverse the tree structure.  Languages such as XQuery provide high-quality functional programming languages with strong type checking.
@@ -261,10 +271,26 @@ Accessing related entities in a system without having to consult a centralized i
 #### Information Layer
 Data about our key business entities.  This includes Things, like People, Places and Events.
 
+#### Inmon Data Warehouse
+The Inmon Data Warehouse is a collection of database design patterns that promote analytics using relational databases promoted by Bill Inmon.
+
+The Inomn approach was first enumerated in his 1992 book "Building the Data Warehouse".  The Inmon approach is usually contrasted to the more recent 2013 [Kimball Data Warehouse](#kimball-data-warehouse) that focuses on a simplicity and single fact table with many dimensions.
+
+Many EKG projects can be funded by their ability to show they can decommission expensive Inmon-style data warehouses that don't have the flexibility of EKGs.
+<br/>[Wikipedia page on Bill Inmon](https://en.wikipedia.org/wiki/Bill_Inmon)
+
 #### Key-Value Store
 A type of database that stores items as pairs of keys and values.  The keys are strings and the values are binary blobs such as files or images.  A simple put/get/delete interface is used to manage the database.
 
 Key-value stores are excellent complements to graph databases since their simplicity allows for low-cost-per-byte storage. 
+
+#### Kimball Data Warehouse
+A data warehouse design pattern that uses a single fact table joined with dimensional tables to minimize the impact of JOIN statements in reporting performance.
+
+Kimball data warehouses are the ultimate in [denormalized database design](#denormalization).  Their goal is often simplicity at the expense of capturing complex relationship-intensive models of the world that can be reused across the enterprise.  As a result, Kimball datamarts  duplicate data in each department and each datamart has their own costs to perform [ETL](#extract-load-transform) operations.  In contrast, EKGs focus on highly [normalized] data models of the world that include many complex relationships.  This closer our models get to the real world the more they can be reused across many departments.
+
+Decomissioning many departmental [datamarts](#datamart) is often a key way to justify EKG projects.
+[Wikipedia Page on Ralph Kimball](https://en.wikipedia.org/wiki/Ralph_Kimball)
 
 #### Knowledge Layer
 A layer in the knowledge triangle that contains connected information.  The knowledge layer is often the top layer in our views.  There are some views that include a Wisdom layer on top of the knowledge layer.
@@ -288,8 +314,11 @@ Knowledge representation is often the most complex challenge in the field of Art
 <br/>[Wikipedia Page on Knowledge Representation](https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning)
 
 #### Knowledge Triangle
-A stack of three layers.  At the base is the [Data Layer](#data-layer), above that the [Information Layer](#information-layer) and at the top the [Knowledge Layer](#knowledge-layer).
-![Knowledge Trainagle](img/knowledge-triangle.png)
+A stack of three layers that illustrates how knowledge graphs are constructed from raw data.  At the base is the [Data Layer](#data-layer) that stores raw binary data in numeric forms, above that is [Information Layer](#information-layer) that finds concepts and business entities within the data layer. At the top the triangle is the [Knowledge Layer](#knowledge-layer) where business entities are connected to make them easy to query using graph traversal algorithms.
+
+![Knowledge Triangle](img/knowledge-triangle.png)
+
+<br/>See also: The [DIKW Pyramid](#dikw-pyramid)
 
 #### Label
 A string associated with one or more [Concepts](#concept).
