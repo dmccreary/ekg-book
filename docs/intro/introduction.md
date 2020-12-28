@@ -66,7 +66,7 @@ Note: We avoid using the term "[Big Data](../glossary.md#big-data" in this book.
 ### Scalability Means Automatic Sharding and Rebalancing
 The first criteria is that when the size of the enterprise graph grows to take on a new department or a new project, new hardware can be installed and the database is smart enough to use the new hardware without extensive pain and suffering by the database staff.  This is illustrated in Figure 1.2.
 
-![Automatic Rebalancing](../img/autosharding.png)
+![Automatic Rebalancing](../img/rebalance.png)
 
 So to be brutally honest, if your graph database does not automatically rebalance data as new nodes are added or removed from a distributed graph cluster I don't consider it a true enterprise graph solution.  It may still solve important business problems, but it does not fit our definition for this book.
 
