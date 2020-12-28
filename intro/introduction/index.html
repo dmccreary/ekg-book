@@ -255,8 +255,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nosql-architectural-patterns" class="md-nav__link">
-    NoSQL Architectural Patterns
+  <a href="#ekgs-in-context-six-nosql-architectural-patterns" class="md-nav__link">
+    EKGs in Context: Six NoSQL Architectural Patterns
   </a>
   
 </li>
@@ -269,11 +269,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scalable-knowledge-graphs" class="md-nav__link">
-    Scalable Knowledge Graphs
+  <a href="#enterprise-scalable-knowledge-graphs" class="md-nav__link">
+    Enterprise Scalable Knowledge Graphs
   </a>
   
-    <nav class="md-nav" aria-label="Scalable Knowledge Graphs">
+    <nav class="md-nav" aria-label="Enterprise Scalable Knowledge Graphs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -284,8 +284,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#scalability-means-automatic-sharding" class="md-nav__link">
-    Scalability Means Automatic Sharding
+  <a href="#scalability-means-automatic-sharding-and-rebalancing" class="md-nav__link">
+    Scalability Means Automatic Sharding and Rebalancing
   </a>
   
 </li>
@@ -325,6 +325,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#scalability-needs-to-be-cost-effective-and-sustainable" class="md-nav__link">
+    Scalability Needs to Be Cost Effective and Sustainable
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -351,6 +358,7 @@
                 
                 
                 <h1 id="chapter-1-what-is-an-enterprise-knowledge-graph">Chapter 1: What is an Enterprise Knowledge Graph</h1>
+<p><a href="../../references/#knowledge-is-power"><strong>Knowledge is Power - Imam Ali (AD 599-661)</strong></a></p>
 <ol>
 <li>EKG are one type of NoSQL architectural patterns</li>
 <li>Defining enterprise knowledge graphs</li>
@@ -359,38 +367,42 @@
 <li>Scale out graph database hardware</li>
 <li>Scale out graph query languages</li>
 </ol>
-<h2 id="nosql-architectural-patterns">NoSQL Architectural Patterns</h2>
-<p>Enterprise Knowledge Graphs (EKGs) are a type of <a href="glossary.md#graph-database">graph database</a> that are designed to scale to meet the demanding requirements of large organizations.  Graph databases are just one type of NoSQL database architectural patten that we use to solve business problems.  The six types of NoSQL database architectural patterns are described in Figure 1.1.</p>
+<h2 id="ekgs-in-context-six-nosql-architectural-patterns">EKGs in Context: Six NoSQL Architectural Patterns</h2>
+<p>Enterprise Knowledge Graphs (EKGs) are a type of <a href="glossary.md#graph-database">graph database</a> that are designed to scale to meet the demanding requirements of large organizations.  Graph databases are just one type of NoSQL database architectural patten that we use to solve business problems.  EKGs are also used in combination with other NoSQL databases since each architecture has its strengths and weaknesses.</p>
+<p>If you are a [solution architect] your job is to work with business units to find how to correctly match business problems to the right NoSQL database architecture pattern.  This book will help you determine if EKGs might be a good fit for one or more of your business areas.</p>
+<p>Although they have become popular, it is critical that we don't begin to think EKGs are the only solution to business problems.  Solution architects must have a strong understanding of all NoSQL architecture patterns to keeping recommendations objective.  They must know the pros and cons of each of these architectures.  Although it is out of the scope of this book to do a deep dive into each of the six architectural pattern, we present each of them here briefly so you can explore more on your own.  The six types of NoSQL database architectural patterns are described in Figure 1.1.</p>
 <p><img alt="NoSQL Architectural Patterns" src="../../img/nosql-architectural-patterns.png" /></p>
 <p>The six key architectures are:</p>
 <ol>
-<li><strong><a href="../../glossary/#relational-database">Relational</a></strong> - where data is stored in rows of tables and new data is added one row at a time.  Relationships between tables are calculated at query time using JOIN statements that require central indexes to be used to traverse the relationships.  Also known as row-stores.</li>
-<li><strong>[Analytical](../glossary.md#analytical-database</strong> - where data is stored in centralized fact tables with simple relationships to dimensional tables.  Dimensions each represent a way you classify the facts in the fact table.  Analytical databases severely restrict the number of JOIN operations to optimise performance but force everyone to agree on the dimensions used to classify data.  Analytical databases tend to be the most difficult to use between departments since the <a href="glossary.md#denomalization">denormalization</a> isprocess can be very specific to a single departments view of the enterprise.</li>
-<li>**<a href="../../glossary/#key-value-store">Key-value Store</a></li>
-<li>**<a href="../../glossary/#column-family-store">Column-family Store</a></li>
-<li>**<a href="../../glossary/#graph-database">Graph Database</a></li>
-<li>**<a href="../../glossary/#document-store">Document Store</a></li>
+<li><strong><a href="../../glossary/#relational-database">Relational</a></strong> - where data is stored as fixed format rows in tables and new data is added one row at a time.  Relationships between tables are calculated at query time using JOIN statements that require central indexes to be used to traverse the relationships.  Ironically, relational databases put relationship traversal as a secondary concern and don't optimize the design for fast traversal of billions of relationships.  Because relationships evolved as an "add on feature" to COBOL flat files running on mainframes, the focus of a relational database is fast atomic transactions on row-oriented data.  Also known as row-stores.</li>
+<li><strong>[Analytical](../glossary.md#analytical-database</strong> - where data is stored in centralized fact tables with simple relationships to dimensional tables.  Dimensions each represent a way you classify the facts in the fact table.  Analytical databases severely restrict the number of JOIN operations to optimise performance but force everyone to agree on the dimensions used to classify data.  Analytical databases tend to be the most difficult to use between departments since the <a href="glossary.md#denomalization">denormalization</a> process can be very specific to a single departments view of the enterprise.</li>
+<li>**<a href="../../glossary/#key-value-store">Key-value Store</a> - a very simple type of data storage system that is deliberately designed to be simple so it can easily scale. Key-value stores have a simple API (store, get and delete) and the salient fact is that you cannot efficiently query the content of a value. It is considered a back box or "binary blob" of information.  Because if the simple design of key-value stores they are easy to distribute over a large cluster of computers and are cost effective when measured annual cost per terabyte per year.  They are an ideal complement to EKGs since EKGs focus on minimizing RAM usage.  EKGs frequently store just the key portion of items such as images or document references.</li>
+<li>**<a href="../../glossary/#column-family-store">Column-family Store</a> - these databases are similar to key-value stores but they partition the key into multiple components such as a row and column portion of the key.  A spreadsheet is a good example where a key is a cell at to get to the cell you must have the row and column identifiers of the cell.</li>
+<li>**<a href="../../glossary/#graph-database">Graph Database</a> - a database composed of vertices and edges, both with attributes, where relationship traversal is a primary concern, not an afterthought.  The graph database architecture pattern is the foundation for all enterprise knowledge graphs.</li>
+<li>**<a href="../../glossary/#document-store">Document Store</a> - a database that is composed of recursive tree-like structures where the atomic unit of storage is branches and leaves of this tree.  Document stores proved path-like query languages to reach any points in a tree using simple path expressions that may contain wildcards.  Document stores are ideal when you have hierarchial tree-like data such as documents or serialized objects that contain other objects.  Both XML and JSON are considered data models to serialize document structures.  Document stores are ideal for document search and retrieval since they can use document structure to aid in relevancy ranking.</li>
 </ol>
+<p>These six database architecture patterns are frequently used with the <a href="../../glossary/#architecture-tradeoff-analysis-method">Architecture Tradeoff Analysis Method</a> (ATAM) to help organizations have a transparent discussion on the pros and cons of each alternative.  A high-level overview of the ATAM process is shown in Figure 1.2:</p>
 <h2 id="defining-enterprise-knowledge-graphs">Defining Enterprise Knowledge Graphs</h2>
 <p>In this book, we define Enterprise Knowledge Graphs as the following:</p>
-<p><strong>An Enterprise Knowledge Graph ia a scalable graph database that stores information from two or more departments of an organization.</strong></p>
-<p>You will note that this definition is both somewhat general and very specific.  It is general because it includes many graph projects using a wide variety of technologies.  It is very specific in that it requires whatever graph database being used to have scalable technology under the hood.  Unfortunately, this eliminates most departmental graph projects in use today.</p>
-<p>Why do we define EKGs with scalability as a prerequisite?  Because to truly meet the future needs of a large enterprise we must build our graph on an infrastructure that will not fall over and die as it grows beyond the initial pilot phase.  I have seen many well intentioned software architects claim to be building enterprise scalable graph databases only to have the projects fail due to performance problems as they grow beyond their early stages.</p>
-<p>We also exclude knowledge graphs that are only attempting to solve problems for a specific department or specific business unit.  These can still be valuable projects for an enterprise since they can help individuals and departments learn the capabilities of graph databases.</p>
-<p>Now let's take a closer look at what we mean by scalable.</p>
-<h2 id="scalable-knowledge-graphs">Scalable Knowledge Graphs</h2>
-<p>Scalability is an inherent characteristic of any database architecture.  It implies that as the size an complexity of the databases grows, the architecture must accommodate this growth without rewriting the core applications.  Although unexpected performance problems with specific queries might occur as the size of your database grows, they should be fixable by doing simple query optimization.</p>
-<p>The key aspect of scalable graph databases is the ability to distribute a graph over a large number of independent but closely connected servers in a data center.  As demands grows, the number of servers in the cluster must easily scale without users or operations being impacted.</p>
+<p><strong>An Enterprise Knowledge Graph is a scalable graph database that stores information from two or more departments of an organization.</strong></p>
+<p>You will note that this definition is both somewhat general and very specific.  It is general because it includes many graph projects using a wide variety of technologies.  It is very specific in that it requires whatever graph database being used to have scalable technology under the hood.  We have very specific rules about what we mean by enterprise scalable.  Unfortunately, this eliminates most departmental graph projects in use today that don't use true scale-out technologies.</p>
+<p>Why do we define EKGs with scalability as a prerequisite?  Because to truly meet the future needs of a large enterprise we must build our graph pilot projects on an infrastructure that will not fall over and die as it grows beyond the initial pilot phase.  I have seen many well intentioned software architects claim to be building enterprise-scalable graph databases only to have the projects fail due to performance problems as they grow beyond their early stages.</p>
+<p>We also exclude knowledge graphs that are only attempting to solve problems for a specific department or specific business unit.  These can still be valuable projects for an enterprise since they can help individuals and departments learn the capabilities of graph databases.  But we would still classify them as departmental graph project, not enterprise-scale graph projects.</p>
+<p>Now let's take a closer look at what we mean by enterprise scalable.</p>
+<h2 id="enterprise-scalable-knowledge-graphs">Enterprise Scalable Knowledge Graphs</h2>
+<p>Scalability is an inherent characteristic of any database architecture.  It implies that as the size and complexity of the databases grows, the architecture must accommodate this growth without rewriting the core applications.  Although unexpected performance problems with specific queries might occur as the size of your database grows, they should be fixable by doing simple query optimization.  To be a true EKG pilot you should never have to redo your architecture from scratch.  You should be able to know that the exact same queries should run on ten thousand vertex graph and a trillion vertex graph.</p>
+<p>The key aspect of scalable graph databases is the ability to distribute a graph over a large number of independent but closely connected servers in a data center.  As demands grows, the number of servers in the cluster must easily scale without users or operations being impacted.  As you add new servers data must automatically be redistributed over the new servers in the cluster.</p>
 <h3 id="scalability-means-the-four-vs">Scalability Means the Four Vs</h3>
 <p>Volume, velocity, variability and veracity are considered the four Vs that define scalable systems.</p>
 <p><strong>Volume</strong> refers to the total amount of data in our knowledge graph.  For example enterprise-scale graphs may easily contain over 10 billion vertices and 50 billion edges. </p>
 <p><strong>Velocity</strong> means that new inserts, updates and deletes might be coming in fast via streaming events and these events must be ACID compliant and still never slow down read access times.  Service levels agreements (SLAs) must focus not on total average times, but the averages of the slowest 5% of the transactions.</p>
-<p><strong>Variability</strong> means that data is not uniform and can be easily stuffed into a single fact table of an <a href="#online-analytical-processing-system">OLAP</a> cube.</p>
-<p><strong>Veracity</strong> means we need to be able to validate the quality of incoming data in real-time and quickly raise warning flags if corrupt data is being transmitted into our EKG.</p>
+<p><strong>Variability</strong> means that data is not uniform and can be easily stuffed into a single fact table of an <a href="#online-analytical-processing-system">OLAP</a> cube.  Anyone should be able to add new assertions to the graph without ever needing to rewrite queries.  This property is called agility and sometime <a href="../../glossary/#sustainability">sustainability</a></p>
+<p><strong>Veracity</strong> means we need to be able to validate the quality of incoming data in real-time and quickly raise warning flags if corrupt data is being transmitted into our EKG.  Data quality may not be important for small departmental graph projects but becomes critical as you merge data from hundreds of different data sources.</p>
 <p>Note: We avoid using the term "[Big Data](../glossary.md#big-data" in this book.  It is an ambiguous statement of a problem and adds no insight into a solution.</p>
-<h3 id="scalability-means-automatic-sharding">Scalability Means Automatic Sharding</h3>
+<h3 id="scalability-means-automatic-sharding-and-rebalancing">Scalability Means Automatic Sharding and Rebalancing</h3>
 <p>The first criteria is that when the size of the enterprise graph grows to take on a new department or a new project, new hardware can be installed and the database is smart enough to use the new hardware without extensive pain and suffering by the database staff.  This is illustrated in Figure 1.2.</p>
-<p><img alt="Automatic Sharding" src="../img/autosharding.png" /></p>
+<p><img alt="Automatic Rebalancing" src="../img/autosharding.png" /></p>
+<p>So to be brutally honest, if your graph database does not automatically rebalance data as new nodes are added or removed from a distributed graph cluster I don't consider it a true enterprise graph solution.  It may still solve important business problems, but it does not fit our definition for this book.</p>
 <h3 id="scalability-means-scalable-access-control">Scalability Means Scalable Access Control</h3>
 <p>Many graph products claim to have performance scale out capabilities, but their software falls down when we give them a a detailed list of what roles can access what data.  This means they might be able to scale their data to 100 nodes, but only a single role of "admin" can be defined for the graph.  They provide an all-or nothing approach to security.  This model works in small applications where access to the application is controlled by security access rules.  However it breaks down when I want 100 teams to only be able to run queries on their own team's data.  We will provide more examples of vertex-level role-based access control in <a href="#lifecycles.md">Chapter 3</a></p>
 <h3 id="scalability-means-high-availability">Scalability Means High Availability</h3>
@@ -401,6 +413,10 @@
 <p>In a small project graph, you often have control and review processes of the code that each developer is working on.  In an enterprise setting you can't control everyone's code.  You need to assume that user will write run-away queries or just run queries that are not optimized for performance during the development and testing phases of query development.  You enterprise graph needs to be able to monitor rouge queries and shut them down when vertex counts, edges counts, CPU counts or memory resources reach reasonable limits.  Without these resource quotas a single query can take down an entire enterprise graph database.  So we need fine-grain controls in query resources, even when the queries may be running on 100 different nodes in a cluster.</p>
 <h3 id="scalability-means-scalable-metadata-management">Scalability Means Scalable Metadata Management</h3>
 <p>For small project graphs, you many only have a few hundred vertices, edges and attributes.  For enterprise-scale graphs you may have thousands of these items and staff that are new to the enterprise knowledge graph need to be able to quickly search for the structures they are interested in.  Once they find the items of interest they need to understand their meaning and what the various code within value sets mean (reference data).  New users also many need to ask the data steward for each attribute questions such as where did the data come from, what assumptions were made about the data if if the dataset contains any sensitive information that might restrict who can view the data.</p>
+<h3 id="scalability-needs-to-be-cost-effective-and-sustainable">Scalability Needs to Be Cost Effective and Sustainable</h3>
+<p>I have worked on several enterprise data warehouse projects that use relational database to perform complex queries that required many JOIN operations.  Both <a href="../../glossary/#inman-data-warehouse">Inman</a> and <a href="../../glossary/#kimball-data-warehouse">Kimball</a> data warehouse methodologies use relational databases and JOIN operations as their main vehicle for deployment.</p>
+<p>Most of the initial projects work fine, but as databases grow in complexity, the number of JOIN operations increase and the performance of the complex queries slowed down.  The number of people who can confidently write 25-level JOIN queries is also much smaller then those that can write 10-level JOINs.  Even the relational database that are built around priopirateary vendor technology that do many tricks with custom <a href="#field-programmable-gate-array">FPGA</a> hardware to minimize the impact of JOIN operations become slower over time.  But in the end, the cost most of these enterprise data warehouse systems exceeded the value of the insight gained from the systems.  Dispute spending hundreds of millions of dollars on attempting to build enterprise scale analytics systems, they get decommissioned.  The costs exceeded the benefits of the system.</p>
+<p>Our goal when building EKGs is to keep a sharp focus on both the costs of these systems and continuing to provide undisputable evidence of value to our business stakeholders.  We will explore this topic in the chapter on <a href="../ekg-cost-benefits/">EKG Cost Benefit Analysis</a>.</p>
 <!--
 Non-published notes:
 

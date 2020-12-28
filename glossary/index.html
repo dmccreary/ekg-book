@@ -330,6 +330,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#classification-and-connection" class="md-nav__link">
+    Classification and Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cognitive-bias" class="md-nav__link">
     Cognitive Bias
   </a>
@@ -372,6 +379,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#data-layer" class="md-nav__link">
+    Data Layer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    Dashboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#datamart" class="md-nav__link">
     Datamart
   </a>
@@ -407,15 +428,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-layer" class="md-nav__link">
-    Data Layer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dashboard" class="md-nav__link">
-    Dashboard
+  <a href="#dikw-pyramid" class="md-nav__link">
+    DIKW Pyramid
   </a>
   
 </li>
@@ -575,8 +589,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#inmon-data-warehouse" class="md-nav__link">
+    Inmon Data Warehouse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#key-value-store" class="md-nav__link">
     Key-Value Store
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kimball-data-warehouse" class="md-nav__link">
+    Kimball Data Warehouse
   </a>
   
 </li>
@@ -990,6 +1018,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#classification-and-connection" class="md-nav__link">
+    Classification and Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#cognitive-bias" class="md-nav__link">
     Cognitive Bias
   </a>
@@ -1032,6 +1067,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#data-layer" class="md-nav__link">
+    Data Layer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    Dashboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#datamart" class="md-nav__link">
     Datamart
   </a>
@@ -1067,15 +1116,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-layer" class="md-nav__link">
-    Data Layer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dashboard" class="md-nav__link">
-    Dashboard
+  <a href="#dikw-pyramid" class="md-nav__link">
+    DIKW Pyramid
   </a>
   
 </li>
@@ -1235,8 +1277,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#inmon-data-warehouse" class="md-nav__link">
+    Inmon Data Warehouse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#key-value-store" class="md-nav__link">
     Key-Value Store
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kimball-data-warehouse" class="md-nav__link">
+    Kimball Data Warehouse
   </a>
   
 </li>
@@ -1589,6 +1645,9 @@ can have a dramatic increase on the search quality of a search engine.</p>
 <p>Software that detects changes in a database and transmits the change information via <a href="#business-event">business events</a> to a remote system.  These events are often published on stream processing systems using the publish/subscribe integration pattern.
 <br/>Also known as: CDC
 <br/><a href="https://en.wikipedia.org/wiki/Change_data_capture">Wikipedia page on Change Data Capture</a></p>
+<h4 id="classification-and-connection">Classification and Connection</h4>
+<p>Within the <a href="#enrichment">data enrichment</a> pattern there are two distinct phases.  The first step is to take raw binary and numeric data streams and classify it according to the concept types in our knowledge graph.  Once we have business entities identified we next need to connect our business entities together using the context around them in the data.  These steps are called classification and connection.
+<br/>See also: <a href="#knowledge-triangle">Knowledge Triangle</a></p>
 <h4 id="cognitive-bias">Cognitive Bias</h4>
 <p>A systematic pattern of deviation from norm or rationality in judgment.</p>
 <p>In this book we study why humans don't adopt enterprise knowledge graph technology and how we can use stories, demonstrations and economic reasoning to overcome these bias.</p>
@@ -1626,6 +1685,10 @@ Concepts are grouped in Schemas and may be part of one or more Collections.<br/>
 <br/><a href="https://en.wikipedia.org/wiki/Data_mining">Wikipedia page on Data Mining</a></p>
 <h4 id="data-ingestion">Data Ingestion</h4>
 <p>A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including <a href="../glossary.md#relational-database-management-system">RDBMS</a>, other types of databases, S3 buckets, CSVs, or from streams.</p>
+<h4 id="data-layer">Data Layer</h4>
+<p>Raw low-level binary codes that contains information after analysis.</p>
+<h4 id="dashboard">Dashboard</h4>
+<p>A set of views, usually presented on a single page, that display information as a set of key performance indicators and charts.  In general, dashboard views can be customized for a role or a specific user.</p>
 <h4 id="datamart">Datamart</h4>
 <p>A data warehouse used by a project or a department.  Decomissioning datamarts is a key cost-driver to the adoption of enterprise knowledge graphs.</p>
 <h4 id="decision-tree">Decision Tree</h4>
@@ -1640,10 +1703,10 @@ Concepts are grouped in Schemas and may be part of one or more Collections.<br/>
 <p>For non-directional graphs, counting is one per edge.  For directional graphs that have reverse edges, each connection counts as two connections.  In a directional graph, each vertex has both an in-degree and out-degree.</p>
 <h4 id="departmental-graph">Departmental Graph</h4>
 <p>A graph designed to store information from one or more departments of an enterprise.  Departmental graphs may be limited in that they can't be scaled up to hold enterprise data.</p>
-<h4 id="data-layer">Data Layer</h4>
-<p>Raw low-level binary codes that contains information after analysis.</p>
-<h4 id="dashboard">Dashboard</h4>
-<p>A set of views, usually presented on a single page, that display information as a set of key performance indicators and charts.  In general, dashboard views can be customized for a role or a specific user.</p>
+<h4 id="dikw-pyramid">DIKW Pyramid</h4>
+<p>A visualization of the relationships between data, information, knowledge, and wisdom with data at the base followed by information, knowledge and finally wisdom at the top.</p>
+<p>Although commonly used in the field of we don't use the DIKW pyramid visualization in this book because the top wisdom layer is confusing in the context of an enterprise knowledge graph.  We used the simpler three layer <a href="#knowledge-triangle">Knowledge Triangle</a>.
+<br/><a href="https://en.wikipedia.org/wiki/DIKW_pyramid">Wikipedia page on DIKW Pyramid</a></p>
 <h4 id="document-store">Document Store</h4>
 <p>A type of database that stores data as tree-structured data elements such as JSON or XML.  Document stores use path-like query languages such as X-PATH to traverse the tree structure.  Languages such as XQuery provide high-quality functional programming languages with strong type checking.</p>
 <p>X-PATH is a mature W3C standard for expressing path traversal using a rich array of standardized wildcard expressions.</p>
@@ -1721,9 +1784,19 @@ See also: <a href="#index-free-adjacency">Index Free Adjacency</a></p>
 <br/>See also: The Neighborhood Walk Story</p>
 <h4 id="information-layer">Information Layer</h4>
 <p>Data about our key business entities.  This includes Things, like People, Places and Events.</p>
+<h4 id="inmon-data-warehouse">Inmon Data Warehouse</h4>
+<p>The Inmon Data Warehouse is a collection of database design patterns that promote analytics using relational databases promoted by Bill Inmon.</p>
+<p>The Inomn approach was first enumerated in his 1992 book "Building the Data Warehouse".  The Inmon approach is usually contrasted to the more recent 2013 <a href="#kimball-data-warehouse">Kimball Data Warehouse</a> that focuses on a simplicity and single fact table with many dimensions.</p>
+<p>Many EKG projects can be funded by their ability to show they can decommission expensive Inmon-style data warehouses that don't have the flexibility of EKGs.
+<br/><a href="https://en.wikipedia.org/wiki/Bill_Inmon">Wikipedia page on Bill Inmon</a></p>
 <h4 id="key-value-store">Key-Value Store</h4>
 <p>A type of database that stores items as pairs of keys and values.  The keys are strings and the values are binary blobs such as files or images.  A simple put/get/delete interface is used to manage the database.</p>
 <p>Key-value stores are excellent complements to graph databases since their simplicity allows for low-cost-per-byte storage. </p>
+<h4 id="kimball-data-warehouse">Kimball Data Warehouse</h4>
+<p>A data warehouse design pattern that uses a single fact table joined with dimensional tables to minimize the impact of JOIN statements in reporting performance.</p>
+<p>Kimball data warehouses are the ultimate in <a href="#denormalization">denormalized database design</a>.  Their goal is often simplicity at the expense of capturing complex relationship-intensive models of the world that can be reused across the enterprise.  As a result, Kimball datamarts  duplicate data in each department and each datamart has their own costs to perform <a href="#extract-load-transform">ETL</a> operations.  In contrast, EKGs focus on highly [normalized] data models of the world that include many complex relationships.  This closer our models get to the real world the more they can be reused across many departments.</p>
+<p>Decomissioning many departmental <a href="#datamart">datamarts</a> is often a key way to justify EKG projects.
+<a href="https://en.wikipedia.org/wiki/Ralph_Kimball">Wikipedia Page on Ralph Kimball</a></p>
 <h4 id="knowledge-layer">Knowledge Layer</h4>
 <p>A layer in the knowledge triangle that contains connected information.  The knowledge layer is often the top layer in our views.  There are some views that include a Wisdom layer on top of the knowledge layer.</p>
 <h4 id="knowledge-graph">Knowledge Graph</h4>
@@ -1737,8 +1810,9 @@ See also: <a href="#index-free-adjacency">Index Free Adjacency</a></p>
 <p>Knowledge representation is often the most complex challenge in the field of Artificial Intelligence.</p>
 <p><br/><a href="https://en.wikipedia.org/wiki/Knowledge_representation_and_reasoning">Wikipedia Page on Knowledge Representation</a></p>
 <h4 id="knowledge-triangle">Knowledge Triangle</h4>
-<p>A stack of three layers.  At the base is the <a href="#data-layer">Data Layer</a>, above that the <a href="#information-layer">Information Layer</a> and at the top the <a href="#knowledge-layer">Knowledge Layer</a>.
-<img alt="Knowledge Trainagle" src="../img/knowledge-triangle.png" /></p>
+<p>A stack of three layers that illustrates how knowledge graphs are constructed from raw data.  At the base is the <a href="#data-layer">Data Layer</a> that stores raw binary data in numeric forms, above that is <a href="#information-layer">Information Layer</a> that finds concepts and business entities within the data layer. At the top the triangle is the <a href="#knowledge-layer">Knowledge Layer</a> where business entities are connected to make them easy to query using graph traversal algorithms.</p>
+<p><img alt="Knowledge Triangle" src="../img/knowledge-triangle.png" /></p>
+<p><br/>See also: The <a href="#dikw-pyramid">DIKW Pyramid</a></p>
 <h4 id="label">Label</h4>
 <p>A string associated with one or more <a href="#concept">Concepts</a>.</p>
 <p>Labels have two main types: <a href="#preferred-lable">Preferred Labels</a> and <a href="#alternate-lable">Alternate Labels</a>.  Most formal ontologies and taxonomies only permit a single preferred label for each Concept in a given Language.</p>
