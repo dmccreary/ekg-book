@@ -309,8 +309,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ekgs-in-context-six-nosql-architectural-patterns" class="md-nav__link">
-    EKGs in Context: Six NoSQL Architectural Patterns
+  <a href="#graphs-are-a-nosql-architectural-patterns" class="md-nav__link">
+    Graphs are a NoSQL Architectural Patterns
   </a>
   
 </li>
@@ -430,6 +430,30 @@
   <li class="md-nav__item">
     <a href="../trends/" title="Ch 4 Graph Adoption Trends" class="md-nav__link">
       Ch 4 Graph Adoption Trends
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ekg-timeline/" title="Timeline" class="md-nav__link">
+      Timeline
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../stories/" title="Stories" class="md-nav__link">
+      Stories
     </a>
   </li>
 
@@ -722,6 +746,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../promoting/technology-adoption/" title="Technology Adoption" class="md-nav__link">
+      Technology Adoption
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../promoting/strategic-serendipity/" title="Strategic Serendipity" class="md-nav__link">
       Strategic Serendipity
     </a>
@@ -734,7 +770,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../promoting/conclustion.md" title="Conclusion" class="md-nav__link">
+    <a href="../../promoting/conclusion/" title="Conclusion" class="md-nav__link">
       Conclusion
     </a>
   </li>
@@ -819,8 +855,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ekgs-in-context-six-nosql-architectural-patterns" class="md-nav__link">
-    EKGs in Context: Six NoSQL Architectural Patterns
+  <a href="#graphs-are-a-nosql-architectural-patterns" class="md-nav__link">
+    Graphs are a NoSQL Architectural Patterns
   </a>
   
 </li>
@@ -924,26 +960,26 @@
                 <h1 id="chapter-1-what-is-an-enterprise-knowledge-graph">Chapter 1: What is an Enterprise Knowledge Graph</h1>
 <p><a href="../../references/#knowledge-is-power"><strong>Knowledge is Power - Imam Ali (AD 599-661)</strong></a></p>
 <ol>
-<li>EKG are one type of NoSQL architectural patterns</li>
+<li>Graphs are a NoSQL architectural patterns</li>
 <li>Defining enterprise knowledge graphs</li>
 <li>The Role of architectural scalability</li>
 <li>Growth Rates of graph databases technology</li>
 <li>Scale out graph database hardware</li>
 <li>Scale out graph query languages</li>
 </ol>
-<h2 id="ekgs-in-context-six-nosql-architectural-patterns">EKGs in Context: Six NoSQL Architectural Patterns</h2>
-<p>Enterprise Knowledge Graphs (EKGs) are a type of <a href="glossary.md#graph-database">graph database</a> that are designed to scale to meet the demanding requirements of large organizations.  Graph databases are just one type of NoSQL database architectural patten that we use to solve business problems.  EKGs are also used in combination with other NoSQL databases since each architecture has its strengths and weaknesses.</p>
-<p>If you are a [solution architect] your job is to work with business units to find how to correctly match business problems to the right NoSQL database architecture pattern.  This book will help you determine if EKGs might be a good fit for one or more of your business areas.</p>
+<h2 id="graphs-are-a-nosql-architectural-patterns">Graphs are a NoSQL Architectural Patterns</h2>
+<p>Enterprise Knowledge Graphs (EKGs) are a type of <a href="glossary.md#graph-database">graph database</a> that are designed to scale to meet the demanding requirements of large organizations.  Graph databases are just one type of NoSQL database architectural patten that we use to solve business problems.  EKGs are also frequently used in combination with other NoSQL databases since each architecture has its strengths and weaknesses.</p>
+<p>If you are a <a href="../../glossary/#solution-architect">solution architect</a> your job is to work with business units to find how to correctly match business problems to the right NoSQL database architecture pattern.  This book will help you determine if EKGs might be a good fit for one or more of your business areas.</p>
 <p>Although they have become popular, it is critical that we don't begin to think EKGs are the only solution to business problems.  Solution architects must have a strong understanding of all NoSQL architecture patterns to keeping recommendations objective.  They must know the pros and cons of each of these architectures.  Although it is out of the scope of this book to do a deep dive into each of the six architectural pattern, we present each of them here briefly so you can explore more on your own.  The six types of NoSQL database architectural patterns are described in Figure 1.1.</p>
 <p><img alt="NoSQL Architectural Patterns" src="../../img/nosql-architectural-patterns.png" /></p>
 <p>The six key architectures are:</p>
 <ol>
 <li><strong><a href="../../glossary/#relational-database">Relational</a></strong> - where data is stored as fixed format rows in tables and new data is added one row at a time.  Relationships between tables are calculated at query time using JOIN statements that require central indexes to be used to traverse the relationships.  Ironically, relational databases put relationship traversal as a secondary concern and don't optimize the design for fast traversal of billions of relationships.  Because relationships evolved as an "add on feature" to COBOL flat files running on mainframes, the focus of a relational database is fast atomic transactions on row-oriented data.  Also known as row-stores.</li>
-<li><strong>[Analytical](../glossary.md#analytical-database</strong> - where data is stored in centralized fact tables with simple relationships to dimensional tables.  Dimensions each represent a way you classify the facts in the fact table.  Analytical databases severely restrict the number of JOIN operations to optimise performance but force everyone to agree on the dimensions used to classify data.  Analytical databases tend to be the most difficult to use between departments since the <a href="glossary.md#denomalization">denormalization</a> process can be very specific to a single departments view of the enterprise.</li>
-<li>**<a href="../../glossary/#key-value-store">Key-value Store</a> - a very simple type of data storage system that is deliberately designed to be simple so it can easily scale. Key-value stores have a simple API (store, get and delete) and the salient fact is that you cannot efficiently query the content of a value. It is considered a back box or "binary blob" of information.  Because if the simple design of key-value stores they are easy to distribute over a large cluster of computers and are cost effective when measured annual cost per terabyte per year.  They are an ideal complement to EKGs since EKGs focus on minimizing RAM usage.  EKGs frequently store just the key portion of items such as images or document references.</li>
-<li>**<a href="../../glossary/#column-family-store">Column-family Store</a> - these databases are similar to key-value stores but they partition the key into multiple components such as a row and column portion of the key.  A spreadsheet is a good example where a key is a cell at to get to the cell you must have the row and column identifiers of the cell.</li>
-<li>**<a href="../../glossary/#graph-database">Graph Database</a> - a database composed of vertices and edges, both with attributes, where relationship traversal is a primary concern, not an afterthought.  The graph database architecture pattern is the foundation for all enterprise knowledge graphs.</li>
-<li>**<a href="../../glossary/#document-store">Document Store</a> - a database that is composed of recursive tree-like structures where the atomic unit of storage is branches and leaves of this tree.  Document stores proved path-like query languages to reach any points in a tree using simple path expressions that may contain wildcards.  Document stores are ideal when you have hierarchial tree-like data such as documents or serialized objects that contain other objects.  Both XML and JSON are considered data models to serialize document structures.  Document stores are ideal for document search and retrieval since they can use document structure to aid in relevancy ranking.</li>
+<li><strong><a href="../../glossary/#analytical-database">Analytical</a></strong> - where data is stored in centralized fact tables with simple relationships to dimensional tables.  Dimensions each represent a way you classify the facts in the fact table.  Analytical databases severely restrict the number of JOIN operations to optimise performance but force everyone to agree on the dimensions used to classify data.  Analytical databases tend to be the most difficult to use between departments since the <a href="glossary.md#denomalization">denormalization</a> process can be very specific to a single departments view of the enterprise.</li>
+<li><strong><a href="../../glossary/#key-value-store">Key-value Store</a></strong> - a very simple type of data storage system that is deliberately designed to be simple so it can easily scale. Key-value stores have a simple API (store, get and delete) and the salient fact is that you cannot efficiently query the content of a value. It is considered a back box or "binary blob" of information.  Because if the simple design of key-value stores they are easy to distribute over a large cluster of computers and are cost effective when measured annual cost per terabyte per year.  They are an ideal complement to EKGs since EKGs focus on minimizing RAM usage.  EKGs frequently store just the key portion of items such as images or document references.</li>
+<li><strong><a href="../../glossary/#column-family-store">Column-family Store</a></strong> - these databases are similar to key-value stores but they partition the key into multiple components such as a row and column portion of the key.  A spreadsheet is a good example where a key is a cell at to get to the cell you must have the row and column identifiers of the cell.</li>
+<li><strong><a href="../../glossary/#graph-database">Graph Database</a></strong> - a database composed of vertices and edges, both with attributes, where relationship traversal is a primary concern, not an afterthought.  The graph database architecture pattern is the foundation for all enterprise knowledge graphs.</li>
+<li><strong><a href="../../glossary/#document-store">Document Store</a></strong> - a database that is composed of recursive tree-like structures where the atomic unit of storage is branches and leaves of this tree.  Document stores proved path-like query languages to reach any points in a tree using simple path expressions that may contain wildcards.  Document stores are ideal when you have hierarchial tree-like data such as documents or serialized objects that contain other objects.  Both XML and JSON are considered data models to serialize document structures.  Document stores are ideal for document search and retrieval since they can use document structure to aid in relevancy ranking.</li>
 </ol>
 <p>These six database architecture patterns are frequently used with the <a href="../../glossary/#architecture-tradeoff-analysis-method">Architecture Tradeoff Analysis Method</a> (ATAM) to help organizations have a transparent discussion on the pros and cons of each alternative.  A high-level overview of the ATAM process is shown in Figure 1.2:</p>
 <h2 id="defining-enterprise-knowledge-graphs">Defining Enterprise Knowledge Graphs</h2>
