@@ -18,6 +18,17 @@ In a [concept](#concept) [subgraph](#subgraph) of a EKG, every concept has a sin
 <br/>See also: [Preferred Label](#preferred-label)
 <br/>See also: [SKOS](#simple-knowledge-organizational-system)
 
+#### Amazon Simple Storage System
+A high-availability cloud-based [Key-value Store](#key-value-store) system created by Amazon in 2006.
+
+In 2006 Amazon was a pioneer in the creation of cloud-based data services.  Because S3 was one of the first ultra-reliable cloud based services it gained early market share and now dominates the data storage industry.  The API for S3 is now duplicated by dozens of other vendors and has become a defacto standard for cloud-based key-value stores.
+
+S3 was the first service launched as part of Amazon Web Services (AWS).
+
+<br/>Also known as: S3
+<br/>[Wikipedia page on Amazon S3](https://en.wikipedia.org/wiki/Amazon_S3)
+
+
 #### Availability Heuristic
 The availability heuristic suggests that the likelihood of events is estimated based on how many examples of such events come to mind.
 
@@ -103,6 +114,16 @@ Concepts are grouped in Schemas and may be part of one or more Collections.<br/>
 #### Concept Graph
 A graph that stores the core business concepts of a project, department or enterprise.  In the ideal world, an enterprise graph will use a combination of machine learning to connect related concepts together.
 
+#### Consilience
+The principle that evidence from independent, unrelated sources can "converge" on strong conclusions.
+
+Combining results from multiple scientific studies to form stronger conclusions than a single study, often called meta analysis, is an example of consilience.
+
+One of the fundamental measures of the value of EKGs is can it promote concilience by linking datasets created from multiple independent data sources.
+<br/>Also known as: Convergence of evidence
+<br/>Also known as: Concordance of evidence
+<br/>[Wikipedia page on Consilience](https://en.wikipedia.org/wiki/Consilience)
+
 #### Cost Sharing
 The ability of a single graph data model to be shared by many business units and thus the costs can also be shared.  Lower charge backs make graph databases more cost-effective than other data models.
 <br/>See also: [No Complexity Penalty](#no-complexity-penalty)
@@ -118,8 +139,19 @@ Data discovery is contrasted with operational reporting which are regular consis
 #### Data Ingestion
 A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including [RDBMS](#relational-database-management-system), other types of databases, S3 buckets, CSVs, or from streams.
 
+#### Data Lake
+A data storage architectural pattern where data is stored its natural/raw format.  Data Lakes are a type of [key-value store](#key-value-store) where the key is a path to a file in a file system.
+
+The Data Lake pattern was made popular with the Hadoop project.  Because Data Lake are simple they have the advantage that they can be easily implemented by distributed files systems such as [Amazon S3](#amazon-s3) object storage system or the [Hadoop Distributed File System](#hadoop-distributed-file-system) (HDFS).
+
+Data Lakes are not considered a true database because the usually lack a query language, ACID transactions, indexing, caching, search, semantics, role-based access control.  Data Lakes are considered a source of data for EKGs.
+
 #### Data Layer
-Raw low-level binary codes that contains information after analysis.
+An abstraction layer were low-level raw binary data is stored that contains information after analysis.
+
+The Data Layer is the lowest level in the [Knowledge Triangle](#knowledge-triangle).
+
+The format of data in the data layer may be narrative text or raw dumps from a relational database.
 
 #### Dashboard
 A set of views, usually presented on a single page, that display information as a set of key performance indicators and charts.  In general, dashboard views can be customized for a role or a specific user.
@@ -249,6 +281,12 @@ See also: [Index Free Adjacency](#index-free-adjacency)
 
 #### Graph Isomorphism
 A graph can exist in different forms having the same number of vertices, edges, and also the same edge connectivity. Such graphs are called isomorphic graphs.
+
+#### Hadoop Distributed File System
+A high-availability distributed key-value store that was a principal component of the Hadoop system.
+
+HDFS was one of the two components of the original Hadoop system.  The other component was the MapReduce system.
+<br/>Also known as: HDFS
 
 #### Hedgehog vs Fox Modeling
 Focus on accurate modeling a single domain or [subgraph](#subgraph) of an enterprise knowledge graph (the Hedgehog) vs general modeling of a wide variety of subgraphs or domains.

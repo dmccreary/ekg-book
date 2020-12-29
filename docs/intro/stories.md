@@ -1,8 +1,5 @@
 # Enterprise Knowledge Graph Stories
-
-## The Google Knowledge Graph
-On May 16, 2012, Google published the "Things Not Strings" blog post.  Now the world knew that graphs were no longer an academic interest. Google's graph serviced millions of requests per minute and was available 24X7.  Knowlege Graphs became cool.
-[Introducing the Knowledge Graph: things, not strings](https://www.blog.google/products/search/introducing-knowledge-graph-things-not/)
+These are a few stories related to enterprise knowledge graphs.
 
 ## Glossary to Taxonomy to Ontology to Graph
 Tracy had a background in library science.  She was asked to help a manufacturing company organize their datasets.

@@ -10,6 +10,8 @@ nav:
     - Ch 2 Costs & Benefits: intro/ekg-cost-benefit.md
     - Ch 3 Lifecycle: intro/lifecycle.md
     - Ch 4 Graph Adoption Trends: intro/trends.md
+    - Timeline: intro/ekg-timeline.md
+    - Stories: intro/stories.md
   - Pt 2 Concepts:
     - Ch 5 Knowledge Triangle: concepts/knowledge-triangle.md
     - Ch 6 Ingesting Data: concepts/ingestion.md
@@ -29,8 +31,9 @@ nav:
     - Strategy Graph: case-studies/strategy-graph.md
   - Pt 4 Promoting:
     - Cognitive Bias: promoting/cognitive-bias.md
+    - Technology Adoption: promoting/technology-adoption.md
     - Strategic Serendipity: promoting/strategic-serendipity.md
-    - Conclusion: promoting/conclustion.md
+    - Conclusion: promoting/conclusion.md
   - Glossary: glossary.md
   - References: references.md
   - Blogs: blogs.md
