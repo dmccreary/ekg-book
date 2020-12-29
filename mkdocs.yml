@@ -2,7 +2,35 @@ site_name: 'Enterprise Knowledge Graphs'
 nav:
   - Home: index.md
   - Table of Contents: table-of-contents.md
+  - Pt 1 Introduction:
+    - Preface: intro/preface.md
+    - About this book: intro/about-this-book.md
+    - Acknowledgements: intro/acknowledgements.md
+    - Ch 1 Introduction: intro/introduction.md
+    - Ch 2 Costs & Benefits: intro/ekg-costs-benefits.md
+    - Ch 3 Lifecycle: intro/lifecycle.md
+  - Pt 2 Concepts:
+    - Ch 4 Knowledge Triangle: concepts/knowledge-triangle.md
+    - Ch 5 Ingesting Data: concepts/ingestion.md
+    - Scaling Out: concepts/scale-out.md
+    - Entity Resolution: concepts/entity-resolution.md
+    - Load and Stress Testing: concepts/load-and-stress-testing.md
+    - Graph Modeling: concepts/graph-modeling.md
+    - Graph Algorithms: concepts/graph-algorithms.md
+    - Graph Hardware: concepts/graph-hardware.md
+    - Natural Language Processing: concepts/natural-language-processing.md
+  - Pt 3 Case Studies:
+    - Customer 360: case-studies/customer-360.md
+    - Analytics Dashboard: case-studies/analytics-dashboard.md
+    - Rules Engine: case-studies/rules-engine.md
+    - Semantic Search: case-studies/semantic-search.md
+  - Pt 4 Promoting:
+    - Cognitive Bias: promoting/cognitive-bias.md
+    - Strategic Serendipity; promoting/strategic-serendipity.md
+    - Conclusion: promoting/conclustion.md
   - Glossary: glossary.md
+  - References: references.md
+  - Blogs: blogs.md
   - Contact: contact.md
 
 site_description: 'Enterprise Knowledge Graphs'
