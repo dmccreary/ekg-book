@@ -19,7 +19,7 @@
     
     
       
-        <title>Graph Hardware - Enterprise Knowledge Graphs</title>
+        <title>Ch 5 Ingesting Data - Enterprise Knowledge Graphs</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#graph-hardware" class="md-skip">
+        <a href="#ingesting-data-into-an-enterprise-knowledge-graph" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Graph Hardware
+              Ch 5 Ingesting Data
             
           </span>
         </div>
@@ -350,11 +350,157 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../ingestion/" title="Ch 5 Ingesting Data" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Ch 5 Ingesting Data
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Ch 5 Ingesting Data" class="md-nav__link md-nav__link--active">
       Ch 5 Ingesting Data
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-flow-concepts" class="md-nav__link">
+    Data Flow concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operational-source-system" class="md-nav__link">
+    Operational Source System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-data-capture" class="md-nav__link">
+    Change Data Capture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-event-publishing" class="md-nav__link">
+    Business Event Publishing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-matching" class="md-nav__link">
+    Schema Matching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-mapping" class="md-nav__link">
+    Schema Mapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-publish-subscribe-pattern" class="md-nav__link">
+    The Publish-Subscribe Pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-updates" class="md-nav__link">
+    Batch Updates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streaming-updates" class="md-nav__link">
+    Streaming Updates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-quality-checks" class="md-nav__link">
+    Data Quality Checks
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Quality Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#document-validation" class="md-nav__link">
+    Document Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-graph-data-checks" class="md-nav__link">
+    In Graph Data Checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-shacl" class="md-nav__link">
+    Case Study: SHACL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-resolution" class="md-nav__link">
+    Entity Resolution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -422,20 +568,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Graph Hardware" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../graph-hardware/" title="Graph Hardware" class="md-nav__link">
       Graph Hardware
     </a>
-    
   </li>
 
         
@@ -665,6 +802,127 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-flow-concepts" class="md-nav__link">
+    Data Flow concepts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operational-source-system" class="md-nav__link">
+    Operational Source System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-data-capture" class="md-nav__link">
+    Change Data Capture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-event-publishing" class="md-nav__link">
+    Business Event Publishing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-matching" class="md-nav__link">
+    Schema Matching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-mapping" class="md-nav__link">
+    Schema Mapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-publish-subscribe-pattern" class="md-nav__link">
+    The Publish-Subscribe Pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-updates" class="md-nav__link">
+    Batch Updates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streaming-updates" class="md-nav__link">
+    Streaming Updates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-quality-checks" class="md-nav__link">
+    Data Quality Checks
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Quality Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#document-validation" class="md-nav__link">
+    Document Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-graph-data-checks" class="md-nav__link">
+    In Graph Data Checks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-shacl" class="md-nav__link">
+    Case Study: SHACL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity-resolution" class="md-nav__link">
+    Entity Resolution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -675,7 +933,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/dmccreary/ekg-book/blob/master/docs/concepts/graph-hardware.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/dmccreary/ekg-book/blob/master/docs/concepts/ingestion.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -683,12 +941,25 @@
                   
                 
                 
-                <h1 id="graph-hardware">Graph Hardware</h1>
-<ul>
-<li>Hardware Architecture</li>
-</ul>
-<p><a href="https://dmccreary.medium.com/intels-incredible-piuma-graph-analytics-hardware-a2e9c3daf8d8">Intel’s Incredible PIUMA Graph Analytics Hardware</a></p>
-<p><a href="https://arxiv.org/abs/2010.06277"></a></p>
+                <h1 id="ingesting-data-into-an-enterprise-knowledge-graph">Ingesting Data into an Enterprise Knowledge Graph</h1>
+<h2 id="data-flow-concepts">Data Flow concepts</h2>
+<p><img alt="EKG Data Flow Diagram" src="../img/ekg-data-flow-diagram.png" /></p>
+<h2 id="operational-source-system">Operational Source System</h2>
+<h2 id="change-data-capture">Change Data Capture</h2>
+<h2 id="business-event-publishing">Business Event Publishing</h2>
+<h2 id="schema-matching">Schema Matching</h2>
+<h2 id="schema-mapping">Schema Mapping</h2>
+<h2 id="the-publish-subscribe-pattern">The Publish-Subscribe Pattern</h2>
+<h2 id="batch-updates">Batch Updates</h2>
+<h2 id="streaming-updates">Streaming Updates</h2>
+<h2 id="data-quality-checks">Data Quality Checks</h2>
+<h3 id="document-validation">Document Validation</h3>
+<h3 id="in-graph-data-checks">In Graph Data Checks</h3>
+<h3 id="case-study-shacl">Case Study: SHACL</h3>
+<p><a href="../../glossary/#shape-constraint-langauge">Shape Constraint Language</a></p>
+<h3 id="entity-resolution">Entity Resolution</h3>
+<p>Master Data Management</p>
+<h3 id="_1"></h3>
                 
               
               
@@ -707,7 +978,7 @@
       <div class="md-footer-nav">
         <nav class="md-footer-nav__inner md-grid">
           
-            <a href="../graph-algorithms/" title="Graph Algorithms" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <a href="../knowledge-triangle/" title="Ch 4 Knowledge Triangle" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
                 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
               </div>
@@ -716,19 +987,19 @@
                   <span class="md-footer-nav__direction">
                     Previous
                   </span>
-                  Graph Algorithms
+                  Ch 4 Knowledge Triangle
                 </span>
               </div>
             </a>
           
           
-            <a href="../natural-language-processing/" title="Natural Language Processing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../scale-out/" title="Scaling Out" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span class="md-footer-nav__direction">
                     Next
                   </span>
-                  Natural Language Processing
+                  Scaling Out
                 </span>
               </div>
               <div class="md-flex__cell md-flex__cell--shrink">
