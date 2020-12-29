@@ -19,18 +19,18 @@
 
 ## Part 3: Enterprise Knowledge Graphs Case Studies
 
-* Customer 360 - a single view of all your customer touch points
-* Analytics Dashboard - the right insights to the right users
-* Semantic Search - EKG services for helping enterprise search
-* Product Recommendation - product graphs
-* Employee Knowledge Graphs - HR insights
-* Strategy Analytics - Are we aligned?
+* [Customer 360](case-studies/customer-360.md) - a single view of all your customer touch points
+* [Analytics Dashboard](case-studies/customer-360.md) - the right insights to the right users
+* [Semantic Search](case-studies/semantic-search.md) - EKG services for helping enterprise search
+* [Product Recommendation](case-studies/product-recommendation.md) - product graphs
+* [Employee Knowledge Graphs](case-studies/employee-knowledge-graphs.md) - the rightHR insights
+* [Strategy Analytics](case-studies/strategy-graph.md) - Are we aligned?
 
 ## Part 4: Promoting Enterprise Knowledge Graphs
 * [Storytelling](promoting/storytelling.md) - using narrative bias to your advantage
 * [Technology Adoption](promoting/technology-adoption.md) - telling the right story to the right audi
 * [Windows of Opportunity](promoting/windows-of-opportunity.md) - the EKG pilot
-* [Strategic Serendipity](promoting/strategic-sendipity.md) - getting ready for discovery
+* [Strategic Serendipity](promoting/strategic-serendipity.md) - getting ready for discovery
 
 [Conclusion](promoting/conclusion.md)
 

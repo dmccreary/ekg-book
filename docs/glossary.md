@@ -116,7 +116,7 @@ Data discovery is contrasted with operational reporting which are regular consis
 <br/>[Wikipedia page on Data Mining](https://en.wikipedia.org/wiki/Data_mining)
 
 #### Data Ingestion
-A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including [RDBMS](../glossary.md#relational-database-management-system), other types of databases, S3 buckets, CSVs, or from streams.
+A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including [RDBMS](#relational-database-management-system), other types of databases, S3 buckets, CSVs, or from streams.
 
 #### Data Layer
 Raw low-level binary codes that contains information after analysis.
