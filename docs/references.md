@@ -9,3 +9,12 @@ The phrase **knowledge is power** is frequently attributed to Sir Francis Bacon 
 
 #### Intel PIUMA on Arxiv
 [PIUMA: Programmable Integrated Unified Memory Architecture](https://arxiv.org/abs/2010.06277)
+
+#### MACC Conference
+[](https://midwestacc.com/wp-content/uploads/2019/11/Dan-McCreary-MACC-Conference-Nov-2019.pdf)
+
+#### The Rainbow Library
+[A Story of Knowledge Classification](https://datadictionary.blogspot.com/2006/10/my-visit-to-metadata-library.html)
+
+#### SemTech 2007
+[](https://datadictionary.blogspot.com/2007/05/impressions-of-sem-tech-07.html)

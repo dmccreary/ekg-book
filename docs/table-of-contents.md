@@ -8,14 +8,21 @@
 
 * [Chapter 1: What is an Enterprise Knowledge Graph](intro/introduction.md)
 * [Chapter 2: Why Build an Enterprise Knowledge Graph](intro/ekg-cost-benefits.md)
-
+* [Chapter 3: How we Build EKGS - the EKG Lifecycle](intro/lifecycle.md)
+* [Stories](intro/stories.md)
+* [EKG Timeline](intro/ekg-timeline.md)
+* [Trends](intro/trends.md)
 
 ## Part 2: Enterprise Knowledge Graphs Concepts
 
-* The Knowledge Triangle TBD
-* Scale-Out Graph Databases - TBD
-* Graph Machine Learning - TBD
-* Calculating the Cost and Benefits of Enterprise Knowledge Graphs - TBD
+* [The Knowledge Triangle](concepts/knowledge-triangle.md)
+* [Ingesting Data into Your EKG](concepts/ingestion.md)
+* [Scale-Out Graph Databases](concepts/scale-out)
+* [Graph Machine Learning](concepts/graph-machine-learning.md)
+* [Graph Modeling](concepts/graph-modeling.md)
+* [Graph Algorithms](concepts/graph-algorithms.md)
+* [Load and Stress Testing](concepts/load-and-stress-testing.md)
+* [Graph Hardware](concepts/graph-hardware.md)
 
 ## Part 3: Enterprise Knowledge Graphs Case Studies
 

@@ -1,6 +1,8 @@
 # Cognitive Bias in Enterprise Knowledge Selection
 
-In this chapter we will look into the reason that organizations are not adopting enterprise knowledge graphs due to logical errors in judgement.  We call these persistent patterns of error [Cognitive Bias](../glossary.md#cognitive-bias).  When we combine this knowledge with our understanding of the [Technology adoption life cycle](../glossary.md#technology-adoption-life-cycle) and [Windows of Opportunigy](#windows-of-opportunity) we can start to make create a predictive model of when and organization might be ready to adopt enterprise knowledge graph technology.
+In this chapter we will look into the reason that organizations are *not* adopting enterprise knowledge graphs due to logical errors in judgement.  We call these persistent patterns of error [Cognitive Bias](../glossary.md#cognitive-bias).  When we combine this knowledge with our understanding of the [Technology adoption life cycle](../glossary.md#technology-adoption-life-cycle) and [Windows of Opportunity](#windows-of-opportunity) we can start to make create a predictive model of when and organization might be ready to adopt enterprise knowledge graph technology.
+
+Being able to predict *when* an organization is ready to make the transition from a relational dominated world to a graph dominated world does not imply that everyone who is ready to change will successfully make the transition.  Sometimes random events occur that block our evolutionary progression.
 
 When I first started to focus on solution architecture consulting, I was frequently hired by organizations that wanted to bring in an objective external consultant to help them evaluate options for a specific business project.  Although our book, **Making Sense of NoSQL** had ample information on how to do this objective analysis, many companies still wanted an experienced outside person to oversee this processes.
 

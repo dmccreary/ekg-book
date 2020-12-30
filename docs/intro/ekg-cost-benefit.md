@@ -1,6 +1,8 @@
-# Chapter 2: Why Build An Enterprise Knowledge Graph
+# Chapter 2: Why Build An Enterprise Knowledge Graph?
 
+* EKG Use Case Taxonomy
 * Cost-Benefit Analysis
+* Metcalf's Law and Network Effects
 * Business Value
 * Measuring EKG costs
 * Measuring EKG tangible benefits
@@ -13,11 +15,24 @@ But most of us don't work at Apple and we are not world leaders with a long succ
 
 Until that happens, we are going to need to learn to speak the language of finance to get our EKGs off the ground.
 
+## EKG Use Case Taxonomy
+
+[A Taxonomy of Graph Use Cases](https://dmccreary.medium.com/a-taxonomy-of-graph-use-cases-2ba34618cf78)
+
+* Performance
+    ** Fast Relationship Traversals (no JOINS)
+    ** Easy to write complex queries
+    ** Easy to perform deep link analysis
+* Flexibility
+* Rules
+
+## Metcalf's Law and Network Effects
+
 ## Cost-Benefit Analysis
 
 [The Business Value of Computers]
 [Wikipedia on Business Value](https://en.wikipedia.org/wiki/Business_value)
-[](https://en.wikipedia.org/wiki/Peter_Drucker)
+[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)
 [](https://en.wikipedia.org/wiki/Michael_Porter)
 
 ## Measuring Costs
