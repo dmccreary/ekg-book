@@ -82,6 +82,16 @@ Software that detects changes in a database and transmits the change information
 Within the [data enrichment](#enrichment) pattern there are two distinct phases.  The first step is to take raw binary and numeric data streams and classify it according to the concept types in our knowledge graph.  Once we have business entities identified we next need to connect our business entities together using the context around them in the data.  These steps are called classification and connection.
 <br/>See also: [Knowledge Triangle](#knowledge-triangle)
 
+#### Codifiable Knowledge
+Knowledge that can be captured in machine readable formats such as taxonomies, ontologies, rules or decision trees and reused across an enterprise.
+
+Codifiable knowledge is contrasted to [Tacit Knowledge](#tacit-knowledge) that can not easily be converted into machine readable forms and shared with others.  The process of converting tacit knowledge to codifiable knowledge is part of the field of [Knowledge Engineering](#knowledge-engineering) and [Knowledge Architecture](#knowledge-architecture).
+
+Within an EKG, our focus is how to model and store codifiable knowledge in terms of graph structures such as taxonomies, ontologies and decision trees.
+
+<br/>Also known as: Explicit Knowledge
+<br/>[Wikipedia page on Explicit Knowledge](https://en.wikipedia.org/wiki/Explicit_knowledge)
+
 #### Cognitive Bias
 A systematic pattern of deviation from norm or rationality in judgment.
 
@@ -340,6 +350,14 @@ Entities can be any business objects, customers, products, parts, documents, emp
 
 Note that this definition has no dependence on semantics and inference.  Our definition is intentionally designed to include many types of interconnected datasets.  We think your organizational chart is a type of knowledge graph an may be a subgraph of your enterprise knowledge graph.
 
+#### Knowledge Management
+A multi-disciplinary field that include processes of creating, sharing, using and managing the knowledge and information of an organization.
+
+Knowledge Management addresses question such as what is organizational knowledge, what types of knowledge are there ([Tacit](#tacit-knowledge) vs. [Codifiable](#codifiable-knowledge)), how do we encourage employees to capture and store knowledge is forms that can be reused, how do we motivate employees to link isolated knowledge islands together, how do we make tacit Knowledge more codifiable, searchable and reusable.
+
+In this book, we take the approach that EKGs should be part of an organizations overall [Enterprise Knowledge Management] strategy and that individuals with formal training in the field of [Knowledge Engineering] should participate in the creation of EKGs and particpate in their evolution.
+<br/>[Wikipedia page on Knowledge Management](https://en.wikipedia.org/wiki/Knowledge_management)
+
 #### Knowledge Representation
 The process of representing information (individual facts) about the world in a form that a computer system can utilize to solve complex tasks.
 
@@ -490,6 +508,14 @@ The ability for a team of developers to maintain the code that supports an enter
 
 #### Systems Thinking
 A way of looking at problems in terms of components that interact with each other over time using direct connections, indirection connections and both positive and negative feedback cycles.  Systems Thinking forces us to think broadly about how our enterprise knowledge graphs interact with external systems.  Systems thinking also helps us see the unintended consequences of our actions.
+
+#### Tacit Knowledge
+A type of knowledge that is difficult to codify in terms of a machine readable artifacts that can be reused across an enterprise.  Tacit knowledge is difficult to transfer from one person to another person by means of writing or verbalizing.
+
+Understanding what tacit knowledge is developing strategies to convert it to codifiable knowledge is a key areas of research in the fields of [Knowledge Management](#knowledge-management) and [Knowledge Engineering](#knowledge-engieering).
+
+<br/>See also: [Codifiable Knowledge](#codifiable-knowledge)
+<br/>[Wikipedia Page on Tacit Knowledge](https://en.wikipedia.org/wiki/Tacit_knowledge)
 
 #### TBox
 A "terminological component" or terminology [Concept](#concept) associated with a set of facts assertions (ABox statements) of a knowledge graph.

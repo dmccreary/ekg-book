@@ -7,7 +7,7 @@
 ## Part 1: Introduction
 
 * [Chapter 1: What is an Enterprise Knowledge Graph](intro/introduction.md)
-* [Chapter 2: Why Build an Enterprise Knowledge Graph](intro/ekg-cost-benefits.md)
+* [Chapter 2: Why Build an Enterprise Knowledge Graph](intro/ekg-cost-benefit.md)
 * [Chapter 3: How we Build EKGS - the EKG Lifecycle](intro/lifecycle.md)
 * [Stories](intro/stories.md)
 * [EKG Timeline](intro/ekg-timeline.md)
