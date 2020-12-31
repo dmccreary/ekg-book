@@ -92,11 +92,46 @@ Most of the initial projects work fine, but as databases grow in complexity, the
 
 Our goal when building EKGs is to keep a sharp focus on both the costs of these systems and continuing to provide undisputable evidence of value to our business stakeholders.  We will explore this topic in the chapter on [EKG Cost Benefit Analysis](ekg-cost-benefit.md).
 
+## EKGs and Knowledge Architecture
+Although we know that EKGs are designed to scale to encompass many parts of an organization, we need to be humble and realize that not all knowledge in your organization can be easily transferred into machine readable components of your EKG.  This is because most knowledge is also highly contextual and for the near term future, will mostly reside in the brains of our employees.
+
+### Tacit and Codifiable Knowledge
+Knowledge can be divided into two forms:
+
+1. [Tacit Knowledge](../glossary.md#tacit-knowledge) is the type of knowledge that only resides in our employees brains.  It can not be easily converted into structures within our knowledge graph such as taxonomies, ontologies, decision trees and inference rules.
+2. [Codifiable Knowledge]()../glossary.md#codifiable-knowledge) is knowledge that can be converted into some for of machine readable representation.  These ultimately become coded as a set of vertices, edge and attributes within our EKG or other system.
+
+## Knowledge Management
+The overall Knowledge Architecture of any organization is driven by a firms approach to Knowledge Management.  We define Knowledge Management as the combination of three disciplines:
+
+1. [Human Resource Management](../glossary.md#human-resources) - How to we create policies to encourage employees to share their knowledge?  Do we make it easy for them to create and share knowledge?  Do we give bonuses for employees that create and maintain content in a wiki or a EKG rules system?  If employees contribute many highly rated answers to questions on web sites like StackOverflow should they get a bonus?  Should authors of blogs that get a high number of views and show sustained though leadership in your industry get higher pay?
+2. [Library Science](../glossary.md#library-science) - How do we organize our knowledge?  So we have official company approved taxonomies and ontologies?  Do we have product taxonomies?  Do we manually tag content based on the preferred labels in our taxonomies?  Do we analyze public taxonomies and our competitive taxonomies to see if their organizational structures give them a competitive advantage.
+3. [Search](../glossary.md#search) - how does our organization create search systems for our knowledge?  Do we use keyword only search or do we use our company taxonomies and ontologies to understand how alternate terms are used to connect to related concepts.  Do we use NLP and automatic document classification to associated documents with the right concepts, products and product managers?  Can product managers get automatic notification if a document, job posting or competitive product is added to the knowledge repository?
+
+You can see that the EKG we design must take our companies overall enterprise knowledge management strategies into account.  EKGs can reinforce classification and search strategies and by connecting content to our employees we can create metrics for creating bonuses for employees that contribute valuable knowledge.
+
+## Systems Thinking
+
+1. What other disciplines might impact how you design and grow your EKG?
+2. Is a narrow range of computer science skills enough to create a successful knowledge graph?
+3. How can you use your knowledge of the human brain to promote your EKG?  What are the limitations of using brain metaphors in this process?
+4. How do industry standards impact the way you represent knowledge in your organization?
+
 <!--
 Non-published notes:
 
-Note this definition does not address the word "enterprise":
+Other definitions of enterprise knowledge graph:
 
+Note the definition on this page does not address the word "enterprise":
 https://help.poolparty.biz/pp/white-papers-release-notes/poolparty-technical-white-paper/an-enterprise-knowledge-graph-life-cycle-a-summary/the-enterprise-knowledge-graph-a-definition
+
+Note that Pool Party draw from employees that have a strong semantic-web-centric knowledge base.
+
+
+https://enterprise-knowledge.com/what-is-an-enterprise-knowledge-graph-and-why-do-i-want-one/#:~:text=An%20enterprise%20knowledge%20graph%20is,by%20both%20humans%20and%20machines.
+
+An enterprise knowledge graph is a representation of an organization’s knowledge domain and artifacts that is understood by both humans and machines. It is a collection of references to your organization’s knowledge assets, content, and data that leverages a data model to describe the people, places, and things and how they are related. 
+
+
 ->
 

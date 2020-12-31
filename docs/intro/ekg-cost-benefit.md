@@ -53,6 +53,7 @@ Until that happens, we are going to need to learn to speak the language of finan
 * The value of insights
 * Tracking early insights
 * Predicting future insights
+* How are innovations and patents valued in your organization?
 * Focus on datasets that generate shared value
 
 ## Brains are Prediction Machines
@@ -62,5 +63,13 @@ Pick up a ball.  Throw it in the air and catch it.  A simple act.  But to perfor
 This metaphor, of the brain as a prediction machine that easily can predict the future position of a ball in flight, is how we want you to think of your enterprise knowledge graph.  The EKG is a machine that will help you predict what actions you can take to best serve your customers.  That is one of the best reasons to build them.
 
 We use the metaphor of the EKG as your companies "brain" carefully.  Because the current generation of graph databases really are very different than a human brain.  Neurons in a human brain are very different from a CPU thread stepping through vertexes and edges of a graph.  A typical enterprise graph has about six connections between a vertex and neighboring vertices.  A human brain has around 10,000 connections for every neuron.  An EKG can be inspired by the human brain just like plans are inspired by birds and submarines are inspired by fish.
+
+## Systems Thinking
+
+1. Should business units be charged for use of an EKG?  How would change-backs be calculated?
+2. What is the role of innovation in your organization.  Does your organization manage a list of ideas from all employees?  Are the ideas sorted by cost-benefit analysis?
+3. How would you describe key events in technology and their relationship to cost-benefit analysis?
+4. What is the relationship between the Chief Executive Officer and the Chief Financial Officer in your organization?  Are finance staff trained on valuing intangible benefits?
+5. How is overall knowledge-capture valued in your organization?  Do employees get a bonus for sharing codifiable knowledge?
 
 
