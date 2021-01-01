@@ -64,7 +64,7 @@ This metaphor, of the brain as a prediction machine that easily can predict the 
 
 We use the metaphor of the EKG as your companies "brain" carefully.  Because the current generation of graph databases really are very different than a human brain.  Neurons in a human brain are very different from a CPU thread stepping through vertexes and edges of a graph.  A typical enterprise graph has about six connections between a vertex and neighboring vertices.  A human brain has around 10,000 connections for every neuron.  An EKG can be inspired by the human brain just like plans are inspired by birds and submarines are inspired by fish.
 
-## Systems Thinking
+## Systems Thinking Questions
 
 1. Should business units be charged for use of an EKG?  How would change-backs be calculated?
 2. What is the role of innovation in your organization.  Does your organization manage a list of ideas from all employees?  Are the ideas sorted by cost-benefit analysis?

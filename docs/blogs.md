@@ -20,3 +20,5 @@ Published Nov. 23rd 2020
 
 
 ## [The Knowledge Triangle]
+
+## [Knowledge Graphs: The Third Era of Computing](https://dmccreary.medium.com/knowledge-graphs-the-third-era-of-computing-a8106f343450)

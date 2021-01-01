@@ -2,12 +2,23 @@
 
 [**Knowledge is Power - Imam Ali (AD 599-661)**](../references.md#knowledge-is-power)
 
+1. EKGs are becoming the central nervous system of an organization
 1. Graphs are a NoSQL architectural patterns
 1. Defining enterprise knowledge graphs
 2. The Role of architectural scalability
 3. Growth Rates of graph databases technology
 4. Scale out graph database hardware
 5. Scale out graph query languages
+
+## EKGs are the central nervous system of an organization
+
+Knowledge is an invisible force that binds parts of an organization together.  When managed correctly, enterprise knowledge can become the central nervous system that responds to customer needs and continually evolves to create new insights and new products.
+
+This is a vision of the Enterprise Knowledge Graph.  A single entity that becomes the continually evolving brain of a dynamic organization.  The technology that forms the foundation of EKGs, the scalable graph database, has only become cost effective in the last few years.  As scalable graph technology matures it is being used with both existing sematic graph technologies and new emerging technologies like machine learning, natural language processing and advanced graph algorithms.
+
+How EKGs take root in an organization and mature is not an exact science.  Creating sustainable EKGs usually takes takes large teams with executive support, strong leadership, open minded-staff and clearly communicated vision of the future.
+
+In this chapter we will provide you a high-level overview of what EKGs are and why scale-out graph databases are necessary for their sustainability.
 
 ## Graphs are a NoSQL Architectural Patterns
 
