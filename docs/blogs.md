@@ -22,3 +22,8 @@ Published Nov. 23rd 2020
 ## [The Knowledge Triangle]
 
 ## [Knowledge Graphs: The Third Era of Computing](https://dmccreary.medium.com/knowledge-graphs-the-third-era-of-computing-a8106f343450)
+I make the case that knowledge graphs will become the third era of computing.
+
+## [From Data Science to Knowledge Science]
+(https://dmccreary.medium.com/from-data-science-to-knowledge-science-7f6707727489)
+In this blog post, I make the argument that accessing a high-quality and highly connected knowledge graph is much more productive than trying have all your data scientists re-interpret raw-data for each project.

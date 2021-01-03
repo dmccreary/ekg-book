@@ -1,11 +1,11 @@
 # Enterprise Knowledge Graph Timeline
 
-* Putting graph representations of knowledge in historical context
+**Putting graph representations of knowledge in historical context**
 
 Here is a timeline of some of significant events that have led to the creation of the enterprise knowledge graph.  We focus on how the representation of knowledge impacted the way that problems were solved.
 
-## First Brain
-Centralized nervous systems may have first evolved around 521 million years ago.  They probably evolved from simple [Nerve Networks](https://en.wikipedia.org/wiki/Nerve_net) which consisted of specialized cells that worked together to process information.  All networks that process information can be modeled by graph databases.
+## First Forms of Knowledge Storage: Brain Evolution
+Lets take a step back and see how brains evolved to store knowledge.  Centralized nervous systems may have first evolved around 521 million years ago.  They probably evolved from simple [Nerve Networks](https://en.wikipedia.org/wiki/Nerve_net) which consisted of specialized cells that worked together to process information.  All networks that process information can be modeled by graph databases.
 
 What is interesting to note is that higher life forms never have evolved information processing systems that use tabular data storage.  This is an artificial construct that evolved from writing systems.
 
