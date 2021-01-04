@@ -7,6 +7,8 @@
 	"settings": {
 		"cSpell.words": [
 			"ATAM",
+			"Arun",
+			"Batchu",
 			"Bitermporal",
 			"Codifiable",
 			"Consilience",
@@ -17,6 +19,7 @@
 			"Denomalization",
 			"Denormalization",
 			"EKGs",
+			"Endogenic",
 			"HDFS",
 			"Inmon",
 			"Inomn",
@@ -28,7 +31,10 @@
 			"SHACL",
 			"SLAs",
 			"Saffo",
+			"Sharepoint",
 			"concilience",
+			"deduplication",
+			"findability",
 			"geospatial",
 			"posteriori",
 			"queryable",
