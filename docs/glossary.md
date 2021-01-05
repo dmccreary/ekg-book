@@ -376,6 +376,22 @@ A stack of three layers that illustrates how knowledge graphs are constructed fr
 
 <br/>See also: The [DIKW Pyramid](#dikw-pyramid)
 
+#### Narrative Level
+The first stage in converting a rule from natural language, such as English, into an executable rule in a knowledge graph or other system.  A narrative rule may contain the following elements:
+
+1. Source of rule (authority organization)
+1. Area of focus (domain)
+2. Scope
+3. Context or setting
+4. Recommendations or action to be taken
+5. The population of items that are included
+6. The population of items that ar excluded
+7. Policy considerations (e.g. privacy, access, regulations)
+
+Narrative levels may contain words or phrases that link to concepts in a [Concept](#concept) Graph.
+
+See [Levels of Knowledge](#levels-of-knowledge)
+
 #### Label
 A string associated with one or more [Concepts](#concept).
 
