@@ -15,7 +15,7 @@
         <meta name="author" content="Dan McCreary">
       
       <link rel="shortcut icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.3">
     
     
       
@@ -23,7 +23,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
       
@@ -55,6 +55,7 @@
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="orange" data-md-color-accent="blue">
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -1136,6 +1137,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#narrative-level" class="md-nav__link">
+    Narrative Level
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#label" class="md-nav__link">
     Label
   </a>
@@ -1897,6 +1905,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#narrative-level" class="md-nav__link">
+    Narrative Level
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#label" class="md-nav__link">
     Label
   </a>
@@ -2425,6 +2440,20 @@ See also: <a href="#index-free-adjacency">Index Free Adjacency</a></p>
 <p>A stack of three layers that illustrates how knowledge graphs are constructed from raw data.  At the base is the <a href="#data-layer">Data Layer</a> that stores raw binary data in numeric forms, above that is <a href="#information-layer">Information Layer</a> that finds concepts and business entities within the data layer. At the top the triangle is the <a href="#knowledge-layer">Knowledge Layer</a> where business entities are connected to make them easy to query using graph traversal algorithms.</p>
 <p><img alt="Knowledge Triangle" src="../img/knowledge-triangle.png" /></p>
 <p><br/>See also: The <a href="#dikw-pyramid">DIKW Pyramid</a></p>
+<h4 id="narrative-level">Narrative Level</h4>
+<p>The first stage in converting a rule from natural language, such as English, into an executable rule in a knowledge graph or other system.  A narrative rule may contain the following elements:</p>
+<ol>
+<li>Source of rule (authority organization)</li>
+<li>Area of focus (domain)</li>
+<li>Scope</li>
+<li>Context or setting</li>
+<li>Recommendations or action to be taken</li>
+<li>The population of items that are included</li>
+<li>The population of items that ar excluded</li>
+<li>Policy considerations (e.g. privacy, access, regulations)</li>
+</ol>
+<p>Narrative levels may contain words or phrases that link to concepts in a <a href="#concept">Concept</a> Graph.</p>
+<p>See <a href="#levels-of-knowledge">Levels of Knowledge</a></p>
 <h4 id="label">Label</h4>
 <p>A string associated with one or more <a href="#concept">Concepts</a>.</p>
 <p>Labels have two main types: <a href="#preferred-lable">Preferred Labels</a> and <a href="#alternate-lable">Alternate Labels</a>.  Most formal ontologies and taxonomies only permit a single preferred label for each Concept in a given Language.</p>
@@ -2610,14 +2639,14 @@ https://en.wikipedia.org/wiki/Triplestore</p>
     </div>
     
       <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/bundle.4a5ba8d6.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
