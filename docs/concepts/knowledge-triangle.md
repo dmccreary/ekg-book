@@ -94,10 +94,6 @@ In summary, The Knowledge Triangle is one of the most useful metaphors in our gr
 I want to thank my friend Arun Batchu for introducing me to the Knowledge Triangle his willingness to transfer his wisdom to me.
 
 
-
-
-
-
 # References
 
 [The Knowledge Triangle Blog Post](https://dmccreary.medium.com/the-knowledge-triangle-c5124637d54c) Published Aug. 31st, 2019
