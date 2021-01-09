@@ -2,7 +2,7 @@
 
 **Putting graph representations of knowledge in historical context**
 
-Here is a timeline of some of significant events that have led to the creation of the enterprise knowledge graph.  We focus on how the representation of knowledge impacted the way that problems were solved.
+Here is a timeline of some of significant events that have led to the creation of the enterprise knowledge graph.  We focus on how the representation of knowledge impacted the way that problems were solved.  We focus on understanding the momentum of various design patterns and the innovations that allowed scale-out knowledge representations.
 
 ## First Forms of Knowledge Storage: Brain Evolution
 Lets take a step back and see how brains evolved to store knowledge.  Centralized nervous systems may have first evolved around 521 million years ago.  They probably evolved from simple [Nerve Networks](https://en.wikipedia.org/wiki/Nerve_net) which consisted of specialized cells that worked together to process information.  All networks that process information can be modeled by graph databases.
@@ -59,7 +59,11 @@ The predominant language for information processing was COBOL for business and F
 ## Relations Added to Flat Files
 In 1970 the concept of adding relationships to flat files was codified into a new type of database appropriately called "Relational" databases.  Although the name "relational" was used, fast relationship traversal were not a primary concern.  The system required all rows of both tables to be fist analyzed before the relationships could be discovered when a query was executed.
 
-https://en.wikipedia.org/wiki/Relational_database#History
+We should note that here were several early efforts to create databases that relied on fast in-memory pointer management.  These were called Navigational Databases because to follow relationships you had to navigate a network of pointer references.  Although many of the concepts in these databases continued to mature in path traversal languages such as [XPath](https://en.wikipedia.org/wiki/XPath) and [XQuery](https://en.wikipedia.org/wiki/XQuery), they did not catch on due to the difficulty of migrating away from the reliance on flat files as the predominant way of storing data.
+
+[Wikipedia Navigational Database](https://en.wikipedia.org/wiki/Navigational_database)
+[Wikipedia Relational Database History](https://en.wikipedia.org/wiki/Relational_database#History)
+
 
 ## Resource Description Format (RDF)
 The need to store relationships between information was addressed by Ramanathan V. Guha and Tim Bray starting around 1995.  A first public draft of RDF appeared in October 1997 as part of standards promoted by the World Wid Web consortium.
@@ -74,14 +78,15 @@ In May of 2001 Scientific American published an article on the Semantic Web.  Th
 ![](../img/semantic-web-cover.png)
 
 ## Neo4j: The First Labeled Property Graph
-In May of 2007 Neo4j created the first labeled property graph.  Unlike the RDF model that did not allow relationships to have properties, the LPG model allowed every relationship to have any number of properties.  This meant that adding a property to a relationship did not require you to refactor the graph structure (Reification) causing all queries to be rewritten.  We finally had a sustainable data model that allowed the models to gracefully grow as complexity grew.
+In May of 2007 Emil Eifrem committed the first labeled property graph data model as an open-source in-memory Java library.  Version 1.0 of the Neo4j database was released in February 2010.  Unlike the RDF model that did not allow relationships to have properties, the LPG model allowed every relationship to have any number of properties.  This meant that adding a property to a relationship did not require you to refactor the graph structure (Reification) causing all queries to be rewritten.  We finally had a sustainable data model that allowed the models to gracefully grow as complexity grew.
 
 Neo4j also kept their in-memory model simple which allowed simple pointer hopping operations to be used to traverse the graph.  This is a key to performance and will enable future hardware optimizations.
 
 [Neo4j First GitHub Commit May 2007](https://github.com/neo4j/neo4j/commit/6a945ab06a928bbd0f93dc56af279ee35107d7c3)
 
 ## The Google Knowledge Graph
-On May 16, 2012, Google published the "Things Not Strings" blog post.  Now the world knew that graphs were no longer an academic interest. Google's graph serviced millions of requests per minute and was available 24X7.  Knowlege Graphs became cool.
+On May 16, 2012, Google published the "Things Not Strings" blog post.  Now the world knew that graphs were no longer an academic interest. Google's graph serviced millions of requests per minute and was available 24X7.  Knowledge Graphs became cool.
+
 [Introducing the Knowledge Graph: things, not strings](https://www.blog.google/products/search/introducing-knowledge-graph-things-not/)
 
 ## TigerGraph Releases the First Distributed LPG
