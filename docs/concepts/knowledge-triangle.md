@@ -1,5 +1,7 @@
 # The Knowledge Triangle
 
+**Knowledge does not emerge from data.  - Judea Pearl**
+
 ## Information Layer
 
 ## Knowledge Layer
@@ -101,3 +103,7 @@ I want to thank my friend Arun Batchu for introducing me to the Knowledge Triang
 [The Knowledge Triangle Blog Post](https://dmccreary.medium.com/the-knowledge-triangle-c5124637d54c) Published Aug. 31st, 2019
 
 https://en.wikipedia.org/wiki/Level_of_analysis#Computational
+
+[Bloom's Taxonomy](https://en.wikipedia.org/wiki/Bloom%27s_taxonomy)
+
+[AI futures - venture beat](https://venturebeat.com/2021/01/02/leading-computer-scientists-debate-the-next-steps-for-ai-in-2021/)
