@@ -4,8 +4,10 @@
 
 Here is a timeline of some of significant events that have led to the creation of the enterprise knowledge graph.  We focus on how the representation of knowledge impacted the way that problems were solved.  We focus on understanding the momentum of various design patterns and the innovations that allowed scale-out knowledge representations.
 
+There are two forces at work.  One is the force of **"tabular convenience"**.  It is all the factors that want us to believe that knowledge of our complex world fits easily into tabular representations of data.  The second force is **"relationship truth"**, where we realize that our world is full of complex relationships and to be effective we need to faithfully model these relationships as connected graph networks.
+
 ## First Forms of Knowledge Storage: Brain Evolution
-Lets take a step back and see how brains evolved to store knowledge.  Centralized nervous systems may have first evolved around 521 million years ago.  They probably evolved from simple [Nerve Networks](https://en.wikipedia.org/wiki/Nerve_net) which consisted of specialized cells that worked together to process information.  All networks that process information can be modeled by graph databases.
+Lets take a step back and see how brains evolved to store knowledge.  Centralized nervous systems may have first evolved around 521 million years ago.  They probably evolved from simple [Nerve Networks](https://en.wikipedia.org/wiki/Nerve_net) which consisted of specialized cells that worked together to process information.  All networks that process information can be modeled by graph databases.  Score one point for relationships.
 
 What is interesting to note is that higher life forms never have evolved information processing systems that use tabular data storage.  This is an artificial construct that evolved from writing systems.
 
@@ -16,29 +18,39 @@ Around 3,000 BCE in the fertile crescent, a group of farmers started to record t
 
 ![Cuniform Tablet](../img/cuniform-writing.png)
 
-This was the first known case of persistent data representation.  Although the transactions were initially simple, they started in motion a long change of representing data in tabular structures.  A process that still exists today.
+This was the first known case of persistent data representation.  Although the transactions were initially simple, they started in motion a long change of representing data in tabular structures.  A process that still exists today.  Score one point for tabular convenience.
 
 ## Hero of Alexandria
-Hero is known to have created the first devices that store information on mechanical devices that control the playback of effects such as sounds.  This was one of the first forms of machine readable knowledge.
-![](../img/hero-of-alexandria.png)
+Hero is known to have created the first devices that store information on mechanical devices that control the playback of sequences of effects such the motion of statues and sounds.  This was one of the first forms of machine readable knowledge.  His inventions were powered by a binary-like system of ropes, knots, and simple machines operated by a rotating cylindrical cogwheel.  We can't say if he used tabular representations of event data.
+
+![Drawing of Hero of Alexandria](../img/hero-of-alexandria.png)
 
 [Hero of Alexandria](https://en.wikipedia.org/wiki/Hero_of_Alexandria)
 
 ## Book of Ingenious Devices
-A large illustrated work on mechanical devices, including automata, published in 850 by the three brothers of Persian descent, known as the Banu Musa.  This book was a collection of best practices for storing and playing back information.
+A large illustrated work on mechanical devices, including automata, published in 850 by the three brothers of Persian descent, known as the Banu Musa.  This book was a collection of best practices for storing and playing back information.  Since we don't really know much about these devices we can't give points to either side.
 
 ![Book of Ingenious Devices](../img/banu-musa-mechanical.jpg)
 
 * [Book of Ingenious Devices](https://en.wikipedia.org/wiki/Book_of_Ingenious_Devices)
 
+## Bookkeeping
+
+Around 1494, Luca Bartolomes Pacioli published a widely read book on a variety of mathematical topics that included the principals of double-entry bookkeeping.  This type of record keeping used various columns in tables to record financial transactions.  Score one point for tables.
+
+* [Wikipedia on Summary of Arithmetic](https://en.wikipedia.org/wiki/Summa_de_arithmetica#Bookkeeping_and_finance)
+
 ## Looms
-Basile Bouchon developed the punch card as a control for looms in 1725.
+Basile Bouchon developed the punch card as a control for looms in 1725.  These inventions were further refined in the Jacquard Machine.  These devices allow the concepts of machine-readable information devices to be created.  Score one point for tables.
+
+[Wikipedia Jacquard Machine](https://en.wikipedia.org/wiki/Jacquard_machine)
 
 ## Leonhard Euler Invents Graph Theory
-In 1736 Euler invented graph theory while pondering the problem of walking around the city of Konisberg.  By reducing the topology of the city, the rivers and islands to a graph he showed that you could not walk through the city and cross each of those bridges once and only once.
+In 1736 Euler invented graph theory while pondering the problem of walking around the city of Konigsberg.  By reducing the topology of the city, the rivers and islands to a graph he showed that you could not walk through the city and cross each of those bridges once and only once.
+Score one point for relationships.
 
 ![]
-[Seven Bridge of Konisberg](https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg)
+[Seven Bridge of Koningsberg](https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg)
 
 ## Punched Cards
 In 1890 Herman Hollerith developed punched cards for use in commercial data processing. These cards became the backbone of machine readable information storage until core memory was invented.
@@ -64,6 +76,12 @@ We should note that here were several early efforts to create databases that rel
 [Wikipedia Navigational Database](https://en.wikipedia.org/wiki/Navigational_database)
 [Wikipedia Relational Database History](https://en.wikipedia.org/wiki/Relational_database#History)
 
+## Inventions of Spreadsheets
+In 1979 Dan Bricklin and Bob Frankston implemented VisiCalc on the Apple II.  It was one of the first affordable spreadsheet programs for personal computers.  This allowed anyone with a personal computer to perform complex calculation on their desktop computer.  Spreadsheets allowed almost anyone with minimal training in programming to create complex financial analysis using simple equations that referenced other cells in a table.  Score one point for tabular convenience.
+
+It is a bit ironic that the data structure behind spreadsheets is a dependency graph.  Every time the value of any cell changes, any calculations that depend on that cell are executed and the new cell values updated.
+
+[Wikipedia](https://en.wikipedia.org/wiki/Spreadsheet#History)
 
 ## Resource Description Format (RDF)
 The need to store relationships between information was addressed by Ramanathan V. Guha and Tim Bray starting around 1995.  A first public draft of RDF appeared in October 1997 as part of standards promoted by the World Wid Web consortium.
