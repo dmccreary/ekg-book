@@ -5,18 +5,18 @@
 * Historical Events that
 
 ## Pattern Matching in our Brains
-Our brains are fantastic machines for finding patterns around us.  If I show you a photo of a famous movie actor, within 50 milliseconds your brain will "recognize" person even though you may have seen thousands of movies and can recall 10,000 faces of actors.  You don't recognize faces consciously.  You don't go through each of the 10,000 actors you have seen and ask yourself, **"Is this photo of this actor.  The eyes are similar but the chin is not as round.  I will give it a low score and move on to the next actor I know."**.  You brain does the matching in your unconscious areas and you can't prevent this from happening.
+Our brains are fantastic machines for finding patterns around us and using these patterns to predict future events.  If I show you a photo of a famous movie actor, within 50 milliseconds your brain will easily **"recognize"** the actor even though you may have seen thousands of movies and can recall 10,000 faces of other actors.  You don't recognize faces consciously.  You don't go through each of the 10,000 actors you have seen and ask yourself, **"Is this photo of this actor.  The eyes are similar but the chin is not as round.  I will give it a low score and move on to the next actor I know."**.  Your brain does the matching in parallel unconsciously and you can't prevent this matching process from happening.
 
 In a similar way, when presented with a new business problem, your brain will unconsciously start to match this new problem with every other business problem you have encountered in the past.  You can't prevent this from happening.  But what you can control is the number and types of problems-solution pairs you hold in your brain.  You can learn how to recognize new problem-solution pairs.
 
 ## Tabs vs. Rels: The Battle for your Mind
-Image there are two memes battling for control over your mind.  The "tabs" meme is the choice of **"tabular convenience"**.  It is all the factors that want us to believe that knowledge of our complex world fits easily into tabular representations of data.  The second force of "rels" is **"relationship truth"**, where we realize that our world is full of complex relationships and to be effective we need to faithfully model these relationships as connected graph networks.
+Imagine there are two memes battling for control over your mind.  The "tabs" meme is the choice of **"tabular convenience"**.  It is all the factors that want us to believe that knowledge of our complex world fits easily into tabular representations of data.  The second force of "rels" is **"relationship truth"**, where we realize that our world is full of complex relationships and to be effective we need to faithfully model these relationships as connected graph networks.
 
 These two forces are constantly at work in our brains, but we are rarely conscious of it.  The goal of this chapter is to help you become aware of these forces and use conscious thought to help you weight the evidence and make the right match.
 
 ## Putting graph representations of knowledge in historical context
 
-Here is a timeline of some of significant events that have led to the creation of the enterprise knowledge graph.  We focus on how the representation of knowledge impacted the way that problems were solved.  We focus on understanding the momentum of various design patterns and the innovations that allowed scale-out knowledge representations.
+Here is a timeline of significant events that have led to the creation of the enterprise knowledge graph.  We focus on how the representation of knowledge impacted the way that problems were solved.  We focus on understanding the momentum of various design patterns and the innovations that allowed scale-out knowledge representations.
 
 There are two forces at work.  One is the force of **"tabular convenience"**.  It is all the factors that want us to believe that knowledge of our complex world fits easily into tabular representations of data.  The second force is **"relationship truth"**, where we realize that our world is full of complex relationships and to be effective we need to faithfully model these relationships as connected graph networks.
 
@@ -50,7 +50,7 @@ A large illustrated work on mechanical devices, including automata, published in
 
 ## Bookkeeping
 
-Around 1494, Luca Bartolomes Pacioli published a widely read book on a variety of mathematical topics that included the principals of double-entry bookkeeping.  This type of record keeping used various columns in tables to record financial transactions.  Score one point for tables.
+Around 1494, Luca Bartolomes Pacioli published a widely read book on a variety of mathematical topics that included the principals of double-entry bookkeeping.  This type of record-keeping used various columns in tables to record financial transactions.  Score one point for tables.
 
 * [Wikipedia on Summary of Arithmetic](https://en.wikipedia.org/wiki/Summa_de_arithmetica#Bookkeeping_and_finance)
 
@@ -91,28 +91,35 @@ We should note that here were several early efforts to create databases that rel
 [Wikipedia Relational Database History](https://en.wikipedia.org/wiki/Relational_database#History)
 
 ## Inventions of Spreadsheets
-In 1979 Dan Bricklin and Bob Frankston implemented VisiCalc on the Apple II.  It was one of the first affordable spreadsheet programs for personal computers.  This allowed anyone with a personal computer to perform complex calculation on their desktop computer.  Spreadsheets allowed almost anyone with minimal training in programming to create complex financial analysis using simple equations that referenced other cells in a table.  Score one point for tabular convenience.
+In 1979 Dan Bricklin and Bob Frankston implemented VisiCalc on the Apple II.  It was one of the first affordable spreadsheet programs for personal computers.  This allowed anyone with a personal computer to perform complex calculations on their desktop computer.  Spreadsheets allowed almost anyone with minimal training in programming to create complex financial analysis using simple equations that referenced other cells in a table.  
 
 It is a bit ironic that the data structure behind spreadsheets is a dependency graph.  Every time the value of any cell changes, any calculations that depend on that cell are executed and the new cell values updated.
+
+Score one point for tabular convenience.
 
 [Wikipedia](https://en.wikipedia.org/wiki/Spreadsheet#History)
 
 ## Resource Description Format (RDF)
 The need to store relationships between information was addressed by Ramanathan V. Guha and Tim Bray starting around 1995.  A first public draft of RDF appeared in October 1997 as part of standards promoted by the World Wid Web consortium.
 
-The RDF data model was a brilliant development but was widely misunderstood due to poor understanding of its potential.  Many thought it was only for storing metadata or for storing data within a database.  In reality it's strength was a robust standard method for serializing complex knowledge in a portable format.
+The RDF data model was a brilliant development but was widely misunderstood due to poor understanding of its potential.  Many thought it was only for storing metadata or for storing data within a database.  In reality it's strength was a robust standard method for serializing complex knowledge in a portable format.  Score one point for relationship thinking.
 
 ![](https://en.wikipedia.org/wiki/Resource_Description_Framework#History)
 
 ## The Semantic Web
-In May of 2001 Scientific American published an article on the Semantic Web.  This article launched and entire industry of companies that wanted to use connected data to power AI systems.  The standards did allow anyone on the web to publish knowledge that could be easily linked into an knowledge graph.  But the stack of tools built on top of RDF had many issues with sustainability and have never gained widespread commercial adoption in most large corporations.
+In May of 2001 Scientific American published an article on the Semantic Web.  This article launched and entire industry of companies that wanted to use connected data to power AI systems.  The standards did allow anyone on the web to publish knowledge that could be easily linked into an knowledge graph.  But the stack of tools built on top of RDF had many issues with sustainability and have never gained widespread commercial adoption in most large corporations.  Score one point for relationship thinking.
 
 ![](../img/semantic-web-cover.png)
+
+## Jeff Hawkins Publishes "On Intelligence"
+In 2005, entrepreneur and brain researcher Jeff Hawkins published the groundbreaking book [On-Intelligence](https://en.wikipedia.org/wiki/On_Intelligence).  Although Hawkins was known for his invention of the PalmPilot, his passion was understanding the overall architecture of the human brain.  Hawkins made many connections between computer science and the brain showing how the network structures of the brain that reflects the true structure of the world.  Hawkins put the responsibility of AI researchers not only on developing algorithms for predicting future events, but for accurately modeling the world with networks and using this structure to predict future events.  His famous quote was **"The key to artificial intelligence has always been representation."**.  Score one point for relationship thinking.
+
+![](../img/on-intelligence.png)
 
 ## Neo4j: The First Labeled Property Graph
 In May of 2007 Emil Eifrem committed the first labeled property graph data model as an open-source in-memory Java library.  Version 1.0 of the Neo4j database was released in February 2010.  Unlike the RDF model that did not allow relationships to have properties, the LPG model allowed every relationship to have any number of properties.  This meant that adding a property to a relationship did not require you to refactor the graph structure (Reification) causing all queries to be rewritten.  We finally had a sustainable data model that allowed the models to gracefully grow as complexity grew.
 
-Neo4j also kept their in-memory model simple which allowed simple pointer hopping operations to be used to traverse the graph.  This is a key to performance and will enable future hardware optimizations.
+Neo4j also kept their in-memory model simple which allowed simple pointer hopping operations to be used to traverse the graph.  This is a key to performance, and will enable future hardware optimizations.   Score one point for relationship thinking.
 
 [Neo4j First GitHub Commit May 2007](https://github.com/neo4j/neo4j/commit/6a945ab06a928bbd0f93dc56af279ee35107d7c3)
 

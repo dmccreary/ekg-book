@@ -28,8 +28,10 @@
 			"Leonhard",
 			"OLAP",
 			"PIUMA",
+			"Pacioli",
 			"RDBMS",
 			"Rebalancing",
+			"Rels",
 			"SHACL",
 			"SLAs",
 			"Saffo",
@@ -40,7 +42,8 @@
 			"geospatial",
 			"posteriori",
 			"queryable",
-			"rebalance"
+			"rebalance",
+			"rels"
 		]
 	}
 }
