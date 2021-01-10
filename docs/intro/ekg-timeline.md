@@ -1,6 +1,20 @@
 # Enterprise Knowledge Graph Timeline
 
-**Putting graph representations of knowledge in historical context**
+* Pattern Matching: Tabs vs. Rels
+* Tabular vs. Relationship Thinking
+* Historical Events that
+
+## Pattern Matching in our Brains
+Our brains are fantastic machines for finding patterns around us.  If I show you a photo of a famous movie actor, within 50 milliseconds your brain will "recognize" person even though you may have seen thousands of movies and can recall 10,000 faces of actors.  You don't recognize faces consciously.  You don't go through each of the 10,000 actors you have seen and ask yourself, **"Is this photo of this actor.  The eyes are similar but the chin is not as round.  I will give it a low score and move on to the next actor I know."**.  You brain does the matching in your unconscious areas and you can't prevent this from happening.
+
+In a similar way, when presented with a new business problem, your brain will unconsciously start to match this new problem with every other business problem you have encountered in the past.  You can't prevent this from happening.  But what you can control is the number and types of problems-solution pairs you hold in your brain.  You can learn how to recognize new problem-solution pairs.
+
+## Tabs vs. Rels: The Battle for your Mind
+Image there are two memes battling for control over your mind.  The "tabs" meme is the choice of **"tabular convenience"**.  It is all the factors that want us to believe that knowledge of our complex world fits easily into tabular representations of data.  The second force of "rels" is **"relationship truth"**, where we realize that our world is full of complex relationships and to be effective we need to faithfully model these relationships as connected graph networks.
+
+These two forces are constantly at work in our brains, but we are rarely conscious of it.  The goal of this chapter is to help you become aware of these forces and use conscious thought to help you weight the evidence and make the right match.
+
+## Putting graph representations of knowledge in historical context
 
 Here is a timeline of some of significant events that have led to the creation of the enterprise knowledge graph.  We focus on how the representation of knowledge impacted the way that problems were solved.  We focus on understanding the momentum of various design patterns and the innovations that allowed scale-out knowledge representations.
 
