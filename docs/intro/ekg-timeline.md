@@ -130,3 +130,8 @@ On May 16, 2012, Google published the "Things Not Strings" blog post.  Now the w
 
 ## TigerGraph Releases the First Distributed LPG
 Although the Neo4j system was innovative for it's time, it was built around a memory model that did not include queries that spanned multiple servers.  In 2017 TigerGraph release a version of a native labeled property graph that was designed from scratch to take into account distributed queries.  This allowed it to have robust scale-out performance to large clusters to meet the needs of large enterprise-scale applications.
+
+## Hardware Graph
+In 2020 we saw the growth of hardware solutions that have been customized to meet the needs of graph databases.  [Graphcore](https://en.wikipedia.org/wiki/Graphcore) produced new custom silicon chips that were ideal for graph parallel traversal.  Xilinx created custom additions to TigerGraph that allowed graph [similarity algorithms](https://developer.xilinx.com/en/articles/cosine-similarity-using-xilinx-alveo.html) to be performed orders-of-magnitude faster than using standard processors.  And finally, in October Intel published their landmark PIUMA architecture that is finely tuned to the needs of graph traversal.
+
+![Intel PIUMA](../img/intel-piuma.png)
