@@ -26,3 +26,6 @@ Part 2 is an in depth analysis of the core concepts involved in building and run
 ## Part 3: Case Studies
 Part 3 is a deep dive into the most important case studies that help EKGs get launched.  Getting your first project off the ground successfully is critical for EKG success.
 
+## Part 4: Promoting EKGs
+This section contains material to help you explain what EKGs are to your non-technical staff.  It includes lessons on storytelling, metaphors and strategies to overcome objectives
+

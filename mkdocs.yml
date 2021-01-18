@@ -10,30 +10,32 @@ nav:
     - Ch 2 Costs & Benefits: intro/ekg-cost-benefit.md
     - Ch 3 Lifecycle: intro/lifecycle.md
     - Ch 4 Graph Adoption Trends: intro/trends.md
-    - Timeline: intro/ekg-timeline.md
-    - Stories: intro/stories.md
+    - Ch 5 Timeline: intro/ekg-timeline.md
   - Pt 2 Concepts:
-    - Ch 5 Knowledge Triangle: concepts/knowledge-triangle.md
-    - Ch 6 Ingesting Data: concepts/ingestion.md
-    - Scaling Out: concepts/scale-out.md
-    - Entity Resolution: concepts/entity-resolution.md
-    - Load and Stress Testing: concepts/load-and-stress-testing.md
-    - Graph Modeling: concepts/graph-modeling.md
-    - Graph Algorithms: concepts/graph-algorithms.md
-    - Graph Machine Learning: concepts/graph-machine-learning.md
-    - Graph Hardware: concepts/graph-hardware.md
-    - Natural Language Processing: concepts/natural-language-processing.md
+    - Ch 6 Knowledge Triangle: concepts/knowledge-triangle.md
+    - Ch 7 Scaling Out: concepts/scale-out.md
+    - Ch 8 Ingesting Data: concepts/ingestion.md
+    - Ch 9 Entity Resolution: concepts/entity-resolution.md
+    - Ch 10 Load and Stress Testing: concepts/load-and-stress-testing.md
+    - Ch 11 Graph Modeling: concepts/graph-modeling.md
+    - Ch 12 Graph Algorithms: concepts/graph-algorithms.md
+    - Ch 13 Graph Machine Learning: concepts/graph-machine-learning.md
+    - Ch 14 Explainability: concepts/explainability.md
+    - Ch 15 Embeddings: concepts/embeddings.md
+    - Ch 16 Natural Language Processing: concepts/natural-language-processing.md
+    - Ch 17 Graph Hardware: concepts/graph-hardware.md
   - Pt 3 Case Studies:
-    - Customer 360: case-studies/customer-360.md
-    - Analytics Dashboard: case-studies/analytics-dashboard.md
-    - Rules Engine: case-studies/rules-engine.md
-    - Semantic Search: case-studies/semantic-search.md
-    - Strategy Graph: case-studies/strategy-graph.md
+    - Ch 18 Customer 360: case-studies/customer-360.md
+    - Ch 19 Analytics Dashboard: case-studies/analytics-dashboard.md
+    - Ch 20 Rules Engines: case-studies/rules-engine.md
+    - Ch 21 Semantic Search: case-studies/semantic-search.md
+    - Ch 22 Human Resource Graphs: case-studies/human-resource-graphs.md
+    - Ch 23 Strategy Graph: case-studies/strategy-graph.md
   - Pt 4 Promoting:
-    - Cognitive Bias: promoting/cognitive-bias.md
-    - Technology Adoption: promoting/technology-adoption.md
-    - Strategic Serendipity: promoting/strategic-serendipity.md
-    - Conclusion: promoting/conclusion.md
+    - Ch 24 Cognitive Bias: promoting/cognitive-bias.md
+    - Ch 25 Technology Adoption: promoting/technology-adoption.md
+    - Ch 26 Strategic Serendipity: promoting/strategic-serendipity.md
+    - Ch 27 Conclusion: promoting/conclusion.md
   - Glossary: glossary.md
   - References: references.md
   - Blogs: blogs.md
