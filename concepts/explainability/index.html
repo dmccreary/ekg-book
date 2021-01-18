@@ -19,7 +19,7 @@
     
     
       
-        <title>Ch 16 Natural Language Processing - Enterprise Knowledge Graphs</title>
+        <title>Ch 14 Explainability - Enterprise Knowledge Graphs</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#natural-language-processing" class="md-skip">
+        <a href="#explainability" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Ch 16 Natural Language Processing
+              Ch 14 Explainability
             
           </span>
         </div>
@@ -459,11 +459,74 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../explainability/" title="Ch 14 Explainability" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Ch 14 Explainability
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Ch 14 Explainability" class="md-nav__link md-nav__link--active">
       Ch 14 Explainability
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-deep-learning-bar" class="md-nav__link">
+    The Deep Learning Bar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-explainable-ai" class="md-nav__link">
+    What is Explainable AI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neural-networks-alone-lack-explainability" class="md-nav__link">
+    Neural Networks Alone Lack Explainability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -483,115 +546,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Ch 16 Natural Language Processing
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Ch 16 Natural Language Processing" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../natural-language-processing/" title="Ch 16 Natural Language Processing" class="md-nav__link">
       Ch 16 Natural Language Processing
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-natural-language-processing" class="md-nav__link">
-    What is Natural Language Processing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#two-worlds-text-and-codes" class="md-nav__link">
-    Two Worlds - Text and Codes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nlp-use-cases" class="md-nav__link">
-    NLP Use Cases
-  </a>
-  
-    <nav class="md-nav" aria-label="NLP Use Cases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#extracting-facts-from-documents" class="md-nav__link">
-    Extracting Facts from Documents
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#document-classification" class="md-nav__link">
-    Document Classification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#semantic-search" class="md-nav__link">
-    Semantic Search
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chatbots" class="md-nav__link">
-    Chatbots
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generating-graph-queries" class="md-nav__link">
-    Generating Graph Queries
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-documents-to-an-ekg" class="md-nav__link">
-    Adding Documents to an EKG
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -866,70 +825,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-natural-language-processing" class="md-nav__link">
-    What is Natural Language Processing
+  <a href="#the-deep-learning-bar" class="md-nav__link">
+    The Deep Learning Bar
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#two-worlds-text-and-codes" class="md-nav__link">
-    Two Worlds - Text and Codes
+  <a href="#what-is-explainable-ai" class="md-nav__link">
+    What is Explainable AI
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#nlp-use-cases" class="md-nav__link">
-    NLP Use Cases
+  <a href="#neural-networks-alone-lack-explainability" class="md-nav__link">
+    Neural Networks Alone Lack Explainability
   </a>
-  
-    <nav class="md-nav" aria-label="NLP Use Cases">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#extracting-facts-from-documents" class="md-nav__link">
-    Extracting Facts from Documents
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#document-classification" class="md-nav__link">
-    Document Classification
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#semantic-search" class="md-nav__link">
-    Semantic Search
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#chatbots" class="md-nav__link">
-    Chatbots
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generating-graph-queries" class="md-nav__link">
-    Generating Graph Queries
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adding-documents-to-an-ekg" class="md-nav__link">
-    Adding Documents to an EKG
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -946,7 +864,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/dmccreary/ekg-book/blob/master/docs/concepts/natural-language-processing.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/dmccreary/ekg-book/blob/master/docs/concepts/explainability.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -954,25 +872,34 @@
                   
                 
                 
-                <h1 id="natural-language-processing">Natural Language Processing</h1>
+                <h1 id="explainability">Explainability</h1>
 <ul>
-<li>What is Natural Language Processing</li>
-<li>NLP Use Cases</li>
-<li>Storing NLP Extracts in and EKG</li>
-<li>When to Use Search Engines</li>
+<li>The Deep Learning Bar</li>
+<li>What is Explainable AI (XAI)</li>
+<li>Neural Networks Alone Lack Explainability</li>
+<li>How do Enterprise Knowledge Graph Help Explainability</li>
+<li>Generating Explanations</li>
 </ul>
-<h2 id="what-is-natural-language-processing">What is Natural Language Processing</h2>
-<h2 id="two-worlds-text-and-codes">Two Worlds - Text and Codes</h2>
-<h2 id="nlp-use-cases">NLP Use Cases</h2>
-<h3 id="extracting-facts-from-documents">Extracting Facts from Documents</h3>
-<h3 id="document-classification">Document Classification</h3>
-<p>Classifying documents based on concepts, not keywords.</p>
-<h3 id="semantic-search">Semantic Search</h3>
-<p>Using taxonomies and ontologies for keyword expansions</p>
-<h3 id="chatbots">Chatbots</h3>
-<h3 id="generating-graph-queries">Generating Graph Queries</h3>
-<h2 id="adding-documents-to-an-ekg">Adding Documents to an EKG</h2>
-<p>Metadata</p>
+<h2 id="the-deep-learning-bar">The Deep Learning Bar</h2>
+<p><img alt="The Deep Learning Bartender" src="../img/deep-learning-bartender.md" /></p>
+<h2 id="what-is-explainable-ai">What is Explainable AI</h2>
+<ul>
+<li>Explainable systems are systems that can enumerate why they are creating specific recommendations</li>
+<li>Explainable systems answer the question "why"</li>
+<li>Explainable systems provide explanations in ways that humans can quickly understand</li>
+<li>Explainable systems provide evidence and references</li>
+<li>Explainable systems can show the linage and provenance of the source data used to make decisions</li>
+<li>Explainable systems describe alternatives</li>
+<li>Explainable systems promote trust</li>
+<li>Explainable systems encourage feedback when assumptions are incorrect</li>
+<li>Explainable systems are easy to correct</li>
+<li>Explainable systems give clear probability analysis</li>
+</ul>
+<h2 id="neural-networks-alone-lack-explainability">Neural Networks Alone Lack Explainability</h2>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://www.darpa.mil/program/explainable-artificial-intelligence">DARPA XAI</a></li>
+</ol>
                 
               
               
@@ -991,7 +918,7 @@
       <div class="md-footer-nav">
         <nav class="md-footer-nav__inner md-grid">
           
-            <a href="../explainability/" title="Ch 14 Explainability" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <a href="../graph-machine-learning/" title="Ch 13 Graph Machine Learning" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
                 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
               </div>
@@ -1000,19 +927,19 @@
                   <span class="md-footer-nav__direction">
                     Previous
                   </span>
-                  Ch 14 Explainability
+                  Ch 13 Graph Machine Learning
                 </span>
               </div>
             </a>
           
           
-            <a href="../graph-hardware/" title="Ch 17 Graph Hardware" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../natural-language-processing/" title="Ch 16 Natural Language Processing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span class="md-footer-nav__direction">
                     Next
                   </span>
-                  Ch 17 Graph Hardware
+                  Ch 16 Natural Language Processing
                 </span>
               </div>
               <div class="md-flex__cell md-flex__cell--shrink">
