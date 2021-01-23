@@ -72,4 +72,7 @@ We use the metaphor of the EKG as your companies "brain" carefully.  Because the
 4. What is the relationship between the Chief Executive Officer and the Chief Financial Officer in your organization?  Are finance staff trained on valuing intangible benefits?
 5. How is overall knowledge-capture valued in your organization?  Do employees get a bonus for sharing codifiable knowledge?
 
+## References
 
+1. [Waste in the US Health Care System
+Estimated Costs and Potential for Savings](https://jamanetwork.com/journals/jama/article-abstract/2752664) - EKGs could potentially save hundreds of billions of dollars a year using evidence-based data to find inefficient healthcare procedures.

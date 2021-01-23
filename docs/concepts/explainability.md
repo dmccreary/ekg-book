@@ -27,4 +27,5 @@
 
 ## References
 
-1. [DARPA XAI](https://www.darpa.mil/program/explainable-artificial-intelligence)
+1. [DARPA XAI](https://www.darpa.mil/program/explainable-artificial-intelligence) - high level overview of XAI from DARPA.
+2. [The Adversarial Turtle: Google’s AI thinks this turtle looks like a gun, which is a problem](https://www.theverge.com/2017/11/2/16597276/google-ai-image-attacks-adversarial-turtle-rifle-3d-printed) - How current image recognition has a focus on low-level pattern detection but fails to take structure into account.
