@@ -880,6 +880,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#concept-matching" class="md-nav__link">
+    Concept Matching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept-mapping" class="md-nav__link">
+    Concept Mapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#consilience" class="md-nav__link">
     Consilience
   </a>
@@ -1069,6 +1083,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#forward-pass" class="md-nav__link">
+    Forward Pass
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#glossary" class="md-nav__link">
     Glossary
   </a>
@@ -1223,8 +1244,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#match-and-map" class="md-nav__link">
+    Match and Map
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#load-as-is-pattern" class="md-nav__link">
     Load-As-Is Pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metathesaurus" class="md-nav__link">
+    Metathesaurus
   </a>
   
 </li>
@@ -1702,6 +1737,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#concept-matching" class="md-nav__link">
+    Concept Matching
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept-mapping" class="md-nav__link">
+    Concept Mapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#consilience" class="md-nav__link">
     Consilience
   </a>
@@ -1891,6 +1940,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#forward-pass" class="md-nav__link">
+    Forward Pass
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#glossary" class="md-nav__link">
     Glossary
   </a>
@@ -2045,8 +2101,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#match-and-map" class="md-nav__link">
+    Match and Map
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#load-as-is-pattern" class="md-nav__link">
     Load-As-Is Pattern
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metathesaurus" class="md-nav__link">
+    Metathesaurus
   </a>
   
 </li>
@@ -2427,6 +2497,17 @@ Concepts are grouped in Schemas and may be part of one or more Collections.*
 <a href="https://www.w3.org/TR/skos-reference/#concepts">Concept Reference on W3C SKOS Site</a></p>
 <h4 id="concept-graph">Concept Graph</h4>
 <p>A graph that stores the core business concepts of a project, department or enterprise.  In the ideal world, an enterprise graph will use a combination of machine learning to connect related concepts together.</p>
+<h4 id="concept-matching">Concept Matching</h4>
+<p>The process of determining if two <a href="#concept">Concepts</a> are semantically related.  When importing new data into an EKG, we must associate data element <a href="#concept">Concepts</a> in an external data source to a well-known data element <a href="#concept">Concept</a> in a canonical representation of an internal knowledge graph.</p>
+<p>Concept Matching is done before data elements are converted to a normalized format in the Concept Mapping phase.  Together these steps are know as <a href="#match-and-map">Match and Map</a>.</p>
+<p>When specific data sets are imported the sum of concept maps compromise a Schema Map.</p>
+<p>A registry of Concept matches is called a <a href="#metathesaurus">Metathesaurus</a>.</p>
+<ul>
+<li>See also: <a href="https://en.wikipedia.org/wiki/Schema_matching">Wikipedia Page on Schema Matching</a></li>
+</ul>
+<h4 id="concept-mapping">Concept Mapping</h4>
+<p>The process of converting external data representations of data elements into normalized formats within an enterprise knowledge graph.  Mapping is the second step in the data ingestion phase after data elements concepts have been <a href="#concept-matching">Matched</a></p>
+<p>Together these steps are know as <a href="#match-and-map">Match and Map</a>.</p>
 <h4 id="consilience">Consilience</h4>
 <p>The principle that evidence from independent, unrelated sources can "converge" on strong conclusions.</p>
 <p>Combining results from multiple scientific studies to form stronger conclusions than a single study, often called meta analysis, is an example of consilience.</p>
@@ -2538,6 +2619,12 @@ https://en.wikipedia.org/wiki/Precision_and_recall</li>
 </ul>
 <h4 id="four-vs-of-scalable-databases">Four Vs of Scalable Databases</h4>
 <p>Volume, velocity, variability and veracity are considered the four Vs that define scalable systems.  Volume refers to the total amount of data in our knowledge graph.  Velocity means that new inserts, updates and deletes might be coming in fast via streaming events and these events must be ACID compliant and still never slow down read access times.  Service levels agreements (SLAs) must focus not on total average times, but the averages of the slowest 5% of the transactions.  Variability means that data is not uniform and can be easily stuffed into a single fact table of an <a href="#online-analytical-processing-system">OLAP</a> cube.  Veracity means we need to be able to validate the quality of incoming data in real-time and quickly raise warning flags if corrupt data is being transmitted into the EKG.</p>
+<h4 id="forward-pass">Forward Pass</h4>
+<p>The process of presenting input values to a neural network and data from the output layers.</p>
+<p>Knowledge can be extracted from large language models such as BERT and GPT by presenting context and a desired object-relationships pair as an input prompt.  This is called a single forward pass query.</p>
+<ul>
+<li><a href="https://arxiv.org/abs/2010.11967">Language Models are Open Knowledge Graphs</a></li>
+</ul>
 <h4 id="glossary">Glossary</h4>
 <p>A business vocabulary associated with a topic.  A glossary often has both general definitions of terms as well as contextual definitions for a specific domain or project.</p>
 <ul>
@@ -2638,6 +2725,10 @@ See also: <a href="#index-free-adjacency">Index Free Adjacency</a></p>
 <p>A graph data model where each Vertex and Edge have a single type and goth Vertices and Edges have attributes.
 Both TigerGraph and Neo4j use the LPG data model.
 * Also known as: LPG</p>
+<h4 id="match-and-map">Match and Map</h4>
+<p>The process of using <a href="#concept-matching">Matching</a> <a href="#concept">Concepts</a> from external sources to internal <a href="#canonical-model">canonical models</a> and then <a href="#concept-mapping">Mapping</a> the data into normalized formats using procedural code.</p>
+<p>Machine learning can be used to accelerate both the Matching and Mapping process if a large data set of prior Matches and Maps are retained by an organization.</p>
+<p>Matching and Mapping processes traditionally comprise over 50% of the cost of building the initial versions of enterprise knowledge graphs.</p>
 <h4 id="load-as-is-pattern">Load-As-Is Pattern</h4>
 <p>A data loading pattern that loads the data into a graph with minimal transformation.  Once the data is loaded
 into the graph the transformation is done in the native language of the graph such as GSQL.  This pattern
@@ -2646,6 +2737,12 @@ using the native query language of the graph.  The other major data model is the
 to the challenges with Reification. Reification causes RDF SPARQL queries to be rewritten.
 * <a href="https://www.marklogic.com/blog/understanding-the-load-as-is-pattern/">Load-as-is pattern</a>
 * See also: <a href="#resource-description-framework">RDF</a></p>
+<h4 id="metathesaurus">Metathesaurus</h4>
+<p>A registry of linkages between semantically related concepts.</p>
+<p>A metathesaurus is used to link concept ontologies together.  They can be used to accelerate data conversions from external to internal representations in a knowledge graph.</p>
+<ul>
+<li><a href="https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/index.html">UMLS Metathesaurus</a></li>
+</ul>
 <h4 id="the-neighborhood-walk-story">The Neighborhood Walk Story</h4>
 <p>A story used to illustrate the difference between direct pointer hopping and using centralized indexes to traverse relationships.  The story uses a 30-second walk between two houses vs. an 8.2-hour walk to a central location and back.</p>
 <h4 id="no-complexity-penalty">No Complexity Penalty</h4>
