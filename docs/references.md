@@ -20,7 +20,7 @@ The phrase **knowledge is power** is frequently attributed to Sir Francis Bacon 
 [SemTech 2007 Blog](https://datadictionary.blogspot.com/2007/05/impressions-of-sem-tech-07.html)
 
 #### Language Models are Open Knowledge Graphs
-[Yannic Kilcher Video](https://www.youtube.com/watch?v=NAJOZTNkhlI)
+[Yannic Kilcher Video](https://www.youtube.com/watch?v=NAJOZTNkhlI) - Nov 2, 2020
 
 #### Machine Learning Street Talk
 Wally Saba

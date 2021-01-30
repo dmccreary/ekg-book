@@ -124,6 +124,22 @@ Concepts are grouped in Schemas and may be part of one or more Collections.*
 #### Concept Graph
 A graph that stores the core business concepts of a project, department or enterprise.  In the ideal world, an enterprise graph will use a combination of machine learning to connect related concepts together.
 
+#### Concept Matching
+The process of determining if two [Concepts](#concept) are semantically related.  When importing new data into an EKG, we must associate data element [Concepts](#concept) in an external data source to a well-known data element [Concept](#concept) in a canonical representation of an internal knowledge graph.
+
+Concept Matching is done before data elements are converted to a normalized format in the Concept Mapping phase.  Together these steps are know as [Match and Map](#match-and-map).
+
+When specific data sets are imported the sum of concept maps compromise a Schema Map.
+
+A registry of Concept matches is called a [Metathesaurus](#metathesaurus).
+
+* See also: [Wikipedia Page on Schema Matching](https://en.wikipedia.org/wiki/Schema_matching)
+
+#### Concept Mapping
+The process of converting external data representations of data elements into normalized formats within an enterprise knowledge graph.  Mapping is the second step in the data ingestion phase after data elements concepts have been [Matched](#concept-matching)
+
+Together these steps are know as [Match and Map](#match-and-map).
+
 #### Consilience
 The principle that evidence from independent, unrelated sources can "converge" on strong conclusions.
 
@@ -281,6 +297,13 @@ Extracted facts can be directly linked to concepts in a Concept graph.
 #### Four Vs of Scalable Databases
 Volume, velocity, variability and veracity are considered the four Vs that define scalable systems.  Volume refers to the total amount of data in our knowledge graph.  Velocity means that new inserts, updates and deletes might be coming in fast via streaming events and these events must be ACID compliant and still never slow down read access times.  Service levels agreements (SLAs) must focus not on total average times, but the averages of the slowest 5% of the transactions.  Variability means that data is not uniform and can be easily stuffed into a single fact table of an [OLAP](#online-analytical-processing-system) cube.  Veracity means we need to be able to validate the quality of incoming data in real-time and quickly raise warning flags if corrupt data is being transmitted into the EKG.
 
+#### Forward Pass
+The process of presenting input values to a neural network and data from the output layers.
+
+Knowledge can be extracted from large language models such as BERT and GPT by presenting context and a desired object-relationships pair as an input prompt.  This is called a single forward pass query.
+
+* [Language Models are Open Knowledge Graphs](https://arxiv.org/abs/2010.11967)
+
 #### Glossary
 A business vocabulary associated with a topic.  A glossary often has both general definitions of terms as well as contextual definitions for a specific domain or project.
 
@@ -420,6 +443,13 @@ A graph data model where each Vertex and Edge have a single type and goth Vertic
 Both TigerGraph and Neo4j use the LPG data model.
 * Also known as: LPG
 
+#### Match and Map
+The process of using [Matching](#concept-matching) [Concepts](#concept) from external sources to internal [canonical models](#canonical-model) and then [Mapping](#concept-mapping) the data into normalized formats using procedural code.
+
+Machine learning can be used to accelerate both the Matching and Mapping process if a large data set of prior Matches and Maps are retained by an organization.
+
+Matching and Mapping processes traditionally comprise over 50% of the cost of building the initial versions of enterprise knowledge graphs.
+
 #### Load-As-Is Pattern
 A data loading pattern that loads the data into a graph with minimal transformation.  Once the data is loaded
 into the graph the transformation is done in the native language of the graph such as GSQL.  This pattern
@@ -428,6 +458,13 @@ using the native query language of the graph.  The other major data model is the
 to the challenges with Reification. Reification causes RDF SPARQL queries to be rewritten.
 * [Load-as-is pattern](https://www.marklogic.com/blog/understanding-the-load-as-is-pattern/)
 * See also: [RDF](#resource-description-framework)
+
+#### Metathesaurus
+A registry of linkages between semantically related concepts.
+
+A metathesaurus is used to link concept ontologies together.  They can be used to accelerate data conversions from external to internal representations in a knowledge graph.
+
+* [UMLS Metathesaurus](https://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/index.html)
 
 #### The Neighborhood Walk Story
 A story used to illustrate the difference between direct pointer hopping and using centralized indexes to traverse relationships.  The story uses a 30-second walk between two houses vs. an 8.2-hour walk to a central location and back.
