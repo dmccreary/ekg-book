@@ -803,6 +803,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#beam-search" class="md-nav__link">
+    Beam Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#big-data" class="md-nav__link">
     Big Data
   </a>
@@ -1660,6 +1667,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#beam-search" class="md-nav__link">
+    Beam Search
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#big-data" class="md-nav__link">
     Big Data
   </a>
@@ -2407,17 +2421,21 @@
                 <h1 id="enterprise-knowledge-graph-glossary-of-terms">Enterprise Knowledge Graph Glossary of Terms</h1>
 <h4 id="abox">ABox</h4>
 <p>Types of assertions or statements in a knowledge graph that conform to specific terminologies (knows as <a href="#tbox">TBox</a> statements).  The terms ABox and TBox are used to help determine if a statement is universal or related to a specific <a href="#subgraph">Subgraph</a> of an <a href="#enterprise-knowledge-graph">Enterprises Knowledge Graph</a>.</p>
-<p>Within our Enterprise Knowledge Graph architecture, ABox statements often contain knowledge about specific customers, parts, or concepts and may have specific <a href="#access-control">Access Control</a> rules.  TBox statements don't usually have these same access rules.
-* See also: TBox
-* <a href="https://en.wikipedia.org/wiki/Abox">Wikipedia page on ABox</a></p>
+<p>Within our Enterprise Knowledge Graph architecture, ABox statements often contain knowledge about specific customers, parts, or concepts and may have specific <a href="#access-control">Access Control</a> rules.  TBox statements don't usually have these same access rules.</p>
+<ul>
+<li>See also: TBox</li>
+<li><a href="https://en.wikipedia.org/wiki/Abox">Wikipedia page on ABox</a></li>
+</ul>
 <h4 id="accumulator">Accumulator</h4>
 <p>A type of variable that tracks items as you traverse through a graph.  Accumulators can be global or be attached to a specific vertex.</p>
 <p>Accumulators allow MapReduce style queries where each server node in a cluster does work in its local data and returns consolidated results to the query node.  For example, in the query <em>"count all customers that have returned clothing items"</em>, each node would return only a single count to the query node.  This type of query reduces the amount of communication between nodes in the graph cluster.</p>
 <h4 id="alternate-label">Alternate Label</h4>
-<p>In a <a href="#concept">concept</a> <a href="#subgraph">subgraph</a> of a EKG, every concept has a single preferred label (per language) and many alternate labels that can also be used to name a concept.  Alternate labels can be abbreviations, acronyms and synonyms of the concept.  In this glossary, alternate labels have a "Also known as" prefix.
-* Also known as: atlLabel
-* See also: <a href="#preferred-label">Preferred Label</a>
-* See also: <a href="#simple-knowledge-organizational-system">SKOS</a></p>
+<p>In a <a href="#concept">concept</a> <a href="#subgraph">subgraph</a> of a EKG, every concept has a single preferred label (per language) and many alternate labels that can also be used to name a concept.  Alternate labels can be abbreviations, acronyms and synonyms of the concept.  In this glossary, alternate labels have a "Also known as" prefix.</p>
+<ul>
+<li>Also known as: atlLabel</li>
+<li>See also: <a href="#preferred-label">Preferred Label</a></li>
+<li>See also: <a href="#simple-knowledge-organizational-system">SKOS</a></li>
+</ul>
 <h4 id="amazon-simple-storage-system">Amazon Simple Storage System</h4>
 <p>A high-availability cloud-based <a href="#key-value-store">Key-value Store</a> system created by Amazon in 2006.</p>
 <p>In 2006 Amazon was a pioneer in the creation of cloud-based data services.  Because S3 was one of the first ultra-reliable cloud based services it gained early market share and now dominates the data storage industry.  The API for S3 is now duplicated by dozens of other vendors and has become a defacto standard for cloud-based key-value stores.</p>
@@ -2428,9 +2446,11 @@
 </ul>
 <h4 id="availability-heuristic">Availability Heuristic</h4>
 <p>The availability heuristic suggests that the likelihood of events is estimated based on how many examples of such events come to mind.</p>
-<p>For example, when a solution architect is presented with a business problem, their likelihood to recommend an enterprise knowledge graph solution is dependant on how many examples of successful enterprise knowledge graph project come to mind.  Surrounding solution architects with many successful stories or case studies of successful enterprise knowledge graph projects may positively impact their probability of recomending an enterprise knowledge graph as an option.
-* See also: <a href="#cognitive-bias">Cognitive Bias</a>
-* <a href="https://en.wikipedia.org/wiki/Case_study#In_business">Wikipedia Case Study</a></p>
+<p>For example, when a solution architect is presented with a business problem, their likelihood to recommend an enterprise knowledge graph solution is dependant on how many examples of successful enterprise knowledge graph project come to mind.  Surrounding solution architects with many successful stories or case studies of successful enterprise knowledge graph projects may positively impact their probability of recomending an enterprise knowledge graph as an option.</p>
+<ul>
+<li>See also: <a href="#cognitive-bias">Cognitive Bias</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Case_study#In_business">Wikipedia Case Study</a></li>
+</ul>
 <h4 id="a-priori-and-a-posteriori">A Priori and A Posteriori</h4>
 <p>A priori knowledge is that which is independent of experience. A posteriori knowledge is that which depends on empirical evidence.  The rules of mathematics, logic, and business rules are usually classified as a priori read-access is usually shared across all users of an enterprise knowledge graph.  Knowledge about a specific observable event, observation, customer transaction, etc. are considered A Posteriori and may not need to be universally accessed.</p>
 <p>In an enterprise knowledge graph, a priori knowledge tends to be more universal such as TBox assertions that are universally accessible by all <a href="#subgraph">subgraphs</a>.
@@ -2438,9 +2458,18 @@ https://en.wikipedia.org/wiki/A_priori_and_a_posteriori</p>
 <h4 id="automatic-sharding">Automatic Sharding</h4>
 <p>The process of automatically migrating data from one server to another server in a distributed database.  Auto-sharding is frequently done as a database cluster grows or shrinks based on new data being added or removed from the cluster.</p>
 <p>Auto-sharding is one of the key features that differentiate scale-out enterprise-class databases from departmental solutions.  Testing sharding at scale under continuous load in the face of possible hardware failure is one of the key challenges facing enterprise data architects.</p>
+<h4 id="beam-search">Beam Search</h4>
+<p>A graph search algorithm that explores by expanding the most promising node in a limited set.</p>
+<p>We use beam search to find <a href="#concept">Concepts</a> in large language models to find facts about concepts.</p>
+<p>Beam search is an optimization of best-first search that reduces its memory requirements. Best-first search is a graph search which orders all partial solutions (states) according to some heuristic. But in beam search, only a predetermined number of best partial solutions are kept as candidates. It is thus a greedy algorithm.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Beam_search">Wikipedia Page on Beam Search</a></li>
+</ul>
 <h4 id="big-data">Big Data</h4>
-<p>An ambiguous term that many or may not refer to data sizes beyond the ability of commonly used tools to mange data.  If you used a spreadsheet, "Big Data" could be any data that does not fit into your spreadsheet.  If you use a Cray Supercomputer then your definition of Big Data could differ by ten orders of magnitude.  If we ever hear someone refer to "Big Data" we strongly suggest they use other terms that have more precise meaning.
-* <a href="https://en.wikipedia.org/wiki/Big_data#Critique">Wikipedia Critique of Big Data</a></p>
+<p>An ambiguous term that many or may not refer to data sizes beyond the ability of commonly used tools to mange data.  If you used a spreadsheet, "Big Data" could be any data that does not fit into your spreadsheet.  If you use a Cray Supercomputer then your definition of Big Data could differ by ten orders of magnitude.  If we ever hear someone refer to "Big Data" we strongly suggest they use other terms that have more precise meaning.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Big_data#Critique">Wikipedia Critique of Big Data</a></li>
+</ul>
 <h4 id="bitermporal-modeling">Bitermporal Modeling</h4>
 <p>A specific case of <a href="#temporal-modeling">Temporal Modeling</a> modeling designed to handle historical data in two different timelines.  One timeline is concerned with when an event occurred in the real world and the other timeline is concerned when the data was recorded or corrected in a computer system. This makes it possible to rewind the information to "as it actually was" in combination with "as it was recorded" at some point in time. </p>
 <p>In order to implement this feature within an Enterprise Knowledge Graph, the data model must accommodate updates while preserving historical information. Information cannot be overwritten or discarded even if it is erroneous.  The consequence is more data must be retained even through only a small percentage of queries might require historical views of data.  Bitemporal models are more complex to query and require additional RAM and disk storage.
@@ -2450,19 +2479,25 @@ https://en.wikipedia.org/wiki/A_priori_and_a_posteriori</p>
 * See also: <a href="#degree">Degree</a>.</p>
 <h4 id="business-event">Business Event</h4>
 <p>A change in the state of a business entity within an operational source system that may be published to a downstream consumer such as an enterprise knowledge graph.</p>
-<p>Business events are usually transmitted by <a href="#change-data-capture">Change Data Capture</a> software and sent via document messages in formats such as JSON or XML.
-* <a href="https://en.wikipedia.org/wiki/Event-driven_architecture">Wikipedia</a></p>
+<p>Business events are usually transmitted by <a href="#change-data-capture">Change Data Capture</a> software and sent via document messages in formats such as JSON or XML.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Event-driven_architecture">Wikipedia</a></li>
+</ul>
 <h4 id="business-vocabulary">Business Vocabulary</h4>
 <p>A collection of terms and phrases that have meaning to a specific domain of work.  A business vocabulary typically starts out with a flat list of terms in a spreadsheet. The terms are listed with their abbreviations and definitions and how they are used within a specific project or department.</p>
 <p>As vocabularies grow and mature the individual terms might be grouped together.  These groupings become taxonomies and can then be used to automatically classify documents with metadata tags of their preferred labels.  Classified documents
 can have a dramatic increase on the search quality of a search engine.</p>
 <h4 id="change-data-capture">Change Data Capture</h4>
-<p>Software that detects changes in a database and transmits the change information via <a href="#business-event">business events</a> to a remote system.  These events are often published on stream processing systems using the publish/subscribe integration pattern.
-* Also known as: CDC
-* <a href="https://en.wikipedia.org/wiki/Change_data_capture">Wikipedia page on Change Data Capture</a></p>
+<p>Software that detects changes in a database and transmits the change information via <a href="#business-event">business events</a> to a remote system.  These events are often published on stream processing systems using the publish/subscribe integration pattern.</p>
+<ul>
+<li>Also known as: CDC</li>
+<li><a href="https://en.wikipedia.org/wiki/Change_data_capture">Wikipedia page on Change Data Capture</a></li>
+</ul>
 <h4 id="classification-and-connection">Classification and Connection</h4>
-<p>Within the <a href="#enrichment">data enrichment</a> pattern there are two distinct phases.  The first step is to take raw binary and numeric data streams and classify it according to the concept types in our knowledge graph.  Once we have business entities identified we next need to connect our business entities together using the context around them in the data.  These steps are called classification and connection.
-* See also: <a href="#knowledge-triangle">Knowledge Triangle</a></p>
+<p>Within the <a href="#enrichment">data enrichment</a> pattern there are two distinct phases.  The first step is to take raw binary and numeric data streams and classify it according to the concept types in our knowledge graph.  Once we have business entities identified we next need to connect our business entities together using the context around them in the data.  These steps are called classification and connection.</p>
+<ul>
+<li>See also: <a href="#knowledge-triangle">Knowledge Triangle</a></li>
+</ul>
 <h4 id="codifiable-knowledge">Codifiable Knowledge</h4>
 <p>Knowledge that can be captured in machine readable formats such as taxonomies, ontologies, rules or decision trees and reused across an enterprise.</p>
 <p>Codifiable knowledge is contrasted to <a href="#tacit-knowledge">Tacit Knowledge</a> that can not easily be converted into machine readable forms and shared with others.  The process of converting tacit knowledge to codifiable knowledge is part of the field of <a href="#knowledge-engineering">Knowledge Engineering</a> and <a href="#knowledge-architecture">Knowledge Architecture</a>.</p>
@@ -2511,19 +2546,25 @@ Concepts are grouped in Schemas and may be part of one or more Collections.*
 <h4 id="consilience">Consilience</h4>
 <p>The principle that evidence from independent, unrelated sources can "converge" on strong conclusions.</p>
 <p>Combining results from multiple scientific studies to form stronger conclusions than a single study, often called meta analysis, is an example of consilience.</p>
-<p>One of the fundamental measures of the value of EKGs is can it promote concilience by linking datasets created from multiple independent data sources.
-* Also known as: Convergence of evidence
-* Also known as: Concordance of evidence
-* <a href="https://en.wikipedia.org/wiki/Consilience">Wikipedia page on Consilience</a></p>
+<p>One of the fundamental measures of the value of EKGs is can it promote concilience by linking datasets created from multiple independent data sources.</p>
+<ul>
+<li>Also known as: Convergence of evidence</li>
+<li>Also known as: Concordance of evidence</li>
+<li><a href="https://en.wikipedia.org/wiki/Consilience">Wikipedia page on Consilience</a></li>
+</ul>
 <h4 id="cost-sharing">Cost Sharing</h4>
-<p>The ability of a single graph data model to be shared by many business units and thus the costs can also be shared.  Lower charge backs make graph databases more cost-effective than other data models.
-* See also: <a href="#no-complexity-penalty">No Complexity Penalty</a></p>
+<p>The ability of a single graph data model to be shared by many business units and thus the costs can also be shared.  Lower charge backs make graph databases more cost-effective than other data models.</p>
+<ul>
+<li>See also: <a href="#no-complexity-penalty">No Complexity Penalty</a></li>
+</ul>
 <h4 id="data-discovery">Data Discovery</h4>
 <p>A process of discovering new patterns in large data sets using a combination of query tools, machine learning and often visualization.</p>
-<p>Data discovery is contrasted with operational reporting which are regular consistent reports that are well known to users and good for spotting trends in datasets.
-* Also known as: Data Mining
-* Also known as: Knowledge discovery
-* <a href="https://en.wikipedia.org/wiki/Data_mining">Wikipedia page on Data Mining</a></p>
+<p>Data discovery is contrasted with operational reporting which are regular consistent reports that are well known to users and good for spotting trends in datasets.</p>
+<ul>
+<li>Also known as: Data Mining</li>
+<li>Also known as: Knowledge discovery</li>
+<li><a href="https://en.wikipedia.org/wiki/Data_mining">Wikipedia page on Data Mining</a></li>
+</ul>
 <h4 id="data-ingestion">Data Ingestion</h4>
 <p>A process by which data is moved from one or more sources to a destination where it can be stored and further analyzed. The data might be in different formats and come from various sources, including <a href="#relational-database-management-system">RDBMS</a>, other types of databases, S3 buckets, CSVs, or from streams.</p>
 <h4 id="data-lake">Data Lake</h4>
@@ -2554,16 +2595,24 @@ Concepts are grouped in Schemas and may be part of one or more Collections.*
 <p>A graph designed to store information from one or more departments of an enterprise.  Departmental graphs may be limited in that they can't be scaled up to hold enterprise data.</p>
 <h4 id="dikw-pyramid">DIKW Pyramid</h4>
 <p>A visualization of the relationships between data, information, knowledge, and wisdom with data at the base followed by information, knowledge and finally wisdom at the top.</p>
-<p>Although commonly used in the field of we don't use the DIKW pyramid visualization in this book because the top wisdom layer is confusing in the context of an enterprise knowledge graph.  We used the simpler three layer <a href="#knowledge-triangle">Knowledge Triangle</a>.
-* <a href="https://en.wikipedia.org/wiki/DIKW_pyramid">Wikipedia page on DIKW Pyramid</a></p>
+<p>Although commonly used in the field of we don't use the DIKW pyramid visualization in this book because the top wisdom layer is confusing in the context of an enterprise knowledge graph.  We used the simpler three layer <a href="#knowledge-triangle">Knowledge Triangle</a>.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/DIKW_pyramid">Wikipedia page on DIKW Pyramid</a></li>
+</ul>
 <h4 id="document-store">Document Store</h4>
 <p>A type of database that stores data as tree-structured data elements such as JSON or XML.  Document stores use path-like query languages such as X-PATH to traverse the tree structure.  Languages such as XQuery provide high-quality functional programming languages with strong type checking.</p>
 <p>X-PATH is a mature W3C standard for expressing path traversal using a rich array of standardized wildcard expressions.</p>
 <h4 id="db-engines">DB Engines</h4>
-<p>A web site that harvests web documents that discuss databases and classifies the documents based on a taxonomy of database types.  The "Popularity changes per category report" is frequently cited in many graph presentations.
-* <a href="https://db-engines.com/en/ranking_categories">DB Engines</a></p>
+<p>A web site that harvests web documents that discuss databases and classifies the documents based on a taxonomy of database types.  The "Popularity changes per category report" is frequently cited in many graph presentations.</p>
+<ul>
+<li><a href="https://db-engines.com/en/ranking_categories">DB Engines</a></li>
+</ul>
 <h4 id="edge-of-chaos">Edge of Chaos</h4>
-<p>The edge of chaos is narrow band between order and disorder in [complex systems] such as enterprise knowledge graphs.  In enterprise knowledge graphs we think of order as areas we have modeled and understand well.  We think of disorder as external areas that we have not yet modeled or we have determined that they are not worth the effort to model.  Enterprise knowledge graphs modeling teams are often working at the Edge of Choas.</p>
+<p>The edge of chaos is narrow band between order and disorder in <a href="#complex-systems">Complex Systems</a> such as enterprise knowledge graphs.</p>
+<p>In enterprise knowledge graphs we think of order as areas we have modeled and understand well.  We think of disorder as external areas that we have not yet modeled or we have determined that they are not worth the effort to model.  Enterprise knowledge graphs modeling teams are often working at the Edge of Chaos.  We use a combination of intuition and <a href="#cost-benefit-analysis">Cost Benefit Analysis</a> to determine the business value of modeling a new area and ingesting the data into this new area.</p>
+<ul>
+<li>See also: <a href="#complex-systems">Complex Systems</a></li>
+</ul>
 <h4 id="embedding">Embedding</h4>
 <p>A data structure, usually a vector of decimal numbers, associated with an item in a graph, that helps users quickly find similar items.  Vertices, Edges, and Paths may all have embeddings.</p>
 <h4 id="endogenic-knowledge">Endogenic Knowledge</h4>
