@@ -19,8 +19,16 @@ The phrase **knowledge is power** is frequently attributed to Sir Francis Bacon 
 #### SemTech 2007
 [SemTech 2007 Blog](https://datadictionary.blogspot.com/2007/05/impressions-of-sem-tech-07.html)
 
+
+
 #### Language Models are Open Knowledge Graphs
-[Yannic Kilcher Video](https://www.youtube.com/watch?v=NAJOZTNkhlI) - Nov 2, 2020
+[Yannic Kilcher Video](https://www.youtube.com/watch?v=NAJOZTNkhlI) - Nov 2, 2020 - Although this paper has some flaws, it did have a noble purpose - how to extract precise facts from a large language model 
 
 #### Machine Learning Street Talk
 Wally Saba
+
+####
+[CDE Meetup on Graph Databases at NetFlix](https://www.slideshare.net/RoopaTangirala/polyglot-persistence-netflix-cde-meetup-90955706#86) - an interesting use case showing that the metadata associated with putting movies in a streaming service is a complex graph problem.  It shows that Digial Asset Management (DAM) is a complex problem suited for graph databases.  The presentation was by Ioannis Papapanagiotou who worked at NetFlix at the time.  He has since moved on to work at Snowflake.
+
+#### Graph Databases at Google and NetFlix
+[Graph Database Stories: Google and Netflix](https://www.youtube.com/watch?v=9c2HAwnVA9k) - this 2017 presentation at a local BayArea meetup shows how Google and NetFlix had to deploy large teams of engineers to perform basic scaleable graph queries.

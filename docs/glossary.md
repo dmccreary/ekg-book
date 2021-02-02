@@ -4,6 +4,7 @@
 Types of assertions or statements in a knowledge graph that conform to specific terminologies (knows as [TBox](#tbox) statements).  The terms ABox and TBox are used to help determine if a statement is universal or related to a specific [Subgraph](#subgraph) of an [Enterprises Knowledge Graph](#enterprise-knowledge-graph).
 
 Within our Enterprise Knowledge Graph architecture, ABox statements often contain knowledge about specific customers, parts, or concepts and may have specific [Access Control](#access-control) rules.  TBox statements don't usually have these same access rules.
+
 * See also: TBox
 * [Wikipedia page on ABox](https://en.wikipedia.org/wiki/Abox)
 
@@ -14,6 +15,7 @@ Accumulators allow MapReduce style queries where each server node in a cluster d
 
 #### Alternate Label
 In a [concept](#concept) [subgraph](#subgraph) of a EKG, every concept has a single preferred label (per language) and many alternate labels that can also be used to name a concept.  Alternate labels can be abbreviations, acronyms and synonyms of the concept.  In this glossary, alternate labels have a "Also known as" prefix.
+
 * Also known as: atlLabel
 * See also: [Preferred Label](#preferred-label)
 * See also: [SKOS](#simple-knowledge-organizational-system)
@@ -33,6 +35,7 @@ S3 was the first service launched as part of Amazon Web Services (AWS).
 The availability heuristic suggests that the likelihood of events is estimated based on how many examples of such events come to mind.
 
 For example, when a solution architect is presented with a business problem, their likelihood to recommend an enterprise knowledge graph solution is dependant on how many examples of successful enterprise knowledge graph project come to mind.  Surrounding solution architects with many successful stories or case studies of successful enterprise knowledge graph projects may positively impact their probability of recomending an enterprise knowledge graph as an option.
+
 * See also: [Cognitive Bias](#cognitive-bias)
 * [Wikipedia Case Study](https://en.wikipedia.org/wiki/Case_study#In_business)
 
@@ -47,8 +50,18 @@ The process of automatically migrating data from one server to another server in
 
 Auto-sharding is one of the key features that differentiate scale-out enterprise-class databases from departmental solutions.  Testing sharding at scale under continuous load in the face of possible hardware failure is one of the key challenges facing enterprise data architects.
 
+#### Beam Search
+A graph search algorithm that explores by expanding the most promising node in a limited set.
+
+We use beam search to find [Concepts](#concept) in large language models to find facts about concepts.
+
+Beam search is an optimization of best-first search that reduces its memory requirements. Best-first search is a graph search which orders all partial solutions (states) according to some heuristic. But in beam search, only a predetermined number of best partial solutions are kept as candidates. It is thus a greedy algorithm.
+
+* [Wikipedia Page on Beam Search](https://en.wikipedia.org/wiki/Beam_search)
+
 #### Big Data
 An ambiguous term that many or may not refer to data sizes beyond the ability of commonly used tools to mange data.  If you used a spreadsheet, "Big Data" could be any data that does not fit into your spreadsheet.  If you use a Cray Supercomputer then your definition of Big Data could differ by ten orders of magnitude.  If we ever hear someone refer to "Big Data" we strongly suggest they use other terms that have more precise meaning.
+
 * [Wikipedia Critique of Big Data](https://en.wikipedia.org/wiki/Big_data#Critique)
 
 #### Bitermporal Modeling
@@ -65,6 +78,7 @@ Explaining enterprise knowledge graphs in terms of the human brain.  Human brain
 A change in the state of a business entity within an operational source system that may be published to a downstream consumer such as an enterprise knowledge graph.
 
 Business events are usually transmitted by [Change Data Capture](#change-data-capture) software and sent via document messages in formats such as JSON or XML.
+
 * [Wikipedia](https://en.wikipedia.org/wiki/Event-driven_architecture)
 
 #### Business Vocabulary
@@ -75,11 +89,13 @@ can have a dramatic increase on the search quality of a search engine.
 
 #### Change Data Capture
 Software that detects changes in a database and transmits the change information via [business events](#business-event) to a remote system.  These events are often published on stream processing systems using the publish/subscribe integration pattern.
+
 * Also known as: CDC
 * [Wikipedia page on Change Data Capture](https://en.wikipedia.org/wiki/Change_data_capture)
 
 #### Classification and Connection
 Within the [data enrichment](#enrichment) pattern there are two distinct phases.  The first step is to take raw binary and numeric data streams and classify it according to the concept types in our knowledge graph.  Once we have business entities identified we next need to connect our business entities together using the context around them in the data.  These steps are called classification and connection.
+
 * See also: [Knowledge Triangle](#knowledge-triangle)
 
 #### Codifiable Knowledge
@@ -146,18 +162,21 @@ The principle that evidence from independent, unrelated sources can "converge" o
 Combining results from multiple scientific studies to form stronger conclusions than a single study, often called meta analysis, is an example of consilience.
 
 One of the fundamental measures of the value of EKGs is can it promote concilience by linking datasets created from multiple independent data sources.
+
 * Also known as: Convergence of evidence
 * Also known as: Concordance of evidence
 * [Wikipedia page on Consilience](https://en.wikipedia.org/wiki/Consilience)
 
 #### Cost Sharing
 The ability of a single graph data model to be shared by many business units and thus the costs can also be shared.  Lower charge backs make graph databases more cost-effective than other data models.
+
 * See also: [No Complexity Penalty](#no-complexity-penalty)
 
 #### Data Discovery
 A process of discovering new patterns in large data sets using a combination of query tools, machine learning and often visualization.
 
 Data discovery is contrasted with operational reporting which are regular consistent reports that are well known to users and good for spotting trends in datasets.
+
 * Also known as: Data Mining
 * Also known as: Knowledge discovery
 * [Wikipedia page on Data Mining](https://en.wikipedia.org/wiki/Data_mining)
@@ -209,6 +228,7 @@ A graph designed to store information from one or more departments of an enterpr
 A visualization of the relationships between data, information, knowledge, and wisdom with data at the base followed by information, knowledge and finally wisdom at the top.
 
 Although commonly used in the field of we don't use the DIKW pyramid visualization in this book because the top wisdom layer is confusing in the context of an enterprise knowledge graph.  We used the simpler three layer [Knowledge Triangle](#knowledge-triangle).
+
 * [Wikipedia page on DIKW Pyramid](https://en.wikipedia.org/wiki/DIKW_pyramid)
 
 #### Document Store
@@ -218,10 +238,15 @@ X-PATH is a mature W3C standard for expressing path traversal using a rich array
 
 #### DB Engines
 A web site that harvests web documents that discuss databases and classifies the documents based on a taxonomy of database types.  The "Popularity changes per category report" is frequently cited in many graph presentations.
+
 * [DB Engines](https://db-engines.com/en/ranking_categories)
 
 #### Edge of Chaos
-The edge of chaos is narrow band between order and disorder in [complex systems] such as enterprise knowledge graphs.  In enterprise knowledge graphs we think of order as areas we have modeled and understand well.  We think of disorder as external areas that we have not yet modeled or we have determined that they are not worth the effort to model.  Enterprise knowledge graphs modeling teams are often working at the Edge of Choas.
+The edge of chaos is narrow band between order and disorder in [Complex Systems](#complex-systems) such as enterprise knowledge graphs.
+
+In enterprise knowledge graphs we think of order as areas we have modeled and understand well.  We think of disorder as external areas that we have not yet modeled or we have determined that they are not worth the effort to model.  Enterprise knowledge graphs modeling teams are often working at the Edge of Chaos.  We use a combination of intuition and [Cost Benefit Analysis](#cost-benefit-analysis) to determine the business value of modeling a new area and ingesting the data into this new area.
+
+* See also: [Complex Systems](#complex-systems)
 
 #### Embedding
 A data structure, usually a vector of decimal numbers, associated with an item in a graph, that helps users quickly find similar items.  Vertices, Edges, and Paths may all have embeddings.
