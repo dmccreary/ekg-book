@@ -198,6 +198,19 @@ The Data Layer is the lowest level in the [Knowledge Triangle](#knowledge-triang
 
 The format of data in the data layer may be narrative text or raw dumps from a relational database.
 
+#### Data Quality
+The fitness of data items for an intended purpose.
+
+For EKGs, data quality can be measured as documents are loaded into an EKG and also measured after data has been connected within an EKG.  Both methods have merit.
+
+Some systems allow specific items in a graph such as a vertex or edge, to have a data quality metric associated with that item.  This metric is typically a numerical score ranging from 1 to 100 to indicate an objective measure of data quality that can be used to determine if the data should be included in a specific report.
+
+For documents, the [XML Schema](https://en.wikipedia.org/wiki/XML_schema) standard is an example of data quality management against a set of rules.
+
+The RDF based [SHACL](#shapes-constraint-language) is an existing standard for RDF graphs.  There is no standard for objectivly measureing data quality.
+
+* See also: [Veracity](#veracity)
+
 #### Dashboard
 A set of views, usually presented on a single page, that display information as a set of key performance indicators and charts.  In general, dashboard views can be customized for a role or a specific user.
 
@@ -321,8 +334,13 @@ Extracted facts can be directly linked to concepts in a Concept graph.
 
 * Part of: [Natural Language Processing](#natural-language-processing)
 
-#### Four Vs of Scalable Databases
-Volume, velocity, variability and veracity are considered the four Vs that define scalable systems.  Volume refers to the total amount of data in our knowledge graph.  Velocity means that new inserts, updates and deletes might be coming in fast via streaming events and these events must be ACID compliant and still never slow down read access times.  Service levels agreements (SLAs) must focus not on total average times, but the averages of the slowest 5% of the transactions.  Variability means that data is not uniform and can be easily stuffed into a single fact table of an [OLAP](#online-analytical-processing-system) cube.  Veracity means we need to be able to validate the quality of incoming data in real-time and quickly raise warning flags if corrupt data is being transmitted into the EKG.
+#### Four Vs
+Volume, Velocity, [Variability](#variability) and [Veracity](#veracity) are considered the four Vs that define sustainable EKG systems.
+
+1. Volume refers to the total amount of data in our knowledge graph.
+2. Velocity means that new inserts, updates and deletes might be coming in fast via streaming events and these events must be ACID compliant and still never slow down read access times.  Service levels agreements (SLAs) must focus not on total average times, but the averages of the slowest 5% of the transactions.
+3. Variability means that data is not uniform and cannot be easily stored into a flat table.  Many [OLAP](#online-analytical-processing-system) systems use a single, large fact table to store data.
+4. Veracity means we need to be able to validate the quality of incoming data in real-time and quickly raise warning flags if corrupt data is being transmitted into the EKG.
 
 #### Forward Pass
 The process of presenting input values to a neural network and data from the output layers.
@@ -705,7 +723,7 @@ For example, a business glossary, taxonomy, ontology or business rules system th
 * See also:[Role Based Access Control](#role-based-access-control)
 
 #### Sustainability
-The ability for an enterprise knowledge graph achieve unquestionable ongoing value to an organization in hhe face of constant change.
+The ability for an enterprise knowledge graph to achieve long-term ongoing value to an organization in the face of constant change.
 
 Changes include new data being added, new types of data being added, new users, new usage patterns and new applications using the enterprise knowledge graph.  Strong EKG architectures are resilient to these changes.
 
@@ -713,7 +731,10 @@ Many organizations measure sustainability as the ability of a central IT organiz
 
 The key measure is to avoid problems related to rewriting graph queries when small changes are made to the graph data model.
 
+Sustainable systems frequently consider scalability and security at an early stage of development since these features are difficult to retrofit once a design has been created.
+
 * See also: The [Jenga Tower] Story
+* See also: The [Four Vs](#four-vs)
 
 #### Systems Thinking
 A way of looking at problems in terms of components that interact with each other over time using direct connections, indirection connections and both positive and negative feedback cycles.  Systems Thinking forces us to think broadly about how our enterprise knowledge graphs interact with external systems.  Systems thinking also helps us see the unintended consequences of our actions.
@@ -747,6 +768,29 @@ https://en.wikipedia.org/wiki/Triplestore
 #### Upper Ontology
 General high-level [Concepts](#concept) that are common across all domains in a knowledge graph.  Concepts such as Organization, Customer, Family Unit, Product, Part, Invoice, Document are often consider part of an upper ontology.  Enterprise graphs may contain multiple ontologies and the ease of linking ontologies in highly dependant on sharing upper ontologies.
 * [Wikipedia Page on Upper Ontology](https://en.wikipedia.org/wiki/Upper_ontology)
+
+#### Variability
+A lack of consistency in a data set that restricts its ability to be easily stored in a single flat tabular data structure.
+
+Graph databases tend to work well on high-variability data since they can easily handle many complex relationships without JOIN penalties.
+
+One of the key aspects of sustainable enterprise knowledge graphs is the ability to ingest new high-variability data without disrupting existing queries.
+
+Variability is one of the [four "V"s](#four-vs) of sustainable EKG systems.
+
+#### Veracity
+The reliability of the data being ingested into our EKG.
+
+The most general definition of veracity is the conformity of a statement to truth.  Within the context of and EKG we use this term as a measure of data quality and the ability of the EKG to apply business rules to check the quality of incoming data.
+
+For documents, the [XML Schema](https://en.wikipedia.org/wiki/XML_schema) standard is an example of veracity management.
+
+The RDF based [SHACL](#shapes-constraint-language) is an existing standard for RDF graphs.
+
+There is no existing standard for expressing data quality rules within a labeled property graph.
+
+* See also: [Data Quality](#data-quality)
+* See also: [XML Schema](https://en.wikipedia.org/wiki/XML_schema)
 
 #### Web Ontology Language
 A Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things.
