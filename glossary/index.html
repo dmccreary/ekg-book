@@ -916,6 +916,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#data-quality" class="md-nav__link">
+    Data Quality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#dashboard" class="md-nav__link">
     Dashboard
   </a>
@@ -1056,8 +1063,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#four-vs-of-scalable-databases" class="md-nav__link">
-    Four Vs of Scalable Databases
+  <a href="#four-vs" class="md-nav__link">
+    Four Vs
   </a>
   
 </li>
@@ -1506,6 +1513,20 @@
         <li class="md-nav__item">
   <a href="#upper-ontology" class="md-nav__link">
     Upper Ontology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variability" class="md-nav__link">
+    Variability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veracity" class="md-nav__link">
+    Veracity
   </a>
   
 </li>
@@ -1782,6 +1803,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#data-quality" class="md-nav__link">
+    Data Quality
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#dashboard" class="md-nav__link">
     Dashboard
   </a>
@@ -1922,8 +1950,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#four-vs-of-scalable-databases" class="md-nav__link">
-    Four Vs of Scalable Databases
+  <a href="#four-vs" class="md-nav__link">
+    Four Vs
   </a>
   
 </li>
@@ -2377,6 +2405,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#variability" class="md-nav__link">
+    Variability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veracity" class="md-nav__link">
+    Veracity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#web-ontology-language" class="md-nav__link">
     Web Ontology Language
   </a>
@@ -2567,6 +2609,15 @@ Concepts are grouped in Schemas and may be part of one or more Collections.*
 <p>An abstraction layer were low-level raw binary data is stored that contains information after analysis.</p>
 <p>The Data Layer is the lowest level in the <a href="#knowledge-triangle">Knowledge Triangle</a>.</p>
 <p>The format of data in the data layer may be narrative text or raw dumps from a relational database.</p>
+<h4 id="data-quality">Data Quality</h4>
+<p>The fitness of data items for an intended purpose.</p>
+<p>For EKGs, data quality can be measured as documents are loaded into an EKG and also measured after data has been connected within an EKG.  Both methods have merit.</p>
+<p>Some systems allow specific items in a graph such as a vertex or edge, to have a data quality metric associated with that item.  This metric is typically a numerical score ranging from 1 to 100 to indicate an objective measure of data quality that can be used to determine if the data should be included in a specific report.</p>
+<p>For documents, the <a href="https://en.wikipedia.org/wiki/XML_schema">XML Schema</a> standard is an example of data quality management against a set of rules.</p>
+<p>The RDF based <a href="#shapes-constraint-language">SHACL</a> is an existing standard for RDF graphs.  There is no standard for objectivly measureing data quality.</p>
+<ul>
+<li>See also: <a href="#veracity">Veracity</a></li>
+</ul>
 <h4 id="dashboard">Dashboard</h4>
 <p>A set of views, usually presented on a single page, that display information as a set of key performance indicators and charts.  In general, dashboard views can be customized for a role or a specific user.</p>
 <h4 id="datamart">Datamart</h4>
@@ -2659,8 +2710,14 @@ https://en.wikipedia.org/wiki/Precision_and_recall</li>
 <ul>
 <li>Part of: <a href="#natural-language-processing">Natural Language Processing</a></li>
 </ul>
-<h4 id="four-vs-of-scalable-databases">Four Vs of Scalable Databases</h4>
-<p>Volume, velocity, variability and veracity are considered the four Vs that define scalable systems.  Volume refers to the total amount of data in our knowledge graph.  Velocity means that new inserts, updates and deletes might be coming in fast via streaming events and these events must be ACID compliant and still never slow down read access times.  Service levels agreements (SLAs) must focus not on total average times, but the averages of the slowest 5% of the transactions.  Variability means that data is not uniform and can be easily stuffed into a single fact table of an <a href="#online-analytical-processing-system">OLAP</a> cube.  Veracity means we need to be able to validate the quality of incoming data in real-time and quickly raise warning flags if corrupt data is being transmitted into the EKG.</p>
+<h4 id="four-vs">Four Vs</h4>
+<p>Volume, Velocity, <a href="#variability">Variability</a> and <a href="#veracity">Veracity</a> are considered the four Vs that define sustainable EKG systems.</p>
+<ol>
+<li>Volume refers to the total amount of data in our knowledge graph.</li>
+<li>Velocity means that new inserts, updates and deletes might be coming in fast via streaming events and these events must be ACID compliant and still never slow down read access times.  Service levels agreements (SLAs) must focus not on total average times, but the averages of the slowest 5% of the transactions.</li>
+<li>Variability means that data is not uniform and cannot be easily stored into a flat table.  Many <a href="#online-analytical-processing-system">OLAP</a> systems use a single, large fact table to store data.</li>
+<li>Veracity means we need to be able to validate the quality of incoming data in real-time and quickly raise warning flags if corrupt data is being transmitted into the EKG.</li>
+</ol>
 <h4 id="forward-pass">Forward Pass</h4>
 <p>The process of presenting input values to a neural network and data from the output layers.</p>
 <p>Knowledge can be extracted from large language models such as BERT and GPT by presenting context and a desired object-relationships pair as an input prompt.  This is called a single forward pass query.</p>
@@ -2964,12 +3021,14 @@ the name of the world-wide-web standard for encoding these systems.  Serializati
 <li>See also:<a href="#role-based-access-control">Role Based Access Control</a></li>
 </ul>
 <h4 id="sustainability">Sustainability</h4>
-<p>The ability for an enterprise knowledge graph achieve unquestionable ongoing value to an organization in hhe face of constant change.</p>
+<p>The ability for an enterprise knowledge graph to achieve long-term ongoing value to an organization in the face of constant change.</p>
 <p>Changes include new data being added, new types of data being added, new users, new usage patterns and new applications using the enterprise knowledge graph.  Strong EKG architectures are resilient to these changes.</p>
 <p>Many organizations measure sustainability as the ability of a central IT organization to charge independent business units recurring <a href="#chargeback">chargeback</a> fees to use the EKG.</p>
 <p>The key measure is to avoid problems related to rewriting graph queries when small changes are made to the graph data model.</p>
+<p>Sustainable systems frequently consider scalability and security at an early stage of development since these features are difficult to retrofit once a design has been created.</p>
 <ul>
 <li>See also: The [Jenga Tower] Story</li>
+<li>See also: The <a href="#four-vs">Four Vs</a></li>
 </ul>
 <h4 id="systems-thinking">Systems Thinking</h4>
 <p>A way of looking at problems in terms of components that interact with each other over time using direct connections, indirection connections and both positive and negative feedback cycles.  Systems Thinking forces us to think broadly about how our enterprise knowledge graphs interact with external systems.  Systems thinking also helps us see the unintended consequences of our actions.</p>
@@ -2996,6 +3055,21 @@ https://en.wikipedia.org/wiki/Triplestore</p>
 <h4 id="upper-ontology">Upper Ontology</h4>
 <p>General high-level <a href="#concept">Concepts</a> that are common across all domains in a knowledge graph.  Concepts such as Organization, Customer, Family Unit, Product, Part, Invoice, Document are often consider part of an upper ontology.  Enterprise graphs may contain multiple ontologies and the ease of linking ontologies in highly dependant on sharing upper ontologies.
 * <a href="https://en.wikipedia.org/wiki/Upper_ontology">Wikipedia Page on Upper Ontology</a></p>
+<h4 id="variability">Variability</h4>
+<p>A lack of consistency in a data set that restricts its ability to be easily stored in a single flat tabular data structure.</p>
+<p>Graph databases tend to work well on high-variability data since they can easily handle many complex relationships without JOIN penalties.</p>
+<p>One of the key aspects of sustainable enterprise knowledge graphs is the ability to ingest new high-variability data without disrupting existing queries.</p>
+<p>Variability is one of the <a href="#four-vs">four "V"s</a> of sustainable EKG systems.</p>
+<h4 id="veracity">Veracity</h4>
+<p>The reliability of the data being ingested into our EKG.</p>
+<p>The most general definition of veracity is the conformity of a statement to truth.  Within the context of and EKG we use this term as a measure of data quality and the ability of the EKG to apply business rules to check the quality of incoming data.</p>
+<p>For documents, the <a href="https://en.wikipedia.org/wiki/XML_schema">XML Schema</a> standard is an example of veracity management.</p>
+<p>The RDF based <a href="#shapes-constraint-language">SHACL</a> is an existing standard for RDF graphs.</p>
+<p>There is no existing standard for expressing data quality rules within a labeled property graph.</p>
+<ul>
+<li>See also: <a href="#data-quality">Data Quality</a></li>
+<li>See also: <a href="https://en.wikipedia.org/wiki/XML_schema">XML Schema</a></li>
+</ul>
 <h4 id="web-ontology-language">Web Ontology Language</h4>
 <p>A Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things.
 * <a href="https://www.w3.org/OWL/">W3C OWL Web Site</a></p>
