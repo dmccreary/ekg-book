@@ -244,6 +244,8 @@ A web site that harvests web documents that discuss databases and classifies the
 #### Edge of Chaos
 The edge of chaos is narrow band between order and disorder in [Complex Systems](#complex-systems) such as enterprise knowledge graphs.
 
+![Edge of Chaos](img/edge-of-chaos.png)
+
 In enterprise knowledge graphs we think of order as areas we have modeled and understand well.  We think of disorder as external areas that we have not yet modeled or we have determined that they are not worth the effort to model.  Enterprise knowledge graphs modeling teams are often working at the Edge of Chaos.  We use a combination of intuition and [Cost Benefit Analysis](#cost-benefit-analysis) to determine the business value of modeling a new area and ingesting the data into this new area.
 
 * See also: [Complex Systems](#complex-systems)
@@ -266,7 +268,7 @@ Emergence is a primary reason to build enterprise knowledge graphs.  Emergence a
 [Wikipedia Page on https://en.wikipedia.org/wiki/Emergence](https://en.wikipedia.org/wiki/Emergence)
 
 #### Employee Graph
-A graph representation of all your organization employees and their activities.  For each employee, the graph may contain items such as reporting structure, job titles, roles, work history, education, training, certifications, current skills, security access groups, goals, projects, tasks assigned, helpdesk tickets, bugs assigned, bugs fixed, inventions, desktop hardware, software being used, software licenses, emails, meetings, salary and performance reviews.
+A graph representation of all your organization employees and their activities.  For each employee, the graph may contain items such as reporting structure, job titles, roles, work history, education, training, certifications, current skills, security access groups, goals, projects, tasks assigned, help desk tickets, bugs assigned, bugs fixed, inventions, desktop hardware, software being used, software licenses, emails, meetings, salary and performance reviews.
 
 A detailed employee graph can be used to match available staff with new projects and find similar employees for career mentoring.  Employee graphs can also be used to predict the impact of employees that leave an organization, what employees work as ambassadors between groups, and what teams will be the most productive.
 
@@ -344,11 +346,13 @@ One concern about GraphQL at the enterprise-scale is that your graph database sh
 #### Graph Query Language
 A proposed standard graph query language being developed by the Working Group 3 (Database Languages) of ISO/IEC JTC 1's Subcommittee 32. 
 GQL is designed to work with [Labeled Property Graphs](#labeled-property-graph).
+
 * [Wikipedia GQL Page](https://en.wikipedia.org/wiki/GQL_Graph_Query_Language)
 
 #### Graph Structured Query Language
 A distributed graph query language developed by TigerGraph.  GSQL was designed to be syntactically similar to the SQL language
 but it also integrated distributed query concepts that share patterns similar to MapReduce queries.
+
 * Also known as: GSQL
 
 #### Graph Database
@@ -380,6 +384,7 @@ For example, the idea behind "higher-order thinking" is that some types of learn
 
 #### Index Free Adjacency
 Accessing related entities in a system without having to consult a centralized index.  Using direct in-memory pointers to represent relationships is approximately three orders of magnitude faster than referencing a central index system.
+
 * See also: The Neighborhood Walk Story
 
 #### Information Layer
@@ -391,7 +396,16 @@ The Inmon Data Warehouse is a collection of database design patterns that promot
 The Inomn approach was first enumerated in his 1992 book "Building the Data Warehouse".  The Inmon approach is usually contrasted to the more recent 2013 [Kimball Data Warehouse](#kimball-data-warehouse) that focuses on a simplicity and single fact table with many dimensions.
 
 Many EKG projects can be funded by their ability to show they can decommission expensive Inmon-style data warehouses that don't have the flexibility of EKGs.
+
 * [Wikipedia page on Bill Inmon](https://en.wikipedia.org/wiki/Bill_Inmon)
+
+#### The Jenga Tower Metaphor
+Within the context of the EKG, the Jenga Tower Metaphor is a story about how resilient any EKG systems is in the face of change.
+
+In the Jenga tower game, a removal of a block lower in the tower should not cause the tower to collapse.  In the same way, a small change to the data model such as adding a property to a relationships should not cause graph queries to be rewritten.
+
+[Labeled property graphs](#labeled-property-graph) (LPG) have a data model that prevents simple changes to the data model from requiring many queries to be rewritten.  Unlike SQL and RDF data models, LPG graphs don't suffer from the problems related to [Reification](#reification).
+
 
 #### Key-Value Store
 A type of database that stores items as pairs of keys and values.  The keys are strings and the values are binary blobs such as files or images.  A simple put/get/delete interface is used to manage the database.
@@ -403,7 +417,7 @@ A data warehouse design pattern that uses a single fact table joined with dimens
 
 Kimball data warehouses are the ultimate in [denormalized database design](#denormalization).  Their goal is often simplicity at the expense of capturing complex relationship-intensive models of the world that can be reused across the enterprise.  As a result, Kimball datamarts  duplicate data in each department and each datamart has their own costs to perform [ETL](#extract-load-transform) operations.  In contrast, EKGs focus on highly [normalized] data models of the world that include many complex relationships.  This closer our models get to the real world the more they can be reused across many departments.
 
-Decomissioning many departmental [datamarts](#datamart) is often a key way to justify EKG projects.
+Decommissioning many departmental [datamarts](#datamart) is often a key way to justify EKG projects.
 [Wikipedia Page on Ralph Kimball](https://en.wikipedia.org/wiki/Ralph_Kimball)
 
 #### Knowledge Layer
@@ -422,6 +436,7 @@ A multi-disciplinary field that include processes of creating, sharing, using an
 Knowledge Management addresses question such as what is organizational knowledge, what types of knowledge are there ([Tacit](#tacit-knowledge) vs. [Codifiable](#codifiable-knowledge)), how do we encourage employees to capture and store knowledge is forms that can be reused, how do we motivate employees to link isolated knowledge islands together, how do we make tacit Knowledge more codifiable, searchable and reusable.
 
 In this book, we take the approach that EKGs should be part of an organizations overall [Enterprise Knowledge Management] strategy and that individuals with formal training in the field of [Knowledge Engineering] should participate in the creation of EKGs and particpate in their evolution.
+
 * [Wikipedia page on Knowledge Management](https://en.wikipedia.org/wiki/Knowledge_management)
 
 #### Knowledge Representation
@@ -466,6 +481,7 @@ Labels have two main types: [Preferred Labels](#preferred-lable) and [Alternate 
 #### Labeled Property Graph
 A graph data model where each Vertex and Edge have a single type and goth Vertices and Edges have attributes.
 Both TigerGraph and Neo4j use the LPG data model.
+
 * Also known as: LPG
 
 #### Match and Map
@@ -481,6 +497,7 @@ into the graph the transformation is done in the native language of the graph su
 allows many projects to share the underlying data loaders and allows each team to customize the post-loading transformation
 using the native query language of the graph.  The other major data model is the RDF model which is discouraged at Optum due
 to the challenges with Reification. Reification causes RDF SPARQL queries to be rewritten.
+
 * [Load-as-is pattern](https://www.marklogic.com/blog/understanding-the-load-as-is-pattern/)
 * See also: [RDF](#resource-description-framework)
 
@@ -496,6 +513,7 @@ A story used to illustrate the difference between direct pointer hopping and usi
 
 #### No Complexity Penalty
 Unlike relational databases, graph databases quickly traverse many complex relationships.  As a result, graph databases are better at modeling the real world - which is full of complexity.  We use the phrase "No Complexity Penalty" every time we are training people who have come from the relational world that worry that too many relationships will slow down their queries due to slow JOINs.
+
 * See also: One version of the truth
 
 #### One Version of the Truth
@@ -503,6 +521,7 @@ The real world has many complex relationships.  There are many ways to build sim
 
 #### Online Analytical Processing System
 An approach to answer multi-dimensional analytical queries quickly by minimizing JOIN operations in relational databases.  OLAP "cubes" often use a star schema with a central fact table and one JOIN operation per dimension of the cube.  The denomalization process used to create star schemas limits enterprise-sharing of these structures.
+
 * [Wikipedia](https://en.wikipedia.org/wiki/Online_analytical_processing)
 
 
@@ -549,13 +568,38 @@ A preferred lexical label associated with a [Concept](#concept).  In the [SKOS](
 #### Project Graph
 A graph that supports a specific project.  Project graphs may contain knowledge that is not of interest to the rest of the enterprise.
 
+#### Role-based Access Control
+An design pattern for restricting system access to authorized users based on the roles they have been assigned.
+
+RBAC systems are highly scalable and preferred by most large enterprises.  RBAC systems are scalable because creating individual relationships between a user an an application is too complex and difficult to maintain.
+
+The following are the levels of RBAC within an EKG:
+
+* Subgraph level RBAC - where roles restrict access permission (read, write etc.) to a subgraph
+* Vertex level RBAC - where roles restrict access permission (read, write etc.) to each vertex of a graph
+* Attribute level RBAC - where roles restrict access permission (read, write etc.) to specific attributes of a vertex or a property
+* Query level RBAC - where only specific roles can execute a query
+
+Enterprise scale graphs support vertex-level data access rules.  Although there are performance concerns implementing RBAC, most enterprise systems require this fine grain control.
+
+![NIST RBAC](img/role-based-access-control.jpg)
+
+* [Wikipedia Page on RBAC](https://en.wikipedia.org/wiki/Role-based_access_control)
+* [Wikipedia Page on NIST RBAC](https://en.wikipedia.org/wiki/NIST_RBAC_model)
+
 #### Reference Data
 Reference data is data used to classify or categorize other data.  They typically are stored as a set of valid codes for a specific data element.
 
 For example the list of [Country Codes](https://en.wikipedia.org/wiki/Country_code) is a type of reference data.  Reference data is often stored as a short code and a definition of what that code represents.
 
 #### Reification
-Reification is the process by which an abstract idea about a computer program is turned into an explicit data model or other object created in a programming language.  Specifically, in the RDF modeling process it is the process of adding an abstract vertex to a graph when properties are needed in a relationship.  Reification causes queries that traverse that node to be rewritten.  This means that SPARQL queries are inherently much more difficult to maintain than LPG graph queries.
+Reification is the process by which an abstract idea about a computer program is turned into an explicit data model or other object created in a programming language.
+
+Within a graph,  reification is the process of turning a relationship into a vertex.
+
+Specifically, in the RDF modeling process it is the process of adding an abstract vertex to a graph when properties are needed in a relationship.  Reification causes queries that traverse that node to be rewritten.  This means that SPARQL queries are inherently much more difficult to maintain than LPG graph queries.
+
+* See also: [The Jenga Tower Metaphor](#jenga-tower-metaphor)
 
 #### Resource Description Framework
 An early family of standards developed by the World Wide Web Consortium for exchanging graph data championed by the [Semantic Web](https://en.wikipedia.org/wiki/Semantic_Web) community starting in 1999.  RDF gained some traction around 2010 but failed to gain widespread adoption due to the complexity of the standards and the problems of [Reification](#reification).
@@ -573,6 +617,7 @@ The ability to assign access to a resource to individuals that have a specific r
 A software component that executes rules according to some algorithm.
 
 In the Enterprise Knowledge Graph space rules are frequently represented in [Decision Tree](#decison-tree) structures within the graph.
+
 * [Rules for Knowledge Graph Rules])https://dmccreary.medium.com/rules-for-knowledge-graphs-rules-f22587307a8f
 
 #### Semantics
@@ -601,14 +646,16 @@ See [Levels of Knowledge](#levels-of-knowledge)
 A W3C standard RDF vocabulary for validating RDF graphs against a set of conditions.
 
 Unlike document validation standards like XML Schema, SHACL assumes that data quality checks should be able to look for relationships in a graph as well as the local context of a document.  These conditions are provided as shapes and other constructs expressed in the form of an RDF graph.  LPG graphs do not yet have a version of SHACL.
+
 * Also known as: SHACL
 * [SHACL W3C](https://www.w3.org/TR/shacl/)
 
 #### Simple Knowledge Organizational System
 A model for expressing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, folksonomies, and other similar types of controlled vocabularies. SKOS is also
 the name of the world-wide-web standard for encoding these systems.  Serializations of SKOS are typically done in RDF format although other encodings such as XML and JSON are common.
+
 * See Also: [W3C SKOS Primer](https://www.w3.org/TR/skos-primer/)
-* See Also: [W2C SKOS Referecnce](https://www.w3.org/2009/08/skos-reference/skos.html)
+* See Also: [W2C SKOS Reference](https://www.w3.org/2009/08/skos-reference/skos.html)
 
 #### Stages of Knowledge Extraction
 The four primary stages of knowledge representation from Narrative, Semi-structured, Structured and Executable.
@@ -632,6 +679,8 @@ Strategy graphs can also be used to determine the alignment of proposed projects
 
 StratML encoding is sometimes required of US federal organizations so that strategies can be analyzed by published public documents.
 
+* [Wikipedia Page on StratML](https://en.wikipedia.org/wiki/Strategy_Markup_Language)
+
 #### Strategic Serendipity
 Building a enterprise strategy around the creation of an environment where it is easier to make unexpected connections between items.  Strategic serendipity involves getting a large number of people ready to discover new things in an enterprise knowledge graph.
 
@@ -646,18 +695,25 @@ Unlike the prior semi-structure stages, this stage must adhere to standards with
 * Structured recommendations in the form of event-condition-action rules
 * Structured process definitions describing how the recommendations fit into a clinical workflow
 * Structured form definitions providing a conceptual description of the user-interfaces involved
-
 * Part of: [Natural Language Processing](#natural-language-processing)
 
 #### Subgraph
 A subset of an enterprise knowledge graph that may store specific types of knowledge and may have specific access control rules based on the role of a user.
 
 For example, a business glossary, taxonomy, ontology or business rules system that contains no customer-specific information may be in one subgraph and have universal read-access for all users.  Customer-specific data that is highly confidential may be stored in a different subgraph, with read access only granted on a need-to-know basis.
+
 * See also:[Role Based Access Control](#role-based-access-control)
 
 #### Sustainability
-The ability for a team of developers to maintain the code that supports an enterprise knowledge graph in the face of changes to the data model.  The key measure is to avoid problems related to rewriting graph queries when small changes are made to the graph data model.
-* See also: The Jenga Tower Story
+The ability for an enterprise knowledge graph achieve unquestionable ongoing value to an organization in hhe face of constant change.
+
+Changes include new data being added, new types of data being added, new users, new usage patterns and new applications using the enterprise knowledge graph.  Strong EKG architectures are resilient to these changes.
+
+Many organizations measure sustainability as the ability of a central IT organization to charge independent business units recurring [chargeback](#chargeback) fees to use the EKG.
+
+The key measure is to avoid problems related to rewriting graph queries when small changes are made to the graph data model.
+
+* See also: The [Jenga Tower] Story
 
 #### Systems Thinking
 A way of looking at problems in terms of components that interact with each other over time using direct connections, indirection connections and both positive and negative feedback cycles.  Systems Thinking forces us to think broadly about how our enterprise knowledge graphs interact with external systems.  Systems thinking also helps us see the unintended consequences of our actions.
