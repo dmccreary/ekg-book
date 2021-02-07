@@ -417,6 +417,17 @@ Many EKG projects can be funded by their ability to show they can decommission e
 
 * [Wikipedia page on Bill Inmon](https://en.wikipedia.org/wiki/Bill_Inmon)
 
+### ISO Definition
+A term definition that conforms to the following guidelines:
+
+* **Precise:** - The definition should have clear meaning and semantics using words with narrow definitions.
+* **Concise:** - The definition should be as short as possible in length without compromising precision.  Good definitions are typically 1 or 2 sentences.
+* **Distinct** - The definition does not have the same definition as other concepts in a vocabulary.
+* **Noncircular** - The definition does not use the original term in defining the definition.
+* **Unencumbered with Rules** - There are no context-specific business rules that would limit the use of the term to a narrow context.  Rules can be stated after a definition but should not be part of the ISO definition.
+
+The origin of these guidelines for ISO definition comes from my work in the ISO/IEC 11179 Metadata Registry standards committee.
+
 #### The Jenga Tower Metaphor
 Within the context of the EKG, the Jenga Tower Metaphor is a story about how resilient any EKG systems is in the face of change.
 
