@@ -14,7 +14,7 @@
       
       
       <link rel="shortcut icon" href="../../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
@@ -22,10 +22,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
         
           
           
@@ -198,7 +198,6 @@
       
       
 
-
   
   
   
@@ -214,7 +213,6 @@
       
       
 
-
   
   
   
@@ -229,7 +227,6 @@
       
       
       
-
 
   
   
@@ -515,7 +512,6 @@
       
       
 
-
   
   
   
@@ -650,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/embeddings.md" class="md-nav__link">
+      <a href="../../concepts/embeddings/" class="md-nav__link">
         Ch 15 Embeddings
       </a>
     </li>
@@ -690,7 +686,6 @@
       
       
       
-
 
   
   
@@ -795,7 +790,6 @@
       
       
 
-
   
   
   
@@ -875,7 +869,6 @@
       
       
 
-
   
   
   
@@ -890,7 +883,6 @@
       
       
       
-
 
   
   
@@ -907,7 +899,6 @@
       
       
 
-
   
   
   
@@ -922,7 +913,6 @@
       
       
       
-
 
   
   
@@ -1153,6 +1143,8 @@
 <p><img alt="Automatic Rebalancing" src="../../img/rebalance.png" /></p>
 <p>So to be brutally honest, if your graph database does not automatically rebalance data as new nodes are added or removed from a distributed graph cluster I don't consider it a true enterprise graph solution.  It may still solve important business problems, but it does not fit our definition for this book.</p>
 <h3 id="scalability-means-scalable-access-control">Scalability Means Scalable Access Control</h3>
+<p><img alt="NIST RBAC" src="img/role-based-access-control.jpg" />
+The NIST data model for role-based access control.</p>
 <p>Many graph products claim to have performance scale out capabilities, but their software falls down when we give them a a detailed list of what roles can access what data.  This means they might be able to scale their data to 100 nodes, but only a single role of "admin" can be defined for the graph.  They provide an all-or nothing approach to security.  This model works in small applications where access to the application is controlled by security access rules.  However it breaks down when I want 100 teams to only be able to run queries on their own team's data.  We will provide more examples of vertex-level role-based access control in <a href="#lifecycles.md">Chapter 3</a></p>
 <h3 id="scalability-means-high-availability">Scalability Means High Availability</h3>
 <p>Many graph products are perfect for a small team in a single city that work 9am to 5pm.  Upgrades can be done at night and on weekends.  But Enterprise class systems don't have users in a single city.  Employees and customers are all over the world.  That means when we upgrade our database with a new version of software we can't shut it down.  We need distributed servers that can take a single node down, upgrade the software and get it back into the cluster without ever dropping a single transaction.</p>
@@ -1260,15 +1252,15 @@ https://help.poolparty.biz/pp/white-papers-release-notes/poolparty-technical-whi
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
-      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

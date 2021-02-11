@@ -18,7 +18,7 @@
     
     
       
-        <title>Ch 14 Explainability - Enterprise Knowledge Graphs</title>
+        <title>Ch 15 Embeddings - Enterprise Knowledge Graphs</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#explainability" class="md-skip">
+        <a href="#embeddings-in-an-enterprise-knowledge-graph" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Ch 14 Explainability
+              Ch 15 Embeddings
             
           </span>
         </div>
@@ -477,6 +477,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../explainability/" class="md-nav__link">
+        Ch 14 Explainability
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -488,12 +500,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Ch 14 Explainability
+          Ch 15 Embeddings
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Ch 14 Explainability
+        Ch 15 Embeddings
       </a>
       
         
@@ -510,29 +522,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-deep-learning-bar" class="md-nav__link">
-    The Deep Learning Bar
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-explainable-ai" class="md-nav__link">
-    What is Explainable AI
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#neural-networks-alone-lack-explainability" class="md-nav__link">
-    Neural Networks Alone Lack Explainability
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
+  <a href="#what-is-a-graph-embedding" class="md-nav__link">
+    What is a Graph Embedding?
   </a>
   
 </li>
@@ -541,18 +532,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../embeddings/" class="md-nav__link">
-        Ch 15 Embeddings
-      </a>
     </li>
   
 
@@ -854,29 +833,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#the-deep-learning-bar" class="md-nav__link">
-    The Deep Learning Bar
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-explainable-ai" class="md-nav__link">
-    What is Explainable AI
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#neural-networks-alone-lack-explainability" class="md-nav__link">
-    Neural Networks Alone Lack Explainability
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
+  <a href="#what-is-a-graph-embedding" class="md-nav__link">
+    What is a Graph Embedding?
   </a>
   
 </li>
@@ -893,39 +851,25 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/dmccreary/ekg-book/blob/master/docs/concepts/explainability.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/dmccreary/ekg-book/blob/master/docs/concepts/embeddings.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="explainability">Explainability</h1>
+                <h1 id="embeddings-in-an-enterprise-knowledge-graph">Embeddings in an Enterprise Knowledge Graph</h1>
+<p><img alt="Embedding" src="" />../img/embedding.png)</p>
 <ul>
-<li>The Deep Learning Bar</li>
-<li>What is Explainable AI (XAI)</li>
-<li>Neural Networks Alone Lack Explainability</li>
-<li>How do Enterprise Knowledge Graph Help Explainability</li>
-<li>Generating Explanations</li>
+<li>What is an Embedding?</li>
+<li>Types of graph embeddings</li>
+<li>What are they used for?</li>
+<li>Creating embeddings</li>
 </ul>
-<h2 id="the-deep-learning-bar">The Deep Learning Bar</h2>
-<p><img alt="The Deep Learning Bartender" src="../img/deep-learning-bartender.md" /></p>
-<h2 id="what-is-explainable-ai">What is Explainable AI</h2>
-<ul>
-<li>Explainable systems are systems that can enumerate why they are creating specific recommendations</li>
-<li>Explainable systems answer the question "why"</li>
-<li>Explainable systems provide explanations in ways that humans can quickly understand</li>
-<li>Explainable systems provide evidence and references</li>
-<li>Explainable systems can show the linage and provenance of the source data used to make decisions</li>
-<li>Explainable systems describe alternatives</li>
-<li>Explainable systems promote trust</li>
-<li>Explainable systems encourage feedback when assumptions are incorrect</li>
-<li>Explainable systems are easy to correct</li>
-<li>Explainable systems give clear probability analysis</li>
-</ul>
-<h2 id="neural-networks-alone-lack-explainability">Neural Networks Alone Lack Explainability</h2>
-<h2 id="references">References</h2>
+<h2 id="what-is-a-graph-embedding">What is a Graph Embedding?</h2>
+<p><a href="vertex-embedding.png">Vertex Embedding</a></p>
+<p><img alt="Distance" src="../../img/distance.png" /></p>
+<h1 id="references">References</h1>
 <ol>
-<li><a href="https://www.darpa.mil/program/explainable-artificial-intelligence">DARPA XAI</a> - high level overview of XAI from DARPA.</li>
-<li><a href="https://www.theverge.com/2017/11/2/16597276/google-ai-image-attacks-adversarial-turtle-rifle-3d-printed">The Adversarial Turtle: Google’s AI thinks this turtle looks like a gun, which is a problem</a> - How current image recognition has a focus on low-level pattern detection but fails to take structure into account.</li>
+<li><a href="https://dmccreary.medium.com/understanding-graph-embeddings-79342921a97f">Understanding Graph Embeddings</a></li>
 </ol>
                 
               
@@ -945,7 +889,7 @@
       <div class="md-footer-nav">
         <nav class="md-footer-nav__inner md-grid">
           
-            <a href="../graph-machine-learning/" title="Ch 13 Graph Machine Learning" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <a href="../explainability/" title="Ch 14 Explainability" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
                 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
               </div>
@@ -954,19 +898,19 @@
                   <span class="md-footer-nav__direction">
                     Previous
                   </span>
-                  Ch 13 Graph Machine Learning
+                  Ch 14 Explainability
                 </span>
               </div>
             </a>
           
           
-            <a href="../embeddings/" title="Ch 15 Embeddings" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="../natural-language-processing/" title="Ch 16 Natural Language Processing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span class="md-footer-nav__direction">
                     Next
                   </span>
-                  Ch 15 Embeddings
+                  Ch 16 Natural Language Processing
                 </span>
               </div>
               <div class="md-flex__cell md-flex__cell--shrink">
