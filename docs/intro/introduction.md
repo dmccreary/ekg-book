@@ -82,6 +82,10 @@ The first criteria is that when the size of the enterprise graph grows to take o
 So to be brutally honest, if your graph database does not automatically rebalance data as new nodes are added or removed from a distributed graph cluster I don't consider it a true enterprise graph solution.  It may still solve important business problems, but it does not fit our definition for this book.
 
 ### Scalability Means Scalable Access Control
+
+![NIST RBAC](img/role-based-access-control.jpg)
+The NIST data model for role-based access control.
+
 Many graph products claim to have performance scale out capabilities, but their software falls down when we give them a a detailed list of what roles can access what data.  This means they might be able to scale their data to 100 nodes, but only a single role of "admin" can be defined for the graph.  They provide an all-or nothing approach to security.  This model works in small applications where access to the application is controlled by security access rules.  However it breaks down when I want 100 teams to only be able to run queries on their own team's data.  We will provide more examples of vertex-level role-based access control in [Chapter 3](#lifecycles.md)
 
 ### Scalability Means High Availability

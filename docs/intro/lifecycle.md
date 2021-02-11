@@ -1,11 +1,17 @@
 # Enterprise Knowledge Graph Life cycles
 
-* How EKGs work in practice
+* Planning
 * Pilot projects
 * Going into production
 * Finding customers
 * Charge backs
 * The value of insight
+
+## Planning
+
+* Begin with the end in mind
+* Scale first, features second
+* Security Planning
 
 ## The First Customer
 
