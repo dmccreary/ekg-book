@@ -1,6 +1,6 @@
 # Conclusion
 
-**Never mistake a clear view for a short distance.” — Paul Saffo**
+*Never mistake a clear view for a short distance. — Paul Saffo*
 
 We now come to an end of our journey through our tour of our knowledge about enterprise knowledge graphs.  We have touched on a wide number of topics and integrated concepts that I suspect you will not find in any single course in a typical universities course catalog.  Which is too bad.  Curriculum design is often driven by historical artifacts, not what is most useful to students.  Artificial barriers between college and university departments promotes specialized [hedgehog thinking](../glossary.md#hedgehog-and-fox), not systems thinking.
 
