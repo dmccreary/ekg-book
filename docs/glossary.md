@@ -50,6 +50,11 @@ The process of automatically migrating data from one server to another server in
 
 Auto-sharding is one of the key features that differentiate scale-out enterprise-class databases from departmental solutions.  Testing sharding at scale under continuous load in the face of possible hardware failure is one of the key challenges facing enterprise data architects.
 
+#### Balancing Feedback
+A change in system state which serves as a signal to start moving in the opposite direction in order to restore the lost balance.
+
+* See also: [Systems Thinking](#systems-thinking)
+
 #### Beam Search
 A graph search algorithm that explores by expanding the most promising node in a limited set.
 
@@ -685,6 +690,12 @@ the name of the world-wide-web standard for encoding these systems.  Serializati
 
 * See Also: [W3C SKOS Primer](https://www.w3.org/TR/skos-primer/)
 * See Also: [W2C SKOS Reference](https://www.w3.org/2009/08/skos-reference/skos.html)
+
+#### Topology Only Graph
+
+A graph design where both vertices and edges do not have any attributes.
+
+Topology only graphs graphs focus on the analysis structure but are not good models of the real-world so are mostly used in academic papers and some graph algorithms.
 
 #### Stages of Knowledge Extraction
 The four primary stages of knowledge representation from Narrative, Semi-structured, Structured and Executable.
