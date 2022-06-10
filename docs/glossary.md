@@ -359,6 +359,14 @@ A business vocabulary associated with a topic.  A glossary often has both genera
 
 * See also: [Business Vocabulary](#business-vocabulary)
 
+### Good-Old-Fashioned Artificial Intelligence
+
+A euphemism for Symbolic AI is characterized by an exclusive focus on symbolic reasoning and deterministic rules.
+
+GOFAI is often used as a pejorative term by the machine learning community that try to discredit symbolic reasoning.  They argue that so many problems have been solved by machine learning and deep neural networks that the study of symbolic AI is no longer relevant to AI.  Projects that require explainable AI tend to have a deeper appreciation of GOFAI.
+
+* Also known as: GOFAI
+
 #### GraphQL
 A query language for APIs and a runtime for fulfilling those queries with your existing data.
 
