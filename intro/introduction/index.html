@@ -1192,7 +1192,7 @@
 <p>Enterprise Knowledge Graphs (EKGs) are a type of <a href="glossary.md#graph-database">graph database</a> that are designed to scale to meet the demanding requirements of large organizations.  Graph databases are just one type of NoSQL database architectural patten that we use to solve business problems.  EKGs are also frequently used in combination with other NoSQL databases since each architecture has its strengths and weaknesses.</p>
 <p>If you are a <a href="../../glossary/#solution-architect">solution architect</a> your job is to work with business units to find how to correctly match business problems to the right NoSQL database architecture pattern.  This book will help you determine if EKGs might be a good fit for one or more of your business areas.</p>
 <p>Although they have become popular, it is critical that we don't begin to think EKGs are the only solution to business problems.  Solution architects must have a strong understanding of all NoSQL architecture patterns to keeping recommendations objective.  They must know the pros and cons of each of these architectures.  Although it is out of the scope of this book to do a deep dive into each of the six architectural pattern, we present each of them here briefly so you can explore more on your own.  The six types of NoSQL database architectural patterns are described in Figure 1.1.</p>
-<p><img alt="NoSQL Architectural Patterns" src="../img/nosql-architectural-patterns.png" /></p>
+<p><img alt="NoSQL Architectural Patterns" src="../../img/nosql-architectural-patterns.png" /></p>
 <p>The six key architectures are:</p>
 <ol>
 <li><strong><a href="../../glossary/#relational-database">Relational</a></strong> - where data is stored as fixed format rows in tables and new data is added one row at a time.  Relationships between tables are calculated at query time using JOIN statements that require central indexes to be used to traverse the relationships.  Ironically, relational databases put relationship traversal as a secondary concern and don't optimize the design for fast traversal of billions of relationships.  Because relationships evolved as an "add on feature" to COBOL flat files running on mainframes, the focus of a relational database is fast atomic transactions on row-oriented data.  Also known as row-stores.</li>
@@ -1222,7 +1222,7 @@
 <p>Note: We avoid using the term "[Big Data](../glossary.md#big-data" in this book.  It is an ambiguous statement of a problem and adds no insight into a solution.</p>
 <h3 id="scalability-means-automatic-sharding-and-rebalancing">Scalability Means Automatic Sharding and Rebalancing</h3>
 <p>The first criteria is that when the size of the enterprise graph grows to take on a new department or a new project, new hardware can be installed and the database is smart enough to use the new hardware without extensive pain and suffering by the database staff.  This is illustrated in Figure 1.2.</p>
-<p><img alt="Automatic Rebalancing" src="../img/rebalance.png" /></p>
+<p><img alt="Automatic Rebalancing" src="../../img/rebalance.png" /></p>
 <p>So to be brutally honest, if your graph database does not automatically rebalance data as new nodes are added or removed from a distributed graph cluster I don't consider it a true enterprise graph solution.  It may still solve important business problems, but it does not fit our definition for this book.</p>
 <h3 id="scalability-means-scalable-access-control">Scalability Means Scalable Access Control</h3>
 <p><img alt="NIST RBAC" src="img/role-based-access-control.jpg" />
